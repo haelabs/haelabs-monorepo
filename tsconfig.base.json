@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@haelabs/types": ["packages/types/src/index.ts"],
+      "@haelabs/sdk": ["packages/sdk/src/index.ts"],
+      "@haelabs/auth": ["packages/auth/src/index.ts"],
+      "@haelabs/utils": ["packages/utils/src/index.ts"],
+      "@haelabs/ui": ["packages/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
