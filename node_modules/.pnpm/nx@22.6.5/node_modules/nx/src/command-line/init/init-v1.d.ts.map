@@ -1,1 +1,0 @@
-{"version":3,"file":"init-v1.d.ts","sourceRoot":"","sources":["../../../../../../packages/nx/src/command-line/init/init-v1.ts"],"names":[],"mappings":"AAgBA,MAAM,WAAW,QAAQ;IACvB,UAAU,EAAE,OAAO,CAAC;IACpB,WAAW,EAAE,OAAO,CAAC;IACrB,OAAO,CAAC,EAAE,OAAO,CAAC;IAClB,SAAS,CAAC,EAAE,MAAM,EAAE,CAAC;IACrB,oBAAoB,CAAC,EAAE,OAAO,CAAC;CAChC;AAED,wBAAsB,WAAW,CAAC,OAAO,EAAE,QAAQ,iBAiElD"}
