@@ -1,0 +1,11 @@
+{
+  "name": "@haelabs/types",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nx build types",
+    "lint": "nx lint types",
+    "test": "nx test types",
+    "typecheck": "nx typecheck types"
+  }
+}
