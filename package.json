@@ -1,0 +1,17 @@
+{
+  "name": "haelabs-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "build": "node tools/scripts/run-target.mjs build",
+    "lint": "node tools/scripts/run-target.mjs lint",
+    "test": "node tools/scripts/run-target.mjs test",
+    "typecheck": "node tools/scripts/run-target.mjs typecheck",
+    "nx": "nx"
+  },
+  "devDependencies": {
+    "nx": "22.6.5",
+    "typescript": "5.9.3"
+  }
+}
