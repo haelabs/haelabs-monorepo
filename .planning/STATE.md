@@ -11,6 +11,12 @@
       "name": "structure-conventions", 
       "status": "complete",
       "slug": "structure-conventions"
+    },
+    {
+      "number": 3,
+      "name": "api-foundation",
+      "status": "in-progress",
+      "slug": "api-foundation"
     }
   ]
 }
