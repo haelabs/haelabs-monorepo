@@ -1,29 +1,17 @@
 {
   "name": "haelabs-monorepo",
-  "version": "0.0.0",
-  "license": "UNLICENSED",
   "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.8.1",
   "scripts": {
-    "build": "nx build",
-    "lint": "nx lint",
-    "test": "nx test",
-    "typecheck": "nx typecheck"
+    "build": "node tools/scripts/run-target.mjs build",
+    "lint": "node tools/scripts/run-target.mjs lint",
+    "test": "node tools/scripts/run-target.mjs test",
+    "typecheck": "node tools/scripts/run-target.mjs typecheck",
+    "nx": "nx"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "devDependencies": {
-    "@nx/esbuild": "16.8.1",
-    "@nx/jest": "16.8.1",
-    "@nx/js": "16.8.1",
-    "@nx/node": "16.8.1",
-    "@nx/react": "16.8.1",
-    "@nx/workspace": "16.8.1",
-    "jest": "^29.7.0",
-    "nx": "16.8.1",
-    "ts-jest": "^29.1.1",
-    "typescript": "5.3.3"
-  },
-  "packageManager": "pnpm@8.15.6"
+    "nx": "22.6.5",
+    "typescript": "5.9.3"
+  }
 }

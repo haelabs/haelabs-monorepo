@@ -1,20 +1,48 @@
 # haelabs-monorepo
 
-This is a mock README for the `haelabs-monorepo` project.
+Nx + pnpm monorepo foundation for Haelabs.
 
-## Overview
+## Current scope
 
-- Monorepo structure placeholder
-- Project documentation placeholder
-- Setup instructions placeholder
+This repository currently establishes the workspace shell, root tooling, and repository conventions needed for future product work.
 
-## Getting Started
+Primary reserved app paths:
+- `apps/petabase`
+- `apps/api`
+- `apps/pawscroll` (optional future app)
+
+Do not create a separate `apps/admin` application. Internal/admin flows should live inside `petabase`.
+
+## Prerequisites
+
+- Node.js 24+
+- pnpm 10+
+
+If pnpm is not available, enable it with Corepack:
 
 ```bash
-# install dependencies (placeholder)
-# run project (placeholder)
+corepack enable
+corepack prepare pnpm@10.8.1 --activate
 ```
 
-## Notes
+## Getting started
 
-Replace this mock content with real project details.
+```bash
+pnpm install
+pnpm exec nx show projects
+pnpm build
+pnpm lint
+pnpm test
+pnpm typecheck
+```
+
+The root scripts are intentionally safe in an empty workspace. They succeed even before real apps or packages exist.
+
+## Repository layout
+
+- `apps/` for deployable applications
+- `packages/` for shared packages and config packages
+- `docs/` for architecture and contributor docs
+- `tools/` for local scripts and workspace tooling
+
+See `docs/monorepo-foundation.md` for the current structure and extension rules.
