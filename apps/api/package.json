@@ -1,0 +1,11 @@
+{
+  "name": "@haelabs/api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nx build api",
+    "lint": "nx lint api",
+    "test": "nx test api",
+    "typecheck": "nx typecheck api"
+  }
+}

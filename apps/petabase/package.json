@@ -1,0 +1,11 @@
+{
+  "name": "@haelabs/petabase",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nx build petabase",
+    "lint": "nx lint petabase",
+    "test": "nx test petabase",
+    "typecheck": "nx typecheck petabase"
+  }
+}
