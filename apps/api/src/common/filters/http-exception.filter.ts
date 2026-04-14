@@ -32,7 +32,10 @@ export class HttpExceptionFilter implements ExceptionFilter {
       const body = exception.getResponse();
       if (this.isErrorEnvelope(body)) {
         return {
-          error: body.error,
+          error: {
+            ...body.error,
+            details: this.sanitizeDetails(body.error.details),
+          },
           meta: {
             timestamp: new Date().toISOString(),
             path: request.originalUrl,
@@ -53,7 +56,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         error: {
           code: 'HTTP_ERROR',
           message,
-          details,
+          details: this.sanitizeDetails(details),
         },
         meta: {
           timestamp: new Date().toISOString(),
@@ -86,5 +89,29 @@ export class HttpExceptionFilter implements ExceptionFilter {
       typeof (payload as { error: unknown }).error === 'object' &&
       (payload as { error: unknown }).error !== null
     );
+  }
+
+  private sanitizeDetails(details: unknown): unknown {
+    if (Array.isArray(details)) {
+      return details.map((item) => this.sanitizeDetails(item));
+    }
+
+    if (details && typeof details === 'object') {
+      const sanitized = Object.entries(details as Record<string, unknown>).reduce<Record<string, unknown>>(
+        (acc, [key, value]) => {
+          if (key === 'target' || key === 'value') {
+            return acc;
+          }
+
+          acc[key] = this.sanitizeDetails(value);
+          return acc;
+        },
+        {},
+      );
+
+      return sanitized;
+    }
+
+    return details;
   }
 }

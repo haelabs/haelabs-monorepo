@@ -39,6 +39,6 @@ export class ResponseEnvelopeInterceptor<T> implements NestInterceptor<T, Succes
   }
 
   private isEnvelope(payload: unknown): payload is SuccessEnvelope<T> {
-    return typeof payload === 'object' && payload !== null && 'data' in payload && 'meta' in payload;
+    return typeof payload === 'object' && payload !== null && 'data' in payload;
   }
 }
