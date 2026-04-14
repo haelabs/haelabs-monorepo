@@ -21,12 +21,14 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const status =
       exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
 
-    const payload = this.buildPayload(exception, request);
+    const payload = this.buildPayload(exception, request, response);
     response.status(status).json(payload);
   }
 
-  private buildPayload(exception: unknown, request: Request): ErrorPayload {
-    const requestId = request.header('x-request-id');
+  private buildPayload(exception: unknown, request: Request, response: Response): ErrorPayload {
+    const responseRequestId = response.getHeader('x-request-id');
+    const requestId =
+      typeof responseRequestId === 'string' ? responseRequestId : request.header('x-request-id');
 
     if (exception instanceof HttpException) {
       const body = exception.getResponse();
