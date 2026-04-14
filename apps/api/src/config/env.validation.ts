@@ -11,6 +11,21 @@ const envSchema = z.object({
   CORS_ORIGINS: z.string().default(''),
 });
 
+function isValidCorsOrigin(origin: string): boolean {
+  try {
+    const parsed = new URL(origin);
+
+    return (
+      (parsed.protocol === 'http:' || parsed.protocol === 'https:') &&
+      parsed.pathname === '/' &&
+      !parsed.search &&
+      !parsed.hash
+    );
+  } catch {
+    return false;
+  }
+}
+
 export type AppEnv = Omit<z.infer<typeof envSchema>, 'CORS_ORIGINS'> & {
   CORS_ORIGINS: string[];
 };
@@ -29,6 +44,14 @@ export function validateEnv(raw: Record<string, unknown>): AppEnv {
   const corsOrigins = parsed.data.CORS_ORIGINS.split(',')
     .map((origin) => origin.trim())
     .filter(Boolean);
+
+  const invalidOrigins = corsOrigins.filter((origin) => !isValidCorsOrigin(origin));
+
+  if (invalidOrigins.length > 0) {
+    throw new Error(
+      `Invalid environment configuration: CORS_ORIGINS must contain valid http/https origins only. Received: ${invalidOrigins.join(', ')}`,
+    );
+  }
 
   return {
     ...parsed.data,
