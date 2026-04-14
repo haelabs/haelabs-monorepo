@@ -1,7 +1,7 @@
 # Executive Summary
-- Issue: Setup monorepo structure with Nx + pnpm
-- Source: haelabs/openclaw-team#28
-- Promoted: 2026-04-13 23:05
+- Issue: Init API project with NestJS — project structure, health check, common, util
+- Source: haelabs/openclaw-team#31
+- Promoted: 2026-04-14 10:05
 - Handoff source: latest comment containing the handoff document
 
 ---
@@ -9,154 +9,159 @@
 ## 📋 Handoff Document
 
 ### Overview
-This issue establishes the monorepo foundation for the product team. The goal is to create a clean Nx + pnpm workspace with stable folder conventions, shared package boundaries, and documentation so subsequent implementation issues can proceed without repository rework.
+This issue creates the backend API foundation inside the monorepo. The goal is to scaffold a NestJS API app under `apps/api`, establish the project structure and cross-cutting backend conventions, and provide a working versioned health endpoint that future domain modules can build on.
 
 Why this matters:
-- prevents ad hoc repo sprawl as apps and shared packages are added
-- gives akai a reliable base for API and web app work
-- aligns the repo with the approved MVP stack and deployment direction
-- reduces future migration cost by enforcing boundaries early without over-engineering
-
-Important current naming direction from the latest approved comments:
-- `apps/petabase` replaces `apps/vet-manage`
-- `apps/pawscroll` replaces `apps/parent-app`
-- `apps/api` remains unchanged
-- internal/admin flows should stay inside `petabase` via route/path separation, not a separate `apps/admin`
+- gives the team a stable backend base before business modules are added
+- ensures consistency for config, validation, error handling, logging, and response shape
+- supports later auth, organization, branch, and user features without rework
+- provides deployment-ready health checks for local dev, CI, and Railway
 
 ### Requirements
-- [ ] Initialize Nx workspace with pnpm
-- [ ] Add baseline workspace files (`package.json`, `pnpm-workspace.yaml`, `nx.json`, base tsconfig)
-- [ ] Establish and document top-level folders: `apps/`, `packages/`, `docs/`, `tools/`
-- [ ] Configure workspace discovery for app and package directories
-- [ ] Add root scripts for build, lint, test, and typecheck
-- [ ] Define naming and placement conventions for apps and shared packages
-- [ ] Preserve clean dependency direction between apps and packages
-- [ ] Document how future apps/packages should be added
-- [ ] Keep the structure MVP-friendly and avoid unnecessary early complexity
-- [ ] Preserve clean paths for `apps/petabase` and `apps/api`
-- [ ] Do not create a separate `apps/admin` app
+- [ ] Create `apps/api` inside the Nx monorepo
+- [ ] Configure TypeScript, ESLint, Prettier, and Nx integration consistently
+- [ ] Add environment/config handling with startup validation
+- [ ] Establish a clear source structure (`common`, `config`, `health`, `modules`, infrastructure/shared folders as needed)
+- [ ] Implement `/api/v1/health`
+- [ ] Return basic service status and database readiness signal or stub-compatible readiness structure
+- [ ] Add global request validation
+- [ ] Add consistent error envelope handling
+- [ ] Add base success response envelope strategy
+- [ ] Configure CORS
+- [ ] Add structured logging
+- [ ] Ensure `nx serve api` and `nx build api` work
 
 ### Technical Spec
 - **Architecture**
-  - Use an app-centric Nx monorepo on top of pnpm workspaces.
-  - Top-level structure:
-    - `apps/`
-      - `petabase/` for clinic/staff operations web app
-      - `api/` for backend API service
-      - `pawscroll/` as future/optional parent-facing app path
-    - `packages/`
-      - `ui/`, `types/`, `sdk/`, `auth/`, `utils/`, shared config packages, and test helpers
-    - `docs/`
-    - `tools/`
-  - Dependency direction should be: `apps -> shared/domain packages -> config/util packages`
-  - Avoid circular dependencies.
-  - Keep shared contracts/types in packages, not duplicated across apps.
-  - Start with inferred Nx tasks and local caching. Add stricter boundary tags later when domains are clearer.
+  - Implement `apps/api` as a NestJS modular monolith within the Nx + pnpm workspace.
+  - Recommended source structure:
+    - `main.ts`
+    - `app.module.ts`
+    - `common/` for framework-level shared concerns
+    - `config/` for env validation and app config
+    - `health/` for health controllers/modules/indicators
+    - `modules/` for future domains (`auth`, `organizations`, `branches`, `users`, `roles`, `permissions`)
+    - `infrastructure/` for DB/logging adapters if needed
+    - `shared/response/` or equivalent for response envelope utilities
+  - Bootstrap conventions:
+    - global prefix `/api`
+    - URI versioning `/v1`
+    - effective route base `/api/v1/*`
+    - global validation pipe with whitelist behavior
+    - central exception filter
+    - request-aware structured logging
+    - env-driven CORS allowlist
 
 - **API Design**
-  - No business endpoints are required in this issue.
-  - Repo conventions must reserve:
-    - `apps/api` for the deployable backend
-    - `packages/types` for shared request/response contracts
-    - `packages/sdk` for typed client wrappers
-    - `packages/auth` only if shared auth helpers are actually needed across apps
+  - Required endpoint:
+    - `GET /api/v1/health`
+  - Recommended response shape:
+    - success: `{ data, meta? }`
+    - error: `{ error: { code, message, details? }, meta? }`
+  - Health response should include at minimum:
+    - service/app status
+    - API version
+    - database connectivity status if implemented, or a stub-compatible structure if DB integration is deferred
+  - Optional later split:
+    - `GET /api/v1/health/live`
+    - `GET /api/v1/health/ready`
+  - Auth is not in scope for implementation here, but the app must be auth-ready:
+    - reserve `modules/auth`
+    - keep health endpoint public
+    - avoid bootstrap choices that block Better Auth or session-based auth later
 
 - **Database Schema**
-  - No product database schema is required in this issue.
-  - Workspace layout must not block future Prisma + Neon integration.
-  - Initial DB ownership should stay in `apps/api` unless real reuse justifies later extraction to a shared package.
+  - No business-domain schema is required in this issue.
+  - The structure should anticipate near-term entities such as `organizations`, `branches`, `users`, `memberships`, `roles`, `sessions`, and `audit_logs`.
+  - DB health should integrate cleanly with future Prisma + PostgreSQL/Neon setup.
+  - If Prisma is not added here, leave a clear integration point for readiness indicators.
 
 ### Implementation Guide
-1. Initialize the Nx workspace using pnpm.
-2. Add baseline root configuration (`package.json`, `pnpm-workspace.yaml`, `nx.json`, base TS config, ignore files as needed).
-3. Create and/or document `apps/`, `packages/`, `docs/`, and `tools/`.
-4. Configure pnpm and Nx workspace discovery for the chosen layout.
-5. Add deterministic root scripts for build, lint, test, and typecheck.
-6. Define starter package conventions for shared config, UI, types, SDK, auth, and utilities.
-7. Document naming and import boundary rules.
-8. Reserve product app paths for `apps/petabase` and `apps/api`. Optionally reserve `apps/pawscroll` for later, but do not force Phase 1 complexity.
-9. Explicitly avoid scaffolding `apps/admin`.
-10. Add repo structure documentation for developers.
-11. Verify install and workspace commands run cleanly.
+1. Scaffold `apps/api` using NestJS inside the Nx workspace.
+2. Add root API bootstrap with `/api/v1` routing, CORS, validation, and logging.
+3. Create the foundational folder structure and keep domain modules as placeholders only.
+4. Add centralized config loading and startup env validation.
+5. Implement the health module and `GET /api/v1/health`.
+6. Add a global exception filter for a consistent error envelope.
+7. Add a response envelope strategy for JSON responses.
+8. Add structured logging suitable for local and Railway logs.
+9. Ensure the app runs via Nx and builds cleanly.
+10. Document folder conventions, route versioning, response contracts, and where future modules belong.
 
 ### Task List
-- **Task 1: Initialize Nx + pnpm workspace**
+- **Task 1: Scaffold NestJS app in Nx workspace**
   - Estimate: M
-  - Dependency: None
-  - Acceptance Criteria: Workspace initializes successfully, install works, Nx recognizes the workspace.
+  - Dependency: #28
+  - Acceptance Criteria: `apps/api` exists and works with `nx serve api` and `nx build api`.
 
-- **Task 2: Add baseline root config files**
+- **Task 2: Set up bootstrap and versioning**
   - Estimate: S
   - Dependency: Task 1
-  - Acceptance Criteria: Root contains valid workspace config and base TS setup.
+  - Acceptance Criteria: App uses `/api/v1` route base; CORS is env-driven; validation is globally enabled.
 
-- **Task 3: Define top-level folder structure**
+- **Task 3: Create foundation folder structure**
+  - Estimate: S
+  - Dependency: Task 1
+  - Acceptance Criteria: `common/`, `config/`, `health/`, `modules/`, and required infrastructure/shared placeholders exist.
+
+- **Task 4: Add environment configuration module**
   - Estimate: S
   - Dependency: Task 2
-  - Acceptance Criteria: `apps/`, `packages/`, `docs/`, and `tools/` exist and/or are explicitly documented.
+  - Acceptance Criteria: Env values are loaded centrally, validated at startup, and fail fast on invalid config.
 
-- **Task 4: Configure workspace discovery**
+- **Task 5: Implement health module**
+  - Estimate: S
+  - Dependency: Tasks 2, 4
+  - Acceptance Criteria: `/api/v1/health` returns a healthy/unhealthy state suitable for deployment health checks.
+
+- **Task 6: Add common error handling**
   - Estimate: S
   - Dependency: Task 2
-  - Acceptance Criteria: `pnpm-workspace.yaml` includes correct workspace paths.
+  - Acceptance Criteria: Global exception filter returns consistent error envelopes.
 
-- **Task 5: Add root scripts for build/lint/test/typecheck**
+- **Task 7: Add request validation pipeline**
   - Estimate: S
   - Dependency: Task 2
-  - Acceptance Criteria: Standard commands exist and are CI-ready.
+  - Acceptance Criteria: Invalid DTO input is rejected consistently with sanitized messages.
 
-- **Task 6: Define shared package conventions**
-  - Estimate: S
-  - Dependency: Task 3
-  - Acceptance Criteria: Shared package purposes are documented clearly.
-
-- **Task 7: Define dependency boundaries and import policy**
+- **Task 8: Add response envelope strategy**
   - Estimate: M
-  - Dependency: Tasks 3, 6
-  - Acceptance Criteria: Clear rules exist for app-only code vs shared package code, including no-circular-deps guidance.
+  - Dependency: Tasks 2, 6
+  - Acceptance Criteria: JSON success responses follow a consistent `{ data, meta }` shape.
 
-- **Task 8: Reserve product app structure aligned to MVP**
+- **Task 9: Add structured logging**
   - Estimate: S
-  - Dependency: Task 3
-  - Acceptance Criteria: Documentation explicitly supports `apps/petabase` and `apps/api`; no separate `apps/admin` is scaffolded.
+  - Dependency: Task 2
+  - Acceptance Criteria: Startup and request lifecycle logs are machine-readable.
 
-- **Task 9: Add monorepo structure documentation**
-  - Estimate: M
-  - Dependency: Tasks 3-8
-  - Acceptance Criteria: A developer can understand layout, naming, commands, and extension rules without tribal knowledge.
-
-- **Task 10: Verification and readiness check**
+- **Task 10: Document API foundation conventions**
   - Estimate: S
-  - Dependency: All prior tasks
-  - Acceptance Criteria: Workspace is ready for follow-up implementation issues without top-level restructure.
+  - Dependency: Tasks 1-9
+  - Acceptance Criteria: Repo docs explain layout, routing, config pattern, response contract, and extension points.
 
 ### Testing
-- Clean install succeeds from a fresh checkout.
-- Root build command runs without config errors.
-- Root lint command runs without config errors.
-- Root test command is wired correctly, even if there are few or no tests yet.
-- Root typecheck command is implemented or explicitly documented.
-- Nx detects the workspace and project graph correctly.
-- `pnpm-workspace.yaml` includes intended directories.
-- Documentation reflects actual paths and current naming (`petabase`, `pawscroll`, `api`).
-- No unexpected `apps/admin` scaffold exists.
-- `tools/` naming is used consistently.
+- `nx serve api` starts successfully.
+- `nx build api` succeeds.
+- `GET /api/v1/health` returns 200 in healthy conditions.
+- Health payload follows the agreed response envelope.
+- Invalid env/config fails fast at startup with readable error output.
+- DTO validation errors return consistent sanitized error responses.
+- Exception filter normalizes framework/application errors.
+- CORS behavior matches configured allowlist.
+- Logging emits structured startup and request information.
+- Health endpoint remains public and unaffected by future auth scaffolding.
 
 ### Decisions Made
-- Nx + pnpm is the approved monorepo foundation.
-- Top-level structure should use `apps/`, `packages/`, `docs/`, and `tools/`.
-- Do not create a separate `apps/admin` app now.
-- Admin/internal flows belong inside `petabase` via route/path separation.
-- Phase 1 should optimize for clinic-side workflows first.
-- `apps/api` and `apps/petabase` are the primary initial applications.
-- Shared contracts/config should live in `packages/*`.
-- Keep DB ownership in `apps/api` initially.
-- Prefer a simple app-centric structure over an over-segmented enterprise monorepo.
-- Latest naming update should be reflected in all docs and conventions.
+- Use NestJS for the API foundation.
+- Build the API as a modular monolith in `apps/api`.
+- Standardize bootstrap from day one: versioning, config validation, response envelopes, error handling, validation, and logging.
+- Keep business logic intentionally out of this issue.
+- Keep the health endpoint public and deployment-friendly.
+- Reserve domain placeholders for auth, organizations, branches, users, roles, and permissions.
+- Keep DB integration minimal here, but make readiness checks compatible with future Prisma + Neon work.
 
 ### Open Questions
-- Should starter shared config packages be scaffolded now or just documented?
-- Should placeholder app directories be created immediately or only reserved/documented?
-- What package scope naming convention should be standardized, for example `@haelabs/<name>`?
-- Should Nx module boundary linting be introduced now or deferred until more packages exist?
-- Should `apps/pawscroll` be reserved immediately or only when parent-facing work is closer?
+- Should Terminus be added now, or should the first health endpoint be custom and upgraded later?
+- Should DB connectivity be implemented immediately or stubbed until the dedicated database issue lands?
+- Which structured logger should be standardized, `pino`/`nestjs-pino` or another option?
+- Should liveness/readiness endpoints be added now or after the first deploy pipeline is in place?
