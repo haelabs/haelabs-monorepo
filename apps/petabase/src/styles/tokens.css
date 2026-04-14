@@ -1,0 +1,16 @@
+:root {
+  --pb-color-bg: #ffffff;
+  --pb-color-heading: #061b31;
+  --pb-color-body: #64748d;
+  --pb-color-label: #273951;
+  --pb-color-primary: #533afd;
+  --pb-color-primary-hover: #4434d4;
+  --pb-color-border: #e5edf5;
+  --pb-color-border-active: #b9b9f9;
+  --pb-color-surface-dark: #1c1e54;
+  --pb-color-accent-ruby: #ea2261;
+  --pb-color-accent-magenta: #f96bee;
+  --pb-shadow-elevated:
+    rgba(50, 50, 93, 0.25) 0 30px 45px -30px,
+    rgba(0, 0, 0, 0.1) 0 18px 36px -18px;
+}

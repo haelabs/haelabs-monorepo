@@ -3,9 +3,33 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "nx build api",
-    "lint": "nx lint api",
-    "test": "nx test api",
-    "typecheck": "nx typecheck api"
+    "start": "ts-node -P tsconfig.app.json src/main.ts",
+    "start:dev": "ts-node-dev --respawn --transpile-only --project tsconfig.app.json src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "node -e \"console.log('No tests yet for apps/api')\"",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.6",
+    "@nestjs/config": "4.0.2",
+    "@nestjs/core": "11.1.6",
+    "@nestjs/platform-express": "11.1.6",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.2",
+    "pino": "9.9.0",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "24.7.2",
+    "@typescript-eslint/eslint-plugin": "8.46.1",
+    "@typescript-eslint/parser": "8.46.1",
+    "eslint": "8.57.1",
+    "prettier": "3.6.2",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0"
   }
 }

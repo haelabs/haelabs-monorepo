@@ -1,0 +1,40 @@
+{
+  "name": "petabase",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/petabase/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter @haelabs/petabase run dev"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/apps/petabase"],
+      "options": {
+        "command": "pnpm --filter @haelabs/petabase run build"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter @haelabs/petabase run lint"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter @haelabs/petabase run test"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter @haelabs/petabase run typecheck"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:petabase"]
+}

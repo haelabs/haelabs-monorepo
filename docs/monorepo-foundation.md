@@ -37,3 +37,7 @@ The command wrappers in `tools/scripts/run-target.mjs` intentionally no-op when 
 ## Structure Conventions
 
 See [docs/conventions.md](./conventions.md) for naming rules, dependency direction, reserved app paths, and guidance on adding new apps and packages.
+
+Backend API conventions and bootstrap details live in [docs/api-foundation.md](./api-foundation.md).
+
+Frontend app conventions and shell details live in [docs/petabase-foundation.md](./petabase-foundation.md).

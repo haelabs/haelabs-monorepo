@@ -23,7 +23,11 @@
     "nonProjectFiles": [
       {
         "file": ".gitignore",
-        "hash": "9141918261192450850"
+        "hash": "5791305126607339207"
+      },
+      {
+        "file": ".gsd-completed",
+        "hash": "16482915675007618294"
       },
       {
         "file": ".opencode/agents/gsd-advisor-researcher.md",
@@ -1127,31 +1131,11 @@
       },
       {
         "file": ".opencode/opencode.json",
-        "hash": "7169046596491408870"
+        "hash": "10910678903357603830"
       },
       {
         "file": ".opencode/settings.json",
         "hash": "15753941481085060538"
-      },
-      {
-        "file": ".planning/PROJECT.md",
-        "hash": "10590164401693098671"
-      },
-      {
-        "file": ".planning/REQUIREMENTS.md",
-        "hash": "8146586252932935676"
-      },
-      {
-        "file": ".planning/ROADMAP.md",
-        "hash": "11191247302718506803"
-      },
-      {
-        "file": ".planning/STATE.md",
-        "hash": "8683055988190170744"
-      },
-      {
-        "file": ".planning/config.json",
-        "hash": "16397300134917931837"
       },
       {
         "file": "AGENTS.md",
@@ -1163,15 +1147,27 @@
       },
       {
         "file": "README.md",
-        "hash": "3647867649225099649"
+        "hash": "14122709213031325820"
       },
       {
         "file": "apps/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
+        "file": "docs/api-foundation.md",
+        "hash": "13869700796404703159"
+      },
+      {
+        "file": "docs/conventions.md",
+        "hash": "17113399218037682373"
+      },
+      {
         "file": "docs/monorepo-foundation.md",
-        "hash": "10319309487328011307"
+        "hash": "3647076719342123701"
+      },
+      {
+        "file": "docs/petabase-foundation.md",
+        "hash": "16461862884896571712"
       },
       {
         "file": "nx.json",
@@ -1187,7 +1183,7 @@
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "15260642103629368633"
+        "hash": "10329755439000037970"
       },
       {
         "file": "pnpm-workspace.yaml",
@@ -1195,7 +1191,19 @@
       },
       {
         "file": "spec.md",
-        "hash": "12169862010350359472"
+        "hash": "6474492111729830191"
+      },
+      {
+        "file": "specs/28/spec.md",
+        "hash": "13671527172895364684"
+      },
+      {
+        "file": "specs/31/spec.md",
+        "hash": "6474492111729830191"
+      },
+      {
+        "file": "specs/33/spec.md",
+        "hash": "6646887070915332909"
       },
       {
         "file": "tools/.gitkeep",
@@ -1214,7 +1222,359 @@
         "hash": "2530239551698568359"
       }
     ],
-    "projectFileMap": {}
+    "projectFileMap": {
+      "@haelabs/types": [
+        {
+          "file": "packages/types/package.json",
+          "hash": "7999081443838942900"
+        }
+      ],
+      "petabase": [
+        {
+          "file": "apps/petabase/.eslintrc.json",
+          "hash": "14613463309782317224"
+        },
+        {
+          "file": "apps/petabase/.prettierrc.json",
+          "hash": "9555875142989992828"
+        },
+        {
+          "file": "apps/petabase/middleware.ts",
+          "hash": "4369045702263113609"
+        },
+        {
+          "file": "apps/petabase/next-env.d.ts",
+          "hash": "2517811901510882550"
+        },
+        {
+          "file": "apps/petabase/next.config.ts",
+          "hash": "305038319733719677"
+        },
+        {
+          "file": "apps/petabase/package.json",
+          "hash": "15469560007392832265",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:prettier",
+            "npm:typescript",
+            "npm:next",
+            "npm:react",
+            "npm:react-dom",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/petabase/project.json",
+          "hash": "1246557275604876282"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(auth)/layout.tsx",
+          "hash": "12082840765975003169"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(auth)/sign-in/page.tsx",
+          "hash": "18052017335399902383"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(dashboard)/dashboard/page.tsx",
+          "hash": "7652542179724084562"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(dashboard)/layout.tsx",
+          "hash": "11419244553939120555"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/admin/layout.tsx",
+          "hash": "15312438204965644900"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/admin/page.tsx",
+          "hash": "4922947483701791939"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/error.tsx",
+          "hash": "729619524555067314"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/layout.tsx",
+          "hash": "12550731471537086537"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/loading.tsx",
+          "hash": "2808790601887310106"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/not-found.tsx",
+          "hash": "17375491375545894368"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/page.tsx",
+          "hash": "16551270416893869547"
+        },
+        {
+          "file": "apps/petabase/src/app/globals.css",
+          "hash": "3705525759977291290"
+        },
+        {
+          "file": "apps/petabase/src/app/layout.tsx",
+          "hash": "5856026018874886932"
+        },
+        {
+          "file": "apps/petabase/src/app/page.tsx",
+          "hash": "12914162688171629964"
+        },
+        {
+          "file": "apps/petabase/src/components/feedback/empty-state.tsx",
+          "hash": "10559729084869108007"
+        },
+        {
+          "file": "apps/petabase/src/components/feedback/loading-state.tsx",
+          "hash": "13724398853870376032"
+        },
+        {
+          "file": "apps/petabase/src/components/layout/page-container.tsx",
+          "hash": "3120106055843597932"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-header.tsx",
+          "hash": "4599951806078718202"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-shell.tsx",
+          "hash": "4678749185446400234"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-sidebar.tsx",
+          "hash": "6192523748836289720"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/button.tsx",
+          "hash": "2463006414696408759"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/card.tsx",
+          "hash": "979319491411941887"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/input.tsx",
+          "hash": "5383713225136688683"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/toast-provider.tsx",
+          "hash": "17638482798086847639"
+        },
+        {
+          "file": "apps/petabase/src/features/auth/components/sign-in-form.tsx",
+          "hash": "4235678435070590926"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-auth-guard.ts",
+          "hash": "1624119933326677013"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-locale-path.ts",
+          "hash": "16087131601068778796"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-toast.ts",
+          "hash": "1749341695735867349"
+        },
+        {
+          "file": "apps/petabase/src/lib/api/client.ts",
+          "hash": "81142919828549965"
+        },
+        {
+          "file": "apps/petabase/src/lib/auth/protection.ts",
+          "hash": "7263762596170025564"
+        },
+        {
+          "file": "apps/petabase/src/lib/env.ts",
+          "hash": "14273013889901088100"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/config.ts",
+          "hash": "7077548793824847153"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/dictionaries.ts",
+          "hash": "5785921298342780189"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/locale.ts",
+          "hash": "187837169138544895"
+        },
+        {
+          "file": "apps/petabase/src/lib/navigation/locale-path.ts",
+          "hash": "11011922692276593655"
+        },
+        {
+          "file": "apps/petabase/src/lib/utils/classnames.ts",
+          "hash": "8460952238377914029"
+        },
+        {
+          "file": "apps/petabase/src/messages/en.ts",
+          "hash": "288094726183440233"
+        },
+        {
+          "file": "apps/petabase/src/messages/th.ts",
+          "hash": "6615217900692999454"
+        },
+        {
+          "file": "apps/petabase/src/styles/tokens.css",
+          "hash": "8175296877173046030"
+        },
+        {
+          "file": "apps/petabase/src/types/i18n.ts",
+          "hash": "10116116241904495741"
+        },
+        {
+          "file": "apps/petabase/tsconfig.json",
+          "hash": "16003690457250127368"
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/.eslintrc.cjs",
+          "hash": "18328227525293569174"
+        },
+        {
+          "file": "apps/api/.prettierrc.json",
+          "hash": "2431873673864141239"
+        },
+        {
+          "file": "apps/api/eslint.config.cjs",
+          "hash": "6288671272798445116"
+        },
+        {
+          "file": "apps/api/package.json",
+          "hash": "9937074737890355725",
+          "deps": [
+            "npm:@types/express",
+            "npm:@types/node",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:prettier",
+            "npm:ts-node",
+            "npm:ts-node-dev",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/core",
+            "npm:@nestjs/platform-express",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:pino",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/project.json",
+          "hash": "7008174353738484094"
+        },
+        {
+          "file": "apps/api/src/app.module.ts",
+          "hash": "5708312214526133263"
+        },
+        {
+          "file": "apps/api/src/common/common.module.ts",
+          "hash": "10352990847979173878"
+        },
+        {
+          "file": "apps/api/src/common/filters/http-exception.filter.ts",
+          "hash": "1620829786323177782"
+        },
+        {
+          "file": "apps/api/src/common/interceptors/response-envelope.interceptor.ts",
+          "hash": "13327919581663536249"
+        },
+        {
+          "file": "apps/api/src/common/logging/app-logger.service.ts",
+          "hash": "12042751787978561921"
+        },
+        {
+          "file": "apps/api/src/common/logging/request-logger.middleware.ts",
+          "hash": "16924928149033412097"
+        },
+        {
+          "file": "apps/api/src/config/env.validation.ts",
+          "hash": "13854647574597033270"
+        },
+        {
+          "file": "apps/api/src/health/health.controller.ts",
+          "hash": "1056270682378401125"
+        },
+        {
+          "file": "apps/api/src/health/health.module.ts",
+          "hash": "16282402931358138409"
+        },
+        {
+          "file": "apps/api/src/health/health.service.ts",
+          "hash": "7950711702041453484"
+        },
+        {
+          "file": "apps/api/src/infrastructure/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/main.ts",
+          "hash": "1482659050997162318"
+        },
+        {
+          "file": "apps/api/src/modules/README.md",
+          "hash": "13575939865122280807"
+        },
+        {
+          "file": "apps/api/src/modules/auth/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/modules/branches/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/modules/organizations/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/modules/permissions/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/modules/roles/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/modules/users/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/shared/response/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/shared/response/response-envelope.ts",
+          "hash": "14177358748804324673"
+        },
+        {
+          "file": "apps/api/tsconfig.app.json",
+          "hash": "14587236669033916276"
+        },
+        {
+          "file": "apps/api/tsconfig.build.json",
+          "hash": "17072117413413809919"
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "8611113420500523003"
+        }
+      ]
+    }
   },
-  "externalNodesHash": "9453964205207055536"
+  "externalNodesHash": "14952022865148634318"
 }

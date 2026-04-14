@@ -8,8 +8,8 @@ Deployable applications live in `apps/`. Each app is an Nx project with its own 
 
 | Path | Purpose | Status |
 |------|---------|--------|
-| `apps/petabase` | Main product (web) | Reserved |
-| `apps/api` | Backend API | Reserved |
+| `apps/petabase` | Main product (web) | Foundation scaffolded |
+| `apps/api` | Backend API | Foundation scaffolded |
 | `apps/pawscroll` | Future product (if needed) | Optional |
 | `apps/admin` | ❌ **Forbidden** | Do not create |
 

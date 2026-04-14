@@ -38,6 +38,15 @@ pnpm typecheck
 
 The root scripts are intentionally safe in an empty workspace. They succeed even before real apps or packages exist.
 
+App-level commands:
+
+```bash
+pnpm exec nx serve petabase
+pnpm exec nx build petabase
+pnpm exec nx serve api
+pnpm exec nx build api
+```
+
 ## Repository layout
 
 - `apps/` for deployable applications
@@ -46,3 +55,4 @@ The root scripts are intentionally safe in an empty workspace. They succeed even
 - `tools/` for local scripts and workspace tooling
 
 See `docs/monorepo-foundation.md` for the current structure and extension rules.
+See `docs/petabase-foundation.md` for web app routing and i18n conventions.
