@@ -7,7 +7,7 @@
     "start:dev": "ts-node-dev --respawn --transpile-only --project tsconfig.app.json src/main.ts",
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint \"src/**/*.ts\"",
-    "test": "node -e \"console.log('No tests yet for apps/api')\"",
+    "test": "node --require ts-node/register --require reflect-metadata --test \"src/**/*.spec.ts\"",
     "typecheck": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {

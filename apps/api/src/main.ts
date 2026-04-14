@@ -10,7 +10,18 @@ import { AppLogger } from './common/logging/app-logger.service';
 import { ResponseEnvelopeInterceptor } from './common/interceptors/response-envelope.interceptor';
 import { AppEnv } from './config/env.validation';
 
-async function bootstrap(): Promise<void> {
+const API_PREFIX = 'api';
+const API_VERSION = '1';
+
+export function getRouteBase(): string {
+  return `/${API_PREFIX}/v${API_VERSION}`;
+}
+
+export function buildCorsOriginValidator(corsOrigins: string[]): (origin: string | undefined) => boolean {
+  return (origin: string | undefined) => !origin || corsOrigins.length === 0 || corsOrigins.includes(origin);
+}
+
+export async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true,
   });
@@ -19,10 +30,10 @@ async function bootstrap(): Promise<void> {
   const config = app.get(ConfigService<AppEnv, true>);
   app.useLogger(logger);
 
-  app.setGlobalPrefix('api');
+  app.setGlobalPrefix(API_PREFIX);
   app.enableVersioning({
     type: VersioningType.URI,
-    defaultVersion: '1',
+    defaultVersion: API_VERSION,
   });
 
   app.useGlobalPipes(
@@ -51,10 +62,11 @@ async function bootstrap(): Promise<void> {
   app.useGlobalInterceptors(new ResponseEnvelopeInterceptor());
 
   const corsOrigins = config.get('CORS_ORIGINS', { infer: true });
+  const isAllowedOrigin = buildCorsOriginValidator(corsOrigins);
 
   app.enableCors({
     origin: (origin: string | undefined, callback: (error: Error | null, allow?: boolean) => void) => {
-      if (!origin || corsOrigins.length === 0 || corsOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         callback(null, true);
         return;
       }
@@ -66,7 +78,9 @@ async function bootstrap(): Promise<void> {
 
   const port = config.get('PORT', { infer: true });
   await app.listen(port);
-  logger.log(`api_started port=${port} base=/api/v1 env=${config.get('NODE_ENV', { infer: true })}`);
+  logger.log(`api_started port=${port} base=${getRouteBase()} env=${config.get('NODE_ENV', { infer: true })}`);
 }
 
-bootstrap();
+if (require.main === module) {
+  void bootstrap();
+}
