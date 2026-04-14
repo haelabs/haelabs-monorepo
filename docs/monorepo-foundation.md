@@ -34,6 +34,6 @@ Nx uses the same app-centric layout via `nx.json`:
 
 The command wrappers in `tools/scripts/run-target.mjs` intentionally no-op when the workspace has no Nx projects yet. That keeps the monorepo CI-friendly during the foundation stage.
 
-## Next phase handoff
+## Structure Conventions
 
-Phase 2 should document the package naming rules, dependency direction, reserved app paths, and future app/package creation guidance in more detail.
+See [docs/conventions.md](./conventions.md) for naming rules, dependency direction, reserved app paths, and guidance on adding new apps and packages.

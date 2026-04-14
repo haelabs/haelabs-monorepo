@@ -50,14 +50,14 @@
 | WS-02 | Phase 1 | Complete |
 | WS-03 | Phase 1 | Complete |
 | WS-04 | Phase 1 | Complete |
-| STR-01 | Phase 2 | Pending |
+| STR-01 | Phase 2 | Complete |
 | STR-02 | Phase 1 | Complete |
-| STR-03 | Phase 2 | Pending |
-| STR-04 | Phase 2 | Pending |
-| STR-05 | Phase 2 | Pending |
+| STR-03 | Phase 2 | Complete |
+| STR-04 | Phase 2 | Complete |
+| STR-05 | Phase 2 | Complete |
 | DOC-01 | Phase 1 | Complete |
-| DOC-02 | Phase 2 | Pending |
-| DOC-03 | Phase 2 | Pending |
+| DOC-02 | Phase 2 | Complete |
+| DOC-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 12 total
