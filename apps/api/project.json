@@ -7,8 +7,17 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm --filter @haelabs/api run start:dev"
-      }
+        "command": "pnpm --filter @haelabs/api run start"
+      },
+      "configurations": {
+        "development": {
+          "command": "pnpm --filter @haelabs/api run start:dev"
+        },
+        "production": {
+          "command": "pnpm --filter @haelabs/api run start"
+        }
+      },
+      "defaultConfiguration": "development"
     },
     "build": {
       "executor": "nx:run-commands",
