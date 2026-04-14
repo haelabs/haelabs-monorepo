@@ -1,7 +1,7 @@
 # Executive Summary
 - Issue: Init vet-manage web app with Next.js — project structure, locale, common, util
 - Source: haelabs/openclaw-team#33
-- Promoted: 2026-04-14 10:05
+- Promoted: 2026-04-14 11:35
 - Handoff source: latest comment containing the handoff document
 
 ---
