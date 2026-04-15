@@ -48,7 +48,7 @@ src/
         └── response-envelope.ts # SuccessEnvelope and ErrorEnvelope type definitions
 ```
 
-## Route versioning convention
+## Routing and versioning conventions
 
 All routes inherit versioning from `main.ts`:
 
@@ -60,7 +60,9 @@ app.enableVersioning({
 });
 ```
 
-This results in all controllers automatically mounting under `/api/v1/*`. Controllers should not redeclare versioning in their decorators.
+This results in all controllers automatically mounting under `/api/v1/*`.
+
+Controllers can rely on global default versioning and may optionally declare `version: '1'` explicitly in the decorator when clarity is preferred.
 
 **Example:**
 ```typescript
@@ -68,7 +70,7 @@ This results in all controllers automatically mounting under `/api/v1/*`. Contro
 export class HealthController { }
 ```
 
-## Config and validation
+## Configuration pattern and validation
 
 ### Env validation and fail-fast behavior
 
@@ -136,7 +138,9 @@ The `HttpExceptionFilter` applies this globally for all exceptions. Validation e
 
 ### Contract
 
-`GET /api/v1/health` returns HTTP 200 with the following payload:
+The controller/service health payload contract remains:
+
+`GET /api/v1/health` returns HTTP 200 and, at the controller/service contract level, the following payload:
 
 ```json
 {
@@ -151,6 +155,26 @@ The `HttpExceptionFilter` applies this globally for all exceptions. Validation e
 ```
 
 This endpoint is **public** (no authentication required) and designed for deployment orchestrators to verify service health.
+
+At HTTP response level, successful responses are wrapped by `ResponseEnvelopeInterceptor`, so the wire response shape is:
+
+```json
+{
+  "data": {
+    "status": "ok",
+    "service": "haelabs-api",
+    "version": "1",
+    "database": {
+      "ready": false,
+      "status": "not_configured"
+    }
+  },
+  "meta": {
+    "timestamp": "2026-04-15T00:00:00.000Z",
+    "requestId": "optional-request-id"
+  }
+}
+```
 
 ### Database readiness structure
 
@@ -234,6 +258,16 @@ Credentials (`credentials: true`) are enabled by default for cookie/token-based 
 | External integrations | `src/infrastructure/{service}/` | Third-party API adapters |
 | Queues/jobs | `src/infrastructure/queues/` | Bull/BullMQ job processing |
 | DTOs/validation | Per-module `dto/` | Request/response DTOs with class-validator |
+
+### Onboarding path for new domain modules
+
+Use this checklist when adding a new `src/modules/{domain}` module:
+
+1. Create module folder with `*.module.ts`, controller(s), service(s), and DTOs.
+2. Register the new module in `AppModule` imports.
+3. Confirm routes resolve under `/api/v1` automatically.
+4. Reuse shared contracts (`common` filters/interceptors/logging) rather than duplicating logic.
+5. Add/update tests and ensure `pnpm nx lint api && pnpm --filter @haelabs/api run test` pass.
 
 ### Integration guidelines
 
