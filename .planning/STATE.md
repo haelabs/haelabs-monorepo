@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Milestone v1.0 shipped
-stopped_at: "Shipped phase 03 via PR #7"
-last_updated: "2026-04-15T09:17:31.783Z"
+stopped_at: Completed 01-01-PLAN.md
+last_updated: "2026-04-15T10:30:58.716Z"
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 4
-  percent: 100
+  total_phases: 2
+  completed_phases: 1
+  total_plans: 4
+  completed_plans: 3
+  percent: 75
 ---
 
 # STATE
@@ -36,6 +36,15 @@ phase_3: completed
 
 - [Phase 03] Keep `docs/api-foundation.md` as canonical backend foundation source and route entry docs to it.
 - [Phase 03] Document ownership boundaries at `apps/api/src/modules/*` without runtime behavior changes.
+- [Phase 01]: Keep locale source of truth in config.ts and normalize locale inputs before routing decisions.
+- [Phase 01]: Use NEXT_PUBLIC_ENABLE_AUTH_GUARD as a coarse toggle while keeping sign-in routes publicly reachable.
+- [Phase 01]: Default only missing public env values while rejecting invalid provided values to preserve fail-fast behavior.
+
+## Accumulated Context
+
+### Roadmap Evolution
+
+- Phase 1 added: Initialize petabase Next.js app foundation (structure, locale, common, util)
 
 ## Performance Metrics
 
@@ -43,11 +52,12 @@ phase_3: completed
 |---|---|---:|---:|---:|
 | 01 | 01 | 6m | 3 | 6 |
 | 01 | 02 | 324m | 3 | 8 |
+| 01 | 01 | 3 min | 2 | 4 |
 | 02 | 01 | 43m | 3 | 2 |
 | 03 | 01 | 2m | 3 | 3 |
 
 ## Session Continuity
 
-Last session: 2026-04-15T16:20:00.000Z
-Stopped at: Shipped phase 03 via PR #7
+Last session: 2026-04-15T10:30:58.714Z
+Stopped at: Completed 01-01-PLAN.md
 Resume file: None
