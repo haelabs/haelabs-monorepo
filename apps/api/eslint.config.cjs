@@ -8,7 +8,7 @@ module.exports = [
     languageOptions: {
       parser: tsEslintParser,
       parserOptions: {
-        project: './tsconfig.app.json',
+        project: './tsconfig.lint.json',
         tsconfigRootDir: __dirname,
         sourceType: 'module',
       },

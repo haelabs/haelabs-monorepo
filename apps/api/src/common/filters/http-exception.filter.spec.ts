@@ -10,7 +10,13 @@ type ResponseCapture = {
   body: unknown;
 };
 
-function runFilter(exception: unknown, requestId?: string): ResponseCapture {
+function runFilter(
+  exception: unknown,
+  options?: {
+    requestId?: string;
+    responseRequestId?: string;
+  },
+): ResponseCapture {
   const filter = new HttpExceptionFilter();
   const capture: ResponseCapture = {
     statusCode: 0,
@@ -19,10 +25,11 @@ function runFilter(exception: unknown, requestId?: string): ResponseCapture {
 
   const request = {
     originalUrl: '/api/v1/health',
-    header: (name: string) => (name.toLowerCase() === 'x-request-id' ? requestId : undefined),
+    header: (name: string) => (name.toLowerCase() === 'x-request-id' ? options?.requestId : undefined),
   };
 
   const response = {
+    getHeader: (name: string) => (name.toLowerCase() === 'x-request-id' ? options?.responseRequestId : undefined),
     status(code: number) {
       capture.statusCode = code;
       return this;
@@ -44,7 +51,9 @@ function runFilter(exception: unknown, requestId?: string): ResponseCapture {
 }
 
 test('exception filter emits normalized error envelope with request metadata', () => {
-  const capture = runFilter(new HttpException('Forbidden', HttpStatus.FORBIDDEN), 'req-123');
+  const capture = runFilter(new HttpException('Forbidden', HttpStatus.FORBIDDEN), {
+    requestId: 'req-123',
+  });
 
   assert.equal(capture.statusCode, HttpStatus.FORBIDDEN);
 
@@ -58,6 +67,18 @@ test('exception filter emits normalized error envelope with request metadata', (
   assert.equal(payload.meta.path, '/api/v1/health');
   assert.equal(payload.meta.requestId, 'req-123');
   assert.match(payload.meta.timestamp, /^\d{4}-\d{2}-\d{2}T/);
+});
+
+test('exception filter uses canonical request id from response header fallback', () => {
+  const capture = runFilter(new HttpException('Forbidden', HttpStatus.FORBIDDEN), {
+    responseRequestId: 'generated-req-1',
+  });
+
+  const payload = capture.body as {
+    meta: { requestId?: string };
+  };
+
+  assert.equal(payload.meta.requestId, 'generated-req-1');
 });
 
 test('validation-style payloads are sanitized and do not leak target/value', () => {

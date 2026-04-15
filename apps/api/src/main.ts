@@ -77,8 +77,17 @@ export async function bootstrap(): Promise<void> {
   });
 
   const port = config.get('PORT', { infer: true });
+  const routeBase = getRouteBase();
+  const environment = config.get('NODE_ENV', { infer: true });
   await app.listen(port);
-  logger.log(`api_started port=${port} base=${getRouteBase()} env=${config.get('NODE_ENV', { infer: true })}`);
+  logger
+    .child({
+      event: 'api_started',
+      port,
+      base: routeBase,
+      env: environment,
+    })
+    .info({ message: 'api_started' });
 }
 
 if (require.main === module) {
