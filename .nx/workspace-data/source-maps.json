@@ -140,7 +140,31 @@
       "apps/api/project.json",
       "nx/core/project-json"
     ],
+    "targets.serve.configurations": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
     "targets.serve.options.command": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.command": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.command": [
       "apps/api/project.json",
       "nx/core/project-json"
     ],

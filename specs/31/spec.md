@@ -1,6 +1,7 @@
 # Executive Summary
 - Issue: Init API project with NestJS — project structure, health check, common, util
 - Source: haelabs/openclaw-team#31
+- Status: Completed — v1.0 API foundation milestone shipped
 - Promoted: 2026-04-14 11:32
 - Handoff source: latest comment containing the handoff document
 
@@ -18,18 +19,18 @@ Why this matters:
 - provides deployment-ready health checks for local dev, CI, and Railway
 
 ### Requirements
-- [ ] Create `apps/api` inside the Nx monorepo
-- [ ] Configure TypeScript, ESLint, Prettier, and Nx integration consistently
-- [ ] Add environment/config handling with startup validation
-- [ ] Establish a clear source structure (`common`, `config`, `health`, `modules`, infrastructure/shared folders as needed)
-- [ ] Implement `/api/v1/health`
-- [ ] Return basic service status and database readiness signal or stub-compatible readiness structure
-- [ ] Add global request validation
-- [ ] Add consistent error envelope handling
-- [ ] Add base success response envelope strategy
-- [ ] Configure CORS
-- [ ] Add structured logging
-- [ ] Ensure `nx serve api` and `nx build api` work
+- [x] Create `apps/api` inside the Nx monorepo
+- [x] Configure TypeScript, ESLint, Prettier, and Nx integration consistently
+- [x] Add environment/config handling with startup validation
+- [x] Establish a clear source structure (`common`, `config`, `health`, `modules`, infrastructure/shared folders as needed)
+- [x] Implement `/api/v1/health`
+- [x] Return basic service status and database readiness signal or stub-compatible readiness structure
+- [x] Add global request validation
+- [x] Add consistent error envelope handling
+- [x] Add base success response envelope strategy
+- [x] Configure CORS
+- [x] Add structured logging
+- [x] Ensure `nx serve api` and `nx build api` work
 
 ### Technical Spec
 - **Architecture**

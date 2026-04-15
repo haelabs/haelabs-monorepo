@@ -10,7 +10,8 @@
     "ui_safety_gate": false,
     "skip_discuss": true,
     "auto_advance": true,
-    "discuss_mode": "assumptions"
+    "discuss_mode": "assumptions",
+    "_auto_chain_active": false
   },
   "git": {
     "branching_strategy": "phase",

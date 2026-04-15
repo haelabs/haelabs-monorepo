@@ -270,9 +270,17 @@
           "serve": {
             "executor": "nx:run-commands",
             "options": {
-              "command": "pnpm --filter @haelabs/api run start:dev"
+              "command": "pnpm --filter @haelabs/api run start"
             },
-            "configurations": {},
+            "configurations": {
+              "development": {
+                "command": "pnpm --filter @haelabs/api run start:dev"
+              },
+              "production": {
+                "command": "pnpm --filter @haelabs/api run start"
+              }
+            },
+            "defaultConfiguration": "development",
             "parallelism": true
           },
           "build": {
@@ -12252,5 +12260,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1776153673761
+  "computedAt": 1776249380027
 }

@@ -23,17 +23,17 @@ Important current naming direction from the latest approved comments:
 - internal/admin flows should stay inside `petabase` via route/path separation, not a separate `apps/admin`
 
 ### Requirements
-- [ ] Initialize Nx workspace with pnpm
-- [ ] Add baseline workspace files (`package.json`, `pnpm-workspace.yaml`, `nx.json`, base tsconfig)
-- [ ] Establish and document top-level folders: `apps/`, `packages/`, `docs/`, `tools/`
-- [ ] Configure workspace discovery for app and package directories
-- [ ] Add root scripts for build, lint, test, and typecheck
-- [ ] Define naming and placement conventions for apps and shared packages
-- [ ] Preserve clean dependency direction between apps and packages
-- [ ] Document how future apps/packages should be added
-- [ ] Keep the structure MVP-friendly and avoid unnecessary early complexity
-- [ ] Preserve clean paths for `apps/petabase` and `apps/api`
-- [ ] Do not create a separate `apps/admin` app
+- [x] Initialize Nx workspace with pnpm
+- [x] Add baseline workspace files (`package.json`, `pnpm-workspace.yaml`, `nx.json`, base tsconfig)
+- [x] Establish and document top-level folders: `apps/`, `packages/`, `docs/`, `tools/`
+- [x] Configure workspace discovery for app and package directories
+- [x] Add root scripts for build, lint, test, and typecheck
+- [x] Define naming and placement conventions for apps and shared packages
+- [x] Preserve clean dependency direction between apps and packages
+- [x] Document how future apps/packages should be added
+- [x] Keep the structure MVP-friendly and avoid unnecessary early complexity
+- [x] Preserve clean paths for `apps/petabase` and `apps/api`
+- [x] Do not create a separate `apps/admin` app
 
 ### Technical Spec
 - **Architecture**
