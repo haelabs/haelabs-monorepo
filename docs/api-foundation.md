@@ -348,3 +348,23 @@ Tests use Node.js native `node:test` framework and are located alongside source 
 ```bash
 pnpm --filter @haelabs/api run test
 ```
+
+## Contributor Verification Path
+
+Use this handoff flow after backend foundation changes to confirm contracts remain stable:
+
+1. Run automated checks:
+
+   ```bash
+   pnpm nx build api
+   pnpm nx lint api
+   pnpm --filter @haelabs/api run test
+   ```
+
+2. Carry-forward runtime checks from Phase 2 verification evidence:
+   - Start the API and call live `GET /api/v1/health` over HTTP; expect `200` and a success envelope containing `data.status=ok`.
+   - Call `GET /api/v1/health` **without auth** headers; expect `200` to confirm the endpoint remains public.
+
+3. Treat `.planning/phases/02-api-contracts-and-health-readiness/02-VERIFICATION.md` as the historical source for checks that remain runtime/manual.
+
+This section is procedural guidance only and does not introduce new runtime endpoint requirements.
