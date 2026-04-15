@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Milestone v1.0 shipped
-stopped_at: Completed 01-03-PLAN.md
-last_updated: "2026-04-15T10:35:52.534Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-04-15T10:42:21.862Z"
 progress:
   total_phases: 2
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 4
+  completed_plans: 5
   percent: 100
 ---
 
@@ -42,6 +42,8 @@ phase_3: completed
 - [Phase 01]: Normalize locale paths in one helper and keep hooks as thin wrappers over it.
 - [Phase 01]: Keep API client lightweight and typed while sourcing base URL only from validated env.
 - [Phase 01]: Keep internal/admin flows within petabase route groups and document extension boundaries explicitly.
+- [Phase 01]: Keep locale validation and dictionary resolution at app/[locale]/layout.tsx for deterministic locale boundaries.
+- [Phase 01]: Use withLocale-based shell navigation links so admin/dashboard/sign-in stay locale-safe inside petabase route ownership.
 
 ## Accumulated Context
 
@@ -53,6 +55,7 @@ phase_3: completed
 
 | Phase | Plan | Duration | Tasks | Files |
 |---|---|---:|---:|---:|
+| 01 | 02 | 6m | 2 | 4 |
 | 01 | 01 | 6m | 3 | 6 |
 | 01 | 02 | 324m | 3 | 8 |
 | 01 | 01 | 3 min | 2 | 4 |
@@ -62,6 +65,6 @@ phase_3: completed
 
 ## Session Continuity
 
-Last session: 2026-04-15T10:35:52.532Z
-Stopped at: Completed 01-03-PLAN.md
+Last session: 2026-04-15T10:42:08.063Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
