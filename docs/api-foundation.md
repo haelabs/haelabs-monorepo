@@ -4,6 +4,14 @@
 
 `apps/api` is the NestJS backend foundation for the monorepo. It establishes shared backend bootstrap conventions before domain logic is introduced.
 
+## Canonical Documentation Ownership
+
+This document is the **canonical backend foundation reference** for `apps/api`.
+
+- Link to this file from other entry-point docs (`README.md`, `docs/monorepo-foundation.md`) instead of duplicating backend conventions.
+- Keep backend runtime truths centralized here so future contributors do not inherit conflicting guidance.
+- Phase 3 is documentation-only handoff hardening and does **not** change runtime contracts.
+
 ## Runtime and routes
 
 - **Global prefix**: `/api`
@@ -245,6 +253,22 @@ CORS is controlled via the `CORS_ORIGINS` env variable (comma-separated origins)
 - Invalid origin format: Startup failure (configuration error)
 
 Credentials (`credentials: true`) are enabled by default for cookie/token-based auth in future phases.
+
+## Module Extension Ownership Boundaries
+
+Future backend feature modules belong under `apps/api/src/modules/*`.
+
+Ownership boundaries for contributions:
+
+- `apps/api/src/modules/*`: domain features (controllers, services, DTOs, domain-specific providers).
+- `apps/api/src/common/*`: shared cross-cutting behaviors used by multiple modules (global filters, interceptors, logging primitives, reusable guards/pipes when introduced).
+- `apps/api/src/config/*`: environment contracts, startup validation, and configuration wiring.
+- `apps/api/src/infrastructure/*`: adapters for external systems (database, queues, third-party integrations).
+- `apps/api/src/shared/*`: reusable contracts/types/helpers with no domain ownership.
+
+When adding module features, prefer extending modules first and only promote code to `common/` or `shared/` after reuse is proven.
+
+This ownership model preserves current backend contracts (`/api/v1`, fail-fast env validation, global `HttpExceptionFilter`, global `ResponseEnvelopeInterceptor`, request correlation via `x-request-id`, and public `GET /api/v1/health` behavior) without introducing runtime scope changes in this phase.
 
 ## Extension points
 
