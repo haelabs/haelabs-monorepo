@@ -22,1526 +22,1363 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".planning/phases/01/01-02-PLAN.md",
-        "hash": "8420576018254421857"
+        "file": ".github/workflows/ci.yml",
+        "hash": "4577883399848764730"
       },
       {
-        "file": ".opencode/get-shit-done/bin/lib/phase.cjs",
-        "hash": "333948840772338836"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-models-planning.md",
-        "hash": "13314772119990643656"
-      },
-      {
-        "file": ".planning/MILESTONES.md",
-        "hash": "3701187453841557324"
-      },
-      {
-        "file": ".opencode/agents/gsd-code-reviewer.md",
-        "hash": "3904379864721086001"
-      },
-      {
-        "file": ".opencode/command/gsd-note.md",
-        "hash": "6848465413136339329"
-      },
-      {
-        "file": ".opencode/agents/gsd-roadmapper.md",
-        "hash": "14288887093265269190"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/verification-overrides.md",
-        "hash": "15565087922186772344"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/tdd.md",
-        "hash": "11584202913220788191"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/state.cjs",
-        "hash": "9603970549122983063"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/summary.md",
-        "hash": "18121080600481336560"
-      },
-      {
-        "file": ".opencode/command/gsd-map-codebase.md",
-        "hash": "8215550890231716411"
+        "file": ".github/workflows/deploy-production.yml",
+        "hash": "14764329280361908032"
       },
       {
         "file": ".gitignore",
         "hash": "5791305126607339207"
       },
       {
-        "file": ".opencode/command/gsd-debug.md",
-        "hash": "1802476830469910643"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-models-verification.md",
-        "hash": "1856600665207664229"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/copilot-instructions.md",
-        "hash": "6440221833872090993"
-      },
-      {
-        "file": "README.md",
-        "hash": "9784702611523596278"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/quick.md",
-        "hash": "9528122629511112828"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research-project/FEATURES.md",
-        "hash": "4234882528725823053"
-      },
-      {
-        "file": ".opencode/hooks/gsd-validate-commit.sh",
-        "hash": "6013573178431380566"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-models-research.md",
-        "hash": "15528939906008549095"
-      },
-      {
-        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-VERIFICATION.md",
-        "hash": "1062852532329138635"
-      },
-      {
-        "file": "package.json",
-        "hash": "5262078858415835150"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/ui-brand.md",
-        "hash": "18191056818254381242"
-      },
-      {
-        "file": ".planning/STATE.md",
-        "hash": "3182914097256617063"
-      },
-      {
-        "file": ".opencode/command/gsd-add-backlog.md",
-        "hash": "17736720799578809526"
-      },
-      {
-        "file": ".opencode/command/gsd-review-backlog.md",
-        "hash": "18097944212026756541"
-      },
-      {
-        "file": ".opencode/agents/gsd-verifier.md",
-        "hash": "5104013887162378183"
-      },
-      {
-        "file": ".opencode/command/gsd-pr-branch.md",
-        "hash": "12464923078675619753"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/init.cjs",
-        "hash": "8200504014555852928"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/user-profiling.md",
-        "hash": "14002905234379877130"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/new-milestone.md",
-        "hash": "9712542854028598644"
-      },
-      {
-        "file": ".opencode/command/gsd-audit-fix.md",
-        "hash": "1382749707652812954"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/universal-anti-patterns.md",
-        "hash": "17222195836333286097"
-      },
-      {
-        "file": ".opencode/command/gsd-complete-milestone.md",
-        "hash": "5469535501559976943"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "9993735522181013675"
-      },
-      {
-        "file": ".opencode/command/gsd-session-report.md",
-        "hash": "14199843665098920600"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/cleanup.md",
-        "hash": "13405875090592976793"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/model-profiles.cjs",
-        "hash": "11100501886793974296"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/planner-gap-closure.md",
-        "hash": "6690842791789217889"
-      },
-      {
-        "file": ".planning/phases/01/01-02-SUMMARY.md",
-        "hash": "11849770268179826985"
-      },
-      {
-        "file": ".opencode/agents/gsd-codebase-mapper.md",
-        "hash": "9163028953024647680"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/add-todo.md",
-        "hash": "13372256864716966598"
+        "file": ".gsd-completed",
+        "hash": "16482915675007618294"
       },
       {
         "file": ".opencode/agents/gsd-advisor-researcher.md",
         "hash": "9857241446520192574"
       },
       {
-        "file": ".opencode/command/gsd-audit-milestone.md",
-        "hash": "16339999207376637854"
-      },
-      {
-        "file": ".opencode/command/gsd-check-todos.md",
-        "hash": "11186367872839546048"
-      },
-      {
-        "file": ".opencode/command/gsd-review.md",
-        "hash": "12652255880412574553"
-      },
-      {
-        "file": ".opencode/command/gsd-milestone-summary.md",
-        "hash": "7554007076046200627"
-      },
-      {
-        "file": ".opencode/hooks/gsd-prompt-guard.js",
-        "hash": "7468194113773954221"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/session-report.md",
-        "hash": "5441810020468663420"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/discuss-phase.md",
-        "hash": "18210766192599094020"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/add-tests.md",
-        "hash": "2090310755006023611"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/milestone-summary.md",
-        "hash": "9361945969570571178"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/explore.md",
-        "hash": "5101359679076833542"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/project.md",
-        "hash": "10931129066900843190"
-      },
-      {
         "file": ".opencode/agents/gsd-assumptions-analyzer.md",
         "hash": "14346272271664903316"
-      },
-      {
-        "file": ".opencode/command/gsd-join-discord.md",
-        "hash": "14979446947669841137"
-      },
-      {
-        "file": ".opencode/hooks/gsd-read-guard.js",
-        "hash": "2914942073584404021"
-      },
-      {
-        "file": ".opencode/command/gsd-new-workspace.md",
-        "hash": "9287793144969022362"
-      },
-      {
-        "file": ".opencode/command/gsd-plan-phase.md",
-        "hash": "12160590051829299392"
-      },
-      {
-        "file": ".opencode/agents/gsd-security-auditor.md",
-        "hash": "13507334118854328042"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/continue-here.md",
-        "hash": "6399487612262415558"
-      },
-      {
-        "file": ".opencode/agents/gsd-ui-researcher.md",
-        "hash": "18272003265822211223"
-      },
-      {
-        "file": "spec.md",
-        "hash": "6474492111729830191"
-      },
-      {
-        "file": ".opencode/command/gsd-plant-seed.md",
-        "hash": "18071327515962859331"
-      },
-      {
-        "file": ".opencode/command/gsd-new-project.md",
-        "hash": "6938747236741101674"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/secure-phase.md",
-        "hash": "13073605007429773055"
-      },
-      {
-        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-CONTEXT.md",
-        "hash": "12361189026514097510"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/few-shot-examples/plan-checker.md",
-        "hash": "5039731436040182263"
-      },
-      {
-        "file": ".opencode/agents/gsd-doc-writer.md",
-        "hash": "14496386260251613243"
-      },
-      {
-        "file": ".planning/milestones/v1.0-ROADMAP.md",
-        "hash": "1823748248458957267"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/planner-reviews.md",
-        "hash": "10894209509632215155"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2530239551698568359"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/concerns.md",
-        "hash": "26555400168606779"
-      },
-      {
-        "file": "nx.json",
-        "hash": "18099693732401140174"
-      },
-      {
-        "file": ".opencode/hooks/gsd-workflow-guard.js",
-        "hash": "17743473095758299912"
-      },
-      {
-        "file": ".planning/phases/01/01-01-SUMMARY.md",
-        "hash": "13476828267036609326"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/git-planning-commit.md",
-        "hash": "6053926294692391868"
-      },
-      {
-        "file": ".opencode/command/gsd-set-profile.md",
-        "hash": "294925578853210631"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/continuation-format.md",
-        "hash": "930062022674621412"
-      },
-      {
-        "file": "packages/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/DEBUG.md",
-        "hash": "11230199420227229886"
-      },
-      {
-        "file": "apps/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/verification-patterns.md",
-        "hash": "12991104595528269242"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/context.md",
-        "hash": "14344498488533743501"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/remove-phase.md",
-        "hash": "5178891119771764422"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/plan-phase.md",
-        "hash": "5289513953165878287"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/learnings.cjs",
-        "hash": "12105152529498755819"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/config.json",
-        "hash": "9947922923353864103"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/schema-detect.cjs",
-        "hash": "9111798273598997130"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/roadmap.cjs",
-        "hash": "2099130820474464126"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/conventions.md",
-        "hash": "12502380771010678128"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/few-shot-examples/verifier.md",
-        "hash": "18348813225142988452"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/commands.cjs",
-        "hash": "16291059003005676509"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-01-PLAN.md",
-        "hash": "7506978733747563754"
-      },
-      {
-        "file": ".opencode/command/gsd-plan-milestone-gaps.md",
-        "hash": "4504627404691722979"
-      },
-      {
-        "file": ".opencode/command/gsd-list-workspaces.md",
-        "hash": "2426247692656328720"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/milestone.md",
-        "hash": "18386810120281508951"
-      },
-      {
-        "file": ".opencode/command/gsd-ship.md",
-        "hash": "17654018872113133629"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "10329755439000037970"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/discuss-phase-power.md",
-        "hash": "12759107731805492283"
-      },
-      {
-        "file": ".opencode/gsd-file-manifest.json",
-        "hash": "1988235636961837884"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/ui-review.md",
-        "hash": "14120199735145588426"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/next.md",
-        "hash": "13280530943283113442"
-      },
-      {
-        "file": "docs/monorepo-foundation.md",
-        "hash": "8940735622983921439"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/ui-phase.md",
-        "hash": "14518544204911476469"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/questioning.md",
-        "hash": "6971127016373593162"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/gsd-tools.cjs",
-        "hash": "15551268397897999203"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/common-bug-patterns.md",
-        "hash": "11723043029168208048"
-      },
-      {
-        "file": ".planning/config.json",
-        "hash": "11403591764206540474"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-02-PLAN.md",
-        "hash": "10441617886636862334"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/context-budget.md",
-        "hash": "10883154378601460313"
-      },
-      {
-        "file": ".opencode/agents/gsd-plan-checker.md",
-        "hash": "6119144044874447362"
-      },
-      {
-        "file": ".opencode/command/gsd-import.md",
-        "hash": "11095338383395682527"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/milestone.cjs",
-        "hash": "4626679776662947550"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/git-integration.md",
-        "hash": "7357005710029699447"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/research-phase.md",
-        "hash": "87317197176941903"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/insert-phase.md",
-        "hash": "6858349655164280795"
-      },
-      {
-        "file": ".opencode/hooks/gsd-phase-boundary.sh",
-        "hash": "10218166022256134235"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/transition.md",
-        "hash": "1960780680132384340"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/help.md",
-        "hash": "3815470822791593031"
-      },
-      {
-        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-HUMAN-UAT.md",
-        "hash": "1241629215662222196"
-      },
-      {
-        "file": ".opencode/command/gsd-intel.md",
-        "hash": "8567697500719885595"
-      },
-      {
-        "file": "specs/32/spec.md",
-        "hash": "716780420377337194"
-      },
-      {
-        "file": ".opencode/command/gsd-health.md",
-        "hash": "17806139899396617496"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/model-profiles.md",
-        "hash": "9783184853600464179"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/new-project.md",
-        "hash": "16425087554033945304"
-      },
-      {
-        "file": ".planning/phases/01/01-CONTEXT.md",
-        "hash": "11507412372299969485"
-      },
-      {
-        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-CONTEXT.md",
-        "hash": "7809200446941772568"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/profile-output.cjs",
-        "hash": "8651934299596381652"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/phase-prompt.md",
-        "hash": "10027096431233306180"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/structure.md",
-        "hash": "971509251841381129"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/model-profile-resolution.md",
-        "hash": "10196352669851039551"
-      },
-      {
-        "file": ".opencode/command/gsd-list-phase-assumptions.md",
-        "hash": "7265151068749471570"
-      },
-      {
-        "file": ".opencode/agents/gsd-ui-auditor.md",
-        "hash": "15281331143892034500"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research-project/STACK.md",
-        "hash": "14758763753248227528"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "16236708781579308380"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/intel.cjs",
-        "hash": "18006829723238800290"
-      },
-      {
-        "file": ".planning/milestones/v1.0-REQUIREMENTS.md",
-        "hash": "1893373510281958463"
-      },
-      {
-        "file": ".opencode/command/gsd-undo.md",
-        "hash": "9365937954017800748"
-      },
-      {
-        "file": ".opencode/command/gsd-quick.md",
-        "hash": "6067161931469807629"
-      },
-      {
-        "file": ".opencode/command/gsd-resume-work.md",
-        "hash": "16219997018967453889"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/frontmatter.cjs",
-        "hash": "7368262740599223773"
-      },
-      {
-        "file": ".opencode/agents/gsd-intel-updater.md",
-        "hash": "9994875448687726798"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/agent-contracts.md",
-        "hash": "13146040283593613872"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/UI-SPEC.md",
-        "hash": "11152276109831533640"
-      },
-      {
-        "file": ".opencode/command/gsd-scan.md",
-        "hash": "16531606301526008776"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/execute-phase.md",
-        "hash": "5426234845780247011"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/stack.md",
-        "hash": "5844954887614585374"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/discovery.md",
-        "hash": "4441308577093534840"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research-project/PITFALLS.md",
-        "hash": "8230649294928358122"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/do.md",
-        "hash": "714841447240788227"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/stats.md",
-        "hash": "2376321361502661592"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/pause-work.md",
-        "hash": "2937148222866913899"
-      },
-      {
-        "file": ".opencode/command/gsd-discuss-phase.md",
-        "hash": "2114080371693454440"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/import.md",
-        "hash": "12653598745648616529"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/dev-preferences.md",
-        "hash": "15852897665120409073"
-      },
-      {
-        "file": ".opencode/command/gsd-verify-work.md",
-        "hash": "10018994266158784813"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/discovery-phase.md",
-        "hash": "2418225413474420881"
-      },
-      {
-        "file": ".opencode/agents/gsd-executor.md",
-        "hash": "10519279489587765917"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/review.md",
-        "hash": "10733668168294781773"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-partner.md",
-        "hash": "14808021688401766830"
-      },
-      {
-        "file": ".opencode/agents/gsd-phase-researcher.md",
-        "hash": "10563224956484012895"
-      },
-      {
-        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-VERIFICATION.md",
-        "hash": "9750752793752213145"
-      },
-      {
-        "file": ".opencode/command/gsd-audit-uat.md",
-        "hash": "5805489500785663560"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/roadmap.md",
-        "hash": "14553848411921589995"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/ship.md",
-        "hash": "9838242279492306102"
-      },
-      {
-        "file": ".opencode/command/gsd-progress.md",
-        "hash": "12546263312858546081"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research-project/SUMMARY.md",
-        "hash": "9229482294871104074"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/code-review.md",
-        "hash": "7004559167025703228"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/autonomous.md",
-        "hash": "1196853862672942820"
-      },
-      {
-        "file": "specs/28/spec.md",
-        "hash": "15552840871831894190"
-      },
-      {
-        "file": ".opencode/command/gsd-do.md",
-        "hash": "8310174647822001056"
-      },
-      {
-        "file": ".opencode/hooks/gsd-session-state.sh",
-        "hash": "9058534260706706282"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/progress.md",
-        "hash": "15669524172139979035"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/fast.md",
-        "hash": "6657667362404678809"
-      },
-      {
-        "file": "tools/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".opencode/command/gsd-validate-phase.md",
-        "hash": "12346827037358031783"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/verify.cjs",
-        "hash": "5442055712198318559"
-      },
-      {
-        "file": ".opencode/command/gsd-stats.md",
-        "hash": "13267288718880876306"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/manager.md",
-        "hash": "1187833660395730281"
-      },
-      {
-        "file": ".opencode/agents/gsd-user-profiler.md",
-        "hash": "11423992715450695945"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/artifact-types.md",
-        "hash": "18114787810520771458"
-      },
-      {
-        "file": ".opencode/agents/gsd-planner.md",
-        "hash": "14576427640007775725"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-03-PLAN.md",
-        "hash": "13494353144489707490"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/config.cjs",
-        "hash": "15394247905853005142"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/planner-subagent-prompt.md",
-        "hash": "10274414857498837351"
-      },
-      {
-        "file": "DESIGN.md",
-        "hash": "5385321441420609493"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/remove-workspace.md",
-        "hash": "4612995355221352832"
-      },
-      {
-        "file": ".opencode/command/gsd-docs-update.md",
-        "hash": "6740384110544074057"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/verification-report.md",
-        "hash": "469798823800636920"
-      },
-      {
-        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-01-PLAN.md",
-        "hash": "12418782734070458106"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/domain-probes.md",
-        "hash": "48176333603777195"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/requirements.md",
-        "hash": "1736974100405894497"
-      },
-      {
-        "file": ".opencode/get-shit-done/contexts/dev.md",
-        "hash": "12150293293117378004"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/SECURITY.md",
-        "hash": "11226154091327895917"
-      },
-      {
-        "file": ".opencode/hooks/gsd-context-monitor.js",
-        "hash": "9536146957706338753"
-      },
-      {
-        "file": "docs/petabase-foundation.md",
-        "hash": "9799983902735912201"
-      },
-      {
-        "file": ".opencode/command/gsd-next.md",
-        "hash": "13159981538579506305"
-      },
-      {
-        "file": ".opencode/command/gsd-reapply-patches.md",
-        "hash": "14750688240733967525"
-      },
-      {
-        "file": ".opencode/command/gsd-new-milestone.md",
-        "hash": "3895333721377638061"
-      },
-      {
-        "file": ".opencode/command/gsd-profile-user.md",
-        "hash": "3019144316952965893"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/complete-milestone.md",
-        "hash": "18137249674073701646"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/summary-complex.md",
-        "hash": "14098726135942596740"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/note.md",
-        "hash": "8782075983339498371"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/docs-update.md",
-        "hash": "3522992566993761693"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/debug-subagent-prompt.md",
-        "hash": "8645477351483641225"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/analyze-dependencies.md",
-        "hash": "1644647612191706510"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/planner-revision.md",
-        "hash": "13087809688408136548"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/testing.md",
-        "hash": "5496792569097676127"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/list-workspaces.md",
-        "hash": "16578861860117417273"
-      },
-      {
-        "file": ".planning/ROADMAP.md",
-        "hash": "2709484679527245706"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/settings.md",
-        "hash": "3173393947973849712"
-      },
-      {
-        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-01-SUMMARY.md",
-        "hash": "9672067246277147107"
-      },
-      {
-        "file": ".planning/phases/01/01-DISCUSSION-LOG.md",
-        "hash": "1551067569360224466"
-      },
-      {
-        "file": ".opencode/settings.json",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": ".opencode/command/gsd-cleanup.md",
-        "hash": "17918620948760864562"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/security.cjs",
-        "hash": "9357061095860409620"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/discussion-log.md",
-        "hash": "16747935864211040051"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/verify-work.md",
-        "hash": "5923733335967713957"
-      },
-      {
-        "file": ".opencode/command/gsd-code-review.md",
-        "hash": "1470491045882051115"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/pr-branch.md",
-        "hash": "1928235598851299994"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/new-workspace.md",
-        "hash": "17706465540822378131"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-models-execution.md",
-        "hash": "8736396054616177584"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/scan.md",
-        "hash": "12662469978309070075"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/checkpoints.md",
-        "hash": "5633076121155366421"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/workstream-flag.md",
-        "hash": "574874981792472432"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research.md",
-        "hash": "3344003076120189603"
-      },
-      {
-        "file": ".opencode/command/gsd-remove-workspace.md",
-        "hash": "18421542709493841548"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/gate-prompts.md",
-        "hash": "8054400282600105443"
-      },
-      {
-        "file": ".opencode/command/gsd-help.md",
-        "hash": "13918763970645462343"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/resume-project.md",
-        "hash": "12870478648089648860"
-      },
-      {
-        "file": ".opencode/command/gsd-analyze-dependencies.md",
-        "hash": "2356136880442169632"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/update.md",
-        "hash": "13969293711998815524"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/audit-milestone.md",
-        "hash": "1251333470617188375"
-      },
-      {
-        "file": ".opencode/command/gsd-ui-review.md",
-        "hash": "6548105935335584656"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/audit-fix.md",
-        "hash": "13614801653396063520"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/docs.cjs",
-        "hash": "16308031098216171246"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/user-setup.md",
-        "hash": "9843828532584304083"
-      },
-      {
-        "file": "docs/conventions.md",
-        "hash": "17113399218037682373"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/inbox.md",
-        "hash": "7077161285211829305"
-      },
-      {
-        "file": ".opencode/agents/gsd-research-synthesizer.md",
-        "hash": "10428021635806442094"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/decimal-phase-calculation.md",
-        "hash": "10704451451325137685"
-      },
-      {
-        "file": ".opencode/command/gsd-autonomous.md",
-        "hash": "14055430158962247236"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/discuss-phase-assumptions.md",
-        "hash": "14829553348496244368"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/phase-argument-parsing.md",
-        "hash": "1051812581392019393"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/forensics.md",
-        "hash": "6187237434071142800"
-      },
-      {
-        "file": ".opencode/agents/gsd-ui-checker.md",
-        "hash": "3242136348454914631"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/retrospective.md",
-        "hash": "1942141084737394843"
-      },
-      {
-        "file": ".opencode/agents/gsd-integration-checker.md",
-        "hash": "5362162128932285644"
       },
       {
         "file": ".opencode/agents/gsd-code-fixer.md",
         "hash": "11320793009524355995"
       },
       {
-        "file": ".planning/PROJECT.md",
-        "hash": "10881394347946472560"
+        "file": ".opencode/agents/gsd-code-reviewer.md",
+        "hash": "3904379864721086001"
       },
       {
-        "file": ".opencode/get-shit-done/references/planning-config.md",
-        "hash": "3462827665291882152"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/audit-uat.md",
-        "hash": "16443385750611448553"
-      },
-      {
-        "file": ".opencode/agents/gsd-nyquist-auditor.md",
-        "hash": "2561927586115954293"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/workstream.cjs",
-        "hash": "1733367962522896391"
-      },
-      {
-        "file": "docs/api-foundation.md",
-        "hash": "3868400923753435289"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/plan-milestone-gaps.md",
-        "hash": "5187420050347012021"
-      },
-      {
-        "file": ".opencode/agents/gsd-project-researcher.md",
-        "hash": "294822726200612339"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/plant-seed.md",
-        "hash": "2282725290541634423"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/map-codebase.md",
-        "hash": "13612025675869189154"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/gates.md",
-        "hash": "4288767915237202968"
-      },
-      {
-        "file": ".opencode/get-shit-done/contexts/review.md",
-        "hash": "851753978245187672"
-      },
-      {
-        "file": ".opencode/command/gsd-remove-phase.md",
-        "hash": "10552827487238221709"
-      },
-      {
-        "file": "tools/scripts/run-target.mjs",
-        "hash": "12976974314986713044"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/template.cjs",
-        "hash": "17097061837689942485"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/state.md",
-        "hash": "5988271637376520865"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/node-repair.md",
-        "hash": "4998560725393138274"
-      },
-      {
-        "file": "specs/33/spec.md",
-        "hash": "6646887070915332909"
-      },
-      {
-        "file": ".opencode/command/gsd-explore.md",
-        "hash": "5534188584215392744"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/core.cjs",
-        "hash": "6950844147938578360"
-      },
-      {
-        "file": ".opencode/command/gsd-execute-phase.md",
-        "hash": "16978521484673951439"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/user-profile.md",
-        "hash": "1137970116080894255"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/UAT.md",
-        "hash": "3723362415005156619"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/execute-plan.md",
-        "hash": "14493088952102321307"
-      },
-      {
-        "file": ".opencode/get-shit-done/references/thinking-models-debug.md",
-        "hash": "4363658419493646715"
-      },
-      {
-        "file": "specs/31/spec.md",
-        "hash": "5576906797576060216"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/claude-md.md",
-        "hash": "428301183407822590"
-      },
-      {
-        "file": ".opencode/command/gsd-manager.md",
-        "hash": "8728474872990721066"
-      },
-      {
-        "file": ".opencode/command/gsd-workstreams.md",
-        "hash": "937018264303166537"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/codebase/integrations.md",
-        "hash": "909211643596532962"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/profile-user.md",
-        "hash": "17437229058896619621"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/verify-phase.md",
-        "hash": "16189694975910978666"
-      },
-      {
-        "file": ".opencode/command/gsd-add-phase.md",
-        "hash": "2303909614002023925"
-      },
-      {
-        "file": ".opencode/command/gsd-secure-phase.md",
-        "hash": "15557967941938455625"
-      },
-      {
-        "file": ".opencode/agents/gsd-doc-verifier.md",
-        "hash": "1211355599733973407"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-01-SUMMARY.md",
-        "hash": "12134714323926952214"
-      },
-      {
-        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-01-SUMMARY.md",
-        "hash": "13255100447262105848"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/undo.md",
-        "hash": "17667531072410505795"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/profile-pipeline.cjs",
-        "hash": "7452849689897382592"
-      },
-      {
-        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-03-SUMMARY.md",
-        "hash": "13942641151996902299"
-      },
-      {
-        "file": ".opencode/command/gsd-code-review-fix.md",
-        "hash": "3506820939648786954"
-      },
-      {
-        "file": ".opencode/command/gsd-add-todo.md",
-        "hash": "4058074750894965034"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/validate-phase.md",
-        "hash": "16947445266312477387"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/research-project/ARCHITECTURE.md",
-        "hash": "552163229792678630"
-      },
-      {
-        "file": ".opencode/command/gsd-fast.md",
-        "hash": "12569460754840599309"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/milestone-archive.md",
-        "hash": "6982118899506082935"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/diagnose-issues.md",
-        "hash": "12613222198503087057"
-      },
-      {
-        "file": ".opencode/command/gsd-update.md",
-        "hash": "6097151074883105663"
-      },
-      {
-        "file": ".opencode/get-shit-done/contexts/research.md",
-        "hash": "8190276505197638060"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/check-todos.md",
-        "hash": "9740197960551637365"
-      },
-      {
-        "file": ".opencode/command/gsd-settings.md",
-        "hash": "9582192440661911926"
-      },
-      {
-        "file": ".opencode/command/gsd-insert-phase.md",
-        "hash": "3958226831482156755"
-      },
-      {
-        "file": ".opencode/command/gsd-pause-work.md",
-        "hash": "7209724149293505051"
-      },
-      {
-        "file": ".opencode/get-shit-done/bin/lib/uat.cjs",
-        "hash": "14693093354748705883"
-      },
-      {
-        "file": ".opencode/get-shit-done/templates/summary-standard.md",
-        "hash": "15859502505283100716"
-      },
-      {
-        "file": ".opencode/hooks/gsd-check-update.js",
-        "hash": "12596992042954013356"
-      },
-      {
-        "file": ".opencode/command/gsd-thread.md",
-        "hash": "165480280006094578"
-      },
-      {
-        "file": ".gsd-completed",
-        "hash": "16482915675007618294"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/health.md",
-        "hash": "4469760165925862836"
-      },
-      {
-        "file": ".opencode/command/gsd-ui-phase.md",
-        "hash": "7268143943825603922"
-      },
-      {
-        "file": ".opencode/get-shit-done/workflows/code-review-fix.md",
-        "hash": "304154097445018685"
+        "file": ".opencode/agents/gsd-codebase-mapper.md",
+        "hash": "9163028953024647680"
       },
       {
         "file": ".opencode/agents/gsd-debugger.md",
         "hash": "14068237274495744576"
       },
       {
-        "file": "AGENTS.md",
-        "hash": "10481453740685675094"
+        "file": ".opencode/agents/gsd-doc-verifier.md",
+        "hash": "1211355599733973407"
+      },
+      {
+        "file": ".opencode/agents/gsd-doc-writer.md",
+        "hash": "14496386260251613243"
+      },
+      {
+        "file": ".opencode/agents/gsd-executor.md",
+        "hash": "10519279489587765917"
+      },
+      {
+        "file": ".opencode/agents/gsd-integration-checker.md",
+        "hash": "5362162128932285644"
+      },
+      {
+        "file": ".opencode/agents/gsd-intel-updater.md",
+        "hash": "9994875448687726798"
+      },
+      {
+        "file": ".opencode/agents/gsd-nyquist-auditor.md",
+        "hash": "2561927586115954293"
+      },
+      {
+        "file": ".opencode/agents/gsd-phase-researcher.md",
+        "hash": "10563224956484012895"
+      },
+      {
+        "file": ".opencode/agents/gsd-plan-checker.md",
+        "hash": "6119144044874447362"
+      },
+      {
+        "file": ".opencode/agents/gsd-planner.md",
+        "hash": "14576427640007775725"
+      },
+      {
+        "file": ".opencode/agents/gsd-project-researcher.md",
+        "hash": "294822726200612339"
+      },
+      {
+        "file": ".opencode/agents/gsd-research-synthesizer.md",
+        "hash": "10428021635806442094"
+      },
+      {
+        "file": ".opencode/agents/gsd-roadmapper.md",
+        "hash": "14288887093265269190"
+      },
+      {
+        "file": ".opencode/agents/gsd-security-auditor.md",
+        "hash": "13507334118854328042"
+      },
+      {
+        "file": ".opencode/agents/gsd-ui-auditor.md",
+        "hash": "15281331143892034500"
+      },
+      {
+        "file": ".opencode/agents/gsd-ui-checker.md",
+        "hash": "3242136348454914631"
+      },
+      {
+        "file": ".opencode/agents/gsd-ui-researcher.md",
+        "hash": "18272003265822211223"
+      },
+      {
+        "file": ".opencode/agents/gsd-user-profiler.md",
+        "hash": "11423992715450695945"
+      },
+      {
+        "file": ".opencode/agents/gsd-verifier.md",
+        "hash": "5104013887162378183"
+      },
+      {
+        "file": ".opencode/command/gsd-add-backlog.md",
+        "hash": "17736720799578809526"
+      },
+      {
+        "file": ".opencode/command/gsd-add-phase.md",
+        "hash": "2303909614002023925"
       },
       {
         "file": ".opencode/command/gsd-add-tests.md",
         "hash": "5742360441691478004"
       },
       {
-        "file": ".opencode/get-shit-done/templates/codebase/architecture.md",
-        "hash": "14422259304399683061"
+        "file": ".opencode/command/gsd-add-todo.md",
+        "hash": "4058074750894965034"
       },
       {
-        "file": ".opencode/opencode.json",
-        "hash": "10910678903357603830"
+        "file": ".opencode/command/gsd-analyze-dependencies.md",
+        "hash": "2356136880442169632"
       },
       {
-        "file": ".opencode/get-shit-done/VERSION",
-        "hash": "5878997511686181220"
+        "file": ".opencode/command/gsd-audit-fix.md",
+        "hash": "1382749707652812954"
       },
       {
-        "file": ".opencode/get-shit-done/templates/VALIDATION.md",
-        "hash": "4803898983532863608"
+        "file": ".opencode/command/gsd-audit-milestone.md",
+        "hash": "16339999207376637854"
+      },
+      {
+        "file": ".opencode/command/gsd-audit-uat.md",
+        "hash": "5805489500785663560"
+      },
+      {
+        "file": ".opencode/command/gsd-autonomous.md",
+        "hash": "14055430158962247236"
+      },
+      {
+        "file": ".opencode/command/gsd-check-todos.md",
+        "hash": "11186367872839546048"
+      },
+      {
+        "file": ".opencode/command/gsd-cleanup.md",
+        "hash": "17918620948760864562"
+      },
+      {
+        "file": ".opencode/command/gsd-code-review-fix.md",
+        "hash": "3506820939648786954"
+      },
+      {
+        "file": ".opencode/command/gsd-code-review.md",
+        "hash": "1470491045882051115"
+      },
+      {
+        "file": ".opencode/command/gsd-complete-milestone.md",
+        "hash": "5469535501559976943"
+      },
+      {
+        "file": ".opencode/command/gsd-debug.md",
+        "hash": "1802476830469910643"
+      },
+      {
+        "file": ".opencode/command/gsd-discuss-phase.md",
+        "hash": "2114080371693454440"
+      },
+      {
+        "file": ".opencode/command/gsd-do.md",
+        "hash": "8310174647822001056"
+      },
+      {
+        "file": ".opencode/command/gsd-docs-update.md",
+        "hash": "6740384110544074057"
+      },
+      {
+        "file": ".opencode/command/gsd-execute-phase.md",
+        "hash": "16978521484673951439"
+      },
+      {
+        "file": ".opencode/command/gsd-explore.md",
+        "hash": "5534188584215392744"
+      },
+      {
+        "file": ".opencode/command/gsd-fast.md",
+        "hash": "12569460754840599309"
       },
       {
         "file": ".opencode/command/gsd-forensics.md",
         "hash": "12783961185646863348"
       },
       {
-        "file": ".opencode/get-shit-done/workflows/add-phase.md",
-        "hash": "6241286742948688502"
+        "file": ".opencode/command/gsd-health.md",
+        "hash": "17806139899396617496"
       },
       {
-        "file": ".opencode/get-shit-done/templates/summary-minimal.md",
-        "hash": "4940754702887546238"
+        "file": ".opencode/command/gsd-help.md",
+        "hash": "13918763970645462343"
       },
       {
-        "file": ".opencode/hooks/gsd-statusline.js",
-        "hash": "12293438126506485514"
+        "file": ".opencode/command/gsd-import.md",
+        "hash": "11095338383395682527"
+      },
+      {
+        "file": ".opencode/command/gsd-insert-phase.md",
+        "hash": "3958226831482156755"
+      },
+      {
+        "file": ".opencode/command/gsd-intel.md",
+        "hash": "8567697500719885595"
+      },
+      {
+        "file": ".opencode/command/gsd-join-discord.md",
+        "hash": "14979446947669841137"
+      },
+      {
+        "file": ".opencode/command/gsd-list-phase-assumptions.md",
+        "hash": "7265151068749471570"
+      },
+      {
+        "file": ".opencode/command/gsd-list-workspaces.md",
+        "hash": "2426247692656328720"
+      },
+      {
+        "file": ".opencode/command/gsd-manager.md",
+        "hash": "8728474872990721066"
+      },
+      {
+        "file": ".opencode/command/gsd-map-codebase.md",
+        "hash": "8215550890231716411"
+      },
+      {
+        "file": ".opencode/command/gsd-milestone-summary.md",
+        "hash": "7554007076046200627"
+      },
+      {
+        "file": ".opencode/command/gsd-new-milestone.md",
+        "hash": "3895333721377638061"
+      },
+      {
+        "file": ".opencode/command/gsd-new-project.md",
+        "hash": "6938747236741101674"
+      },
+      {
+        "file": ".opencode/command/gsd-new-workspace.md",
+        "hash": "9287793144969022362"
+      },
+      {
+        "file": ".opencode/command/gsd-next.md",
+        "hash": "13159981538579506305"
+      },
+      {
+        "file": ".opencode/command/gsd-note.md",
+        "hash": "6848465413136339329"
+      },
+      {
+        "file": ".opencode/command/gsd-pause-work.md",
+        "hash": "7209724149293505051"
+      },
+      {
+        "file": ".opencode/command/gsd-plan-milestone-gaps.md",
+        "hash": "4504627404691722979"
+      },
+      {
+        "file": ".opencode/command/gsd-plan-phase.md",
+        "hash": "12160590051829299392"
+      },
+      {
+        "file": ".opencode/command/gsd-plant-seed.md",
+        "hash": "18071327515962859331"
+      },
+      {
+        "file": ".opencode/command/gsd-pr-branch.md",
+        "hash": "12464923078675619753"
+      },
+      {
+        "file": ".opencode/command/gsd-profile-user.md",
+        "hash": "3019144316952965893"
+      },
+      {
+        "file": ".opencode/command/gsd-progress.md",
+        "hash": "12546263312858546081"
+      },
+      {
+        "file": ".opencode/command/gsd-quick.md",
+        "hash": "6067161931469807629"
+      },
+      {
+        "file": ".opencode/command/gsd-reapply-patches.md",
+        "hash": "14750688240733967525"
+      },
+      {
+        "file": ".opencode/command/gsd-remove-phase.md",
+        "hash": "10552827487238221709"
+      },
+      {
+        "file": ".opencode/command/gsd-remove-workspace.md",
+        "hash": "18421542709493841548"
       },
       {
         "file": ".opencode/command/gsd-research-phase.md",
         "hash": "2820150426282886332"
       },
       {
+        "file": ".opencode/command/gsd-resume-work.md",
+        "hash": "16219997018967453889"
+      },
+      {
+        "file": ".opencode/command/gsd-review-backlog.md",
+        "hash": "18097944212026756541"
+      },
+      {
+        "file": ".opencode/command/gsd-review.md",
+        "hash": "12652255880412574553"
+      },
+      {
+        "file": ".opencode/command/gsd-scan.md",
+        "hash": "16531606301526008776"
+      },
+      {
+        "file": ".opencode/command/gsd-secure-phase.md",
+        "hash": "15557967941938455625"
+      },
+      {
+        "file": ".opencode/command/gsd-session-report.md",
+        "hash": "14199843665098920600"
+      },
+      {
+        "file": ".opencode/command/gsd-set-profile.md",
+        "hash": "294925578853210631"
+      },
+      {
+        "file": ".opencode/command/gsd-settings.md",
+        "hash": "9582192440661911926"
+      },
+      {
+        "file": ".opencode/command/gsd-ship.md",
+        "hash": "17654018872113133629"
+      },
+      {
+        "file": ".opencode/command/gsd-stats.md",
+        "hash": "13267288718880876306"
+      },
+      {
+        "file": ".opencode/command/gsd-thread.md",
+        "hash": "165480280006094578"
+      },
+      {
+        "file": ".opencode/command/gsd-ui-phase.md",
+        "hash": "7268143943825603922"
+      },
+      {
+        "file": ".opencode/command/gsd-ui-review.md",
+        "hash": "6548105935335584656"
+      },
+      {
+        "file": ".opencode/command/gsd-undo.md",
+        "hash": "9365937954017800748"
+      },
+      {
+        "file": ".opencode/command/gsd-update.md",
+        "hash": "6097151074883105663"
+      },
+      {
+        "file": ".opencode/command/gsd-validate-phase.md",
+        "hash": "12346827037358031783"
+      },
+      {
+        "file": ".opencode/command/gsd-verify-work.md",
+        "hash": "10018994266158784813"
+      },
+      {
+        "file": ".opencode/command/gsd-workstreams.md",
+        "hash": "937018264303166537"
+      },
+      {
+        "file": ".opencode/get-shit-done/VERSION",
+        "hash": "5878997511686181220"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/gsd-tools.cjs",
+        "hash": "15551268397897999203"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/commands.cjs",
+        "hash": "16291059003005676509"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/config.cjs",
+        "hash": "15394247905853005142"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/core.cjs",
+        "hash": "6950844147938578360"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/docs.cjs",
+        "hash": "16308031098216171246"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/frontmatter.cjs",
+        "hash": "7368262740599223773"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/init.cjs",
+        "hash": "8200504014555852928"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/intel.cjs",
+        "hash": "18006829723238800290"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/learnings.cjs",
+        "hash": "12105152529498755819"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/milestone.cjs",
+        "hash": "4626679776662947550"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/model-profiles.cjs",
+        "hash": "11100501886793974296"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/phase.cjs",
+        "hash": "333948840772338836"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/profile-output.cjs",
+        "hash": "8651934299596381652"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/profile-pipeline.cjs",
+        "hash": "7452849689897382592"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/roadmap.cjs",
+        "hash": "2099130820474464126"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/schema-detect.cjs",
+        "hash": "9111798273598997130"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/security.cjs",
+        "hash": "9357061095860409620"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/state.cjs",
+        "hash": "9603970549122983063"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/template.cjs",
+        "hash": "17097061837689942485"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/uat.cjs",
+        "hash": "14693093354748705883"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/verify.cjs",
+        "hash": "5442055712198318559"
+      },
+      {
+        "file": ".opencode/get-shit-done/bin/lib/workstream.cjs",
+        "hash": "1733367962522896391"
+      },
+      {
+        "file": ".opencode/get-shit-done/contexts/dev.md",
+        "hash": "12150293293117378004"
+      },
+      {
+        "file": ".opencode/get-shit-done/contexts/research.md",
+        "hash": "8190276505197638060"
+      },
+      {
+        "file": ".opencode/get-shit-done/contexts/review.md",
+        "hash": "851753978245187672"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/agent-contracts.md",
+        "hash": "13146040283593613872"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/artifact-types.md",
+        "hash": "18114787810520771458"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/checkpoints.md",
+        "hash": "5633076121155366421"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/common-bug-patterns.md",
+        "hash": "11723043029168208048"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/context-budget.md",
+        "hash": "10883154378601460313"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/continuation-format.md",
+        "hash": "930062022674621412"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/decimal-phase-calculation.md",
+        "hash": "10704451451325137685"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/domain-probes.md",
+        "hash": "48176333603777195"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/few-shot-examples/plan-checker.md",
+        "hash": "5039731436040182263"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/few-shot-examples/verifier.md",
+        "hash": "18348813225142988452"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/gate-prompts.md",
+        "hash": "8054400282600105443"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/gates.md",
+        "hash": "4288767915237202968"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/git-integration.md",
+        "hash": "7357005710029699447"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/git-planning-commit.md",
+        "hash": "6053926294692391868"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/model-profile-resolution.md",
+        "hash": "10196352669851039551"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/model-profiles.md",
+        "hash": "9783184853600464179"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/phase-argument-parsing.md",
+        "hash": "1051812581392019393"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/planner-gap-closure.md",
+        "hash": "6690842791789217889"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/planner-reviews.md",
+        "hash": "10894209509632215155"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/planner-revision.md",
+        "hash": "13087809688408136548"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/planning-config.md",
+        "hash": "3462827665291882152"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/questioning.md",
+        "hash": "6971127016373593162"
+      },
+      {
         "file": ".opencode/get-shit-done/references/revision-loop.md",
         "hash": "4701402252230511877"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/tdd.md",
+        "hash": "11584202913220788191"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-models-debug.md",
+        "hash": "4363658419493646715"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-models-execution.md",
+        "hash": "8736396054616177584"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-models-planning.md",
+        "hash": "13314772119990643656"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-models-research.md",
+        "hash": "15528939906008549095"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-models-verification.md",
+        "hash": "1856600665207664229"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/thinking-partner.md",
+        "hash": "14808021688401766830"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/ui-brand.md",
+        "hash": "18191056818254381242"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/universal-anti-patterns.md",
+        "hash": "17222195836333286097"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/user-profiling.md",
+        "hash": "14002905234379877130"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/verification-overrides.md",
+        "hash": "15565087922186772344"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/verification-patterns.md",
+        "hash": "12991104595528269242"
+      },
+      {
+        "file": ".opencode/get-shit-done/references/workstream-flag.md",
+        "hash": "574874981792472432"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/DEBUG.md",
+        "hash": "11230199420227229886"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/SECURITY.md",
+        "hash": "11226154091327895917"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/UAT.md",
+        "hash": "3723362415005156619"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/UI-SPEC.md",
+        "hash": "11152276109831533640"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/VALIDATION.md",
+        "hash": "4803898983532863608"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/claude-md.md",
+        "hash": "428301183407822590"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/architecture.md",
+        "hash": "14422259304399683061"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/concerns.md",
+        "hash": "26555400168606779"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/conventions.md",
+        "hash": "12502380771010678128"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/integrations.md",
+        "hash": "909211643596532962"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/stack.md",
+        "hash": "5844954887614585374"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/structure.md",
+        "hash": "971509251841381129"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/codebase/testing.md",
+        "hash": "5496792569097676127"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/config.json",
+        "hash": "9947922923353864103"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/context.md",
+        "hash": "14344498488533743501"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/continue-here.md",
+        "hash": "6399487612262415558"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/copilot-instructions.md",
+        "hash": "6440221833872090993"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/debug-subagent-prompt.md",
+        "hash": "8645477351483641225"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/dev-preferences.md",
+        "hash": "15852897665120409073"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/discovery.md",
+        "hash": "4441308577093534840"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/discussion-log.md",
+        "hash": "16747935864211040051"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/milestone-archive.md",
+        "hash": "6982118899506082935"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/milestone.md",
+        "hash": "18386810120281508951"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/phase-prompt.md",
+        "hash": "10027096431233306180"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/planner-subagent-prompt.md",
+        "hash": "10274414857498837351"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/project.md",
+        "hash": "10931129066900843190"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/requirements.md",
+        "hash": "1736974100405894497"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research-project/ARCHITECTURE.md",
+        "hash": "552163229792678630"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research-project/FEATURES.md",
+        "hash": "4234882528725823053"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research-project/PITFALLS.md",
+        "hash": "8230649294928358122"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research-project/STACK.md",
+        "hash": "14758763753248227528"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research-project/SUMMARY.md",
+        "hash": "9229482294871104074"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/research.md",
+        "hash": "3344003076120189603"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/retrospective.md",
+        "hash": "1942141084737394843"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/roadmap.md",
+        "hash": "14553848411921589995"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/state.md",
+        "hash": "5988271637376520865"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/summary-complex.md",
+        "hash": "14098726135942596740"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/summary-minimal.md",
+        "hash": "4940754702887546238"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/summary-standard.md",
+        "hash": "15859502505283100716"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/summary.md",
+        "hash": "18121080600481336560"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/user-profile.md",
+        "hash": "1137970116080894255"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/user-setup.md",
+        "hash": "9843828532584304083"
+      },
+      {
+        "file": ".opencode/get-shit-done/templates/verification-report.md",
+        "hash": "469798823800636920"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/add-phase.md",
+        "hash": "6241286742948688502"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/add-tests.md",
+        "hash": "2090310755006023611"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/add-todo.md",
+        "hash": "13372256864716966598"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/analyze-dependencies.md",
+        "hash": "1644647612191706510"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/audit-fix.md",
+        "hash": "13614801653396063520"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/audit-milestone.md",
+        "hash": "1251333470617188375"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/audit-uat.md",
+        "hash": "16443385750611448553"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/autonomous.md",
+        "hash": "1196853862672942820"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/check-todos.md",
+        "hash": "9740197960551637365"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/cleanup.md",
+        "hash": "13405875090592976793"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/code-review-fix.md",
+        "hash": "304154097445018685"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/code-review.md",
+        "hash": "7004559167025703228"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/complete-milestone.md",
+        "hash": "18137249674073701646"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/diagnose-issues.md",
+        "hash": "12613222198503087057"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/discovery-phase.md",
+        "hash": "2418225413474420881"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/discuss-phase-assumptions.md",
+        "hash": "14829553348496244368"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/discuss-phase-power.md",
+        "hash": "12759107731805492283"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/discuss-phase.md",
+        "hash": "18210766192599094020"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/do.md",
+        "hash": "714841447240788227"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/docs-update.md",
+        "hash": "3522992566993761693"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/execute-phase.md",
+        "hash": "5426234845780247011"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/execute-plan.md",
+        "hash": "14493088952102321307"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/explore.md",
+        "hash": "5101359679076833542"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/fast.md",
+        "hash": "6657667362404678809"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/forensics.md",
+        "hash": "6187237434071142800"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/health.md",
+        "hash": "4469760165925862836"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/help.md",
+        "hash": "3815470822791593031"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/import.md",
+        "hash": "12653598745648616529"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/inbox.md",
+        "hash": "7077161285211829305"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/insert-phase.md",
+        "hash": "6858349655164280795"
       },
       {
         "file": ".opencode/get-shit-done/workflows/list-phase-assumptions.md",
         "hash": "14806578395855371608"
       },
       {
+        "file": ".opencode/get-shit-done/workflows/list-workspaces.md",
+        "hash": "16578861860117417273"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/manager.md",
+        "hash": "1187833660395730281"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/map-codebase.md",
+        "hash": "13612025675869189154"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/milestone-summary.md",
+        "hash": "9361945969570571178"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/new-milestone.md",
+        "hash": "9712542854028598644"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/new-project.md",
+        "hash": "16425087554033945304"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/new-workspace.md",
+        "hash": "17706465540822378131"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/next.md",
+        "hash": "13280530943283113442"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/node-repair.md",
+        "hash": "4998560725393138274"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/note.md",
+        "hash": "8782075983339498371"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/pause-work.md",
+        "hash": "2937148222866913899"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/plan-milestone-gaps.md",
+        "hash": "5187420050347012021"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/plan-phase.md",
+        "hash": "5289513953165878287"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/plant-seed.md",
+        "hash": "2282725290541634423"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/pr-branch.md",
+        "hash": "1928235598851299994"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/profile-user.md",
+        "hash": "17437229058896619621"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/progress.md",
+        "hash": "15669524172139979035"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/quick.md",
+        "hash": "9528122629511112828"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/remove-phase.md",
+        "hash": "5178891119771764422"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/remove-workspace.md",
+        "hash": "4612995355221352832"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/research-phase.md",
+        "hash": "87317197176941903"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/resume-project.md",
+        "hash": "12870478648089648860"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/review.md",
+        "hash": "10733668168294781773"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/scan.md",
+        "hash": "12662469978309070075"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/secure-phase.md",
+        "hash": "13073605007429773055"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/session-report.md",
+        "hash": "5441810020468663420"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/settings.md",
+        "hash": "3173393947973849712"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/ship.md",
+        "hash": "9838242279492306102"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/stats.md",
+        "hash": "2376321361502661592"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/transition.md",
+        "hash": "1960780680132384340"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/ui-phase.md",
+        "hash": "14518544204911476469"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/ui-review.md",
+        "hash": "14120199735145588426"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/undo.md",
+        "hash": "17667531072410505795"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/update.md",
+        "hash": "13969293711998815524"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/validate-phase.md",
+        "hash": "16947445266312477387"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/verify-phase.md",
+        "hash": "16189694975910978666"
+      },
+      {
+        "file": ".opencode/get-shit-done/workflows/verify-work.md",
+        "hash": "5923733335967713957"
+      },
+      {
+        "file": ".opencode/gsd-file-manifest.json",
+        "hash": "1988235636961837884"
+      },
+      {
+        "file": ".opencode/hooks/gsd-check-update.js",
+        "hash": "12596992042954013356"
+      },
+      {
+        "file": ".opencode/hooks/gsd-context-monitor.js",
+        "hash": "9536146957706338753"
+      },
+      {
+        "file": ".opencode/hooks/gsd-phase-boundary.sh",
+        "hash": "10218166022256134235"
+      },
+      {
+        "file": ".opencode/hooks/gsd-prompt-guard.js",
+        "hash": "7468194113773954221"
+      },
+      {
+        "file": ".opencode/hooks/gsd-read-guard.js",
+        "hash": "2914942073584404021"
+      },
+      {
+        "file": ".opencode/hooks/gsd-session-state.sh",
+        "hash": "9058534260706706282"
+      },
+      {
+        "file": ".opencode/hooks/gsd-statusline.js",
+        "hash": "12293438126506485514"
+      },
+      {
+        "file": ".opencode/hooks/gsd-validate-commit.sh",
+        "hash": "6013573178431380566"
+      },
+      {
+        "file": ".opencode/hooks/gsd-workflow-guard.js",
+        "hash": "17743473095758299912"
+      },
+      {
+        "file": ".opencode/opencode.json",
+        "hash": "10910678903357603830"
+      },
+      {
+        "file": ".opencode/settings.json",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": ".planning/MILESTONES.md",
+        "hash": "3701187453841557324"
+      },
+      {
+        "file": ".planning/PROJECT.md",
+        "hash": "10881394347946472560"
+      },
+      {
+        "file": ".planning/REQUIREMENTS.md",
+        "hash": "13241489981136353396"
+      },
+      {
+        "file": ".planning/ROADMAP.md",
+        "hash": "16549591671282522353"
+      },
+      {
+        "file": ".planning/STATE.md",
+        "hash": "1294867680201288218"
+      },
+      {
+        "file": ".planning/config.json",
+        "hash": "11403591764206540474"
+      },
+      {
+        "file": ".planning/milestones/v1.0-REQUIREMENTS.md",
+        "hash": "1893373510281958463"
+      },
+      {
+        "file": ".planning/milestones/v1.0-ROADMAP.md",
+        "hash": "1823748248458957267"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-01-PLAN.md",
+        "hash": "7506978733747563754"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-01-SUMMARY.md",
+        "hash": "12134714323926952214"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-02-PLAN.md",
+        "hash": "10441617886636862334"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-02-SUMMARY.md",
+        "hash": "10113831896077343379"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-03-PLAN.md",
+        "hash": "13494353144489707490"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-03-SUMMARY.md",
+        "hash": "14452419814520113295"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-04-PLAN.md",
+        "hash": "9783567880047037726"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-04-SUMMARY.md",
+        "hash": "17041755516675780802"
+      },
+      {
+        "file": ".planning/phases/01-initialize-petabase-next-js-app-foundation-structure-locale-/01-VERIFICATION.md",
+        "hash": "17471956257620592363"
+      },
+      {
+        "file": ".planning/phases/01/01-01-SUMMARY.md",
+        "hash": "13476828267036609326"
+      },
+      {
+        "file": ".planning/phases/01/01-02-PLAN.md",
+        "hash": "8420576018254421857"
+      },
+      {
+        "file": ".planning/phases/01/01-02-SUMMARY.md",
+        "hash": "11849770268179826985"
+      },
+      {
+        "file": ".planning/phases/01/01-CONTEXT.md",
+        "hash": "11507412372299969485"
+      },
+      {
+        "file": ".planning/phases/01/01-DISCUSSION-LOG.md",
+        "hash": "1551067569360224466"
+      },
+      {
+        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-01-PLAN.md",
+        "hash": "12418782734070458106"
+      },
+      {
+        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-01-SUMMARY.md",
+        "hash": "9672067246277147107"
+      },
+      {
+        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-CONTEXT.md",
+        "hash": "7809200446941772568"
+      },
+      {
+        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-HUMAN-UAT.md",
+        "hash": "1241629215662222196"
+      },
+      {
+        "file": ".planning/phases/02-api-contracts-and-health-readiness/02-VERIFICATION.md",
+        "hash": "1062852532329138635"
+      },
+      {
         "file": ".planning/phases/03-documentation-and-handoff-completeness/03-01-PLAN.md",
         "hash": "16201728630870855408"
+      },
+      {
+        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-01-SUMMARY.md",
+        "hash": "13255100447262105848"
+      },
+      {
+        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-CONTEXT.md",
+        "hash": "12361189026514097510"
+      },
+      {
+        "file": ".planning/phases/03-documentation-and-handoff-completeness/03-VERIFICATION.md",
+        "hash": "9750752793752213145"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "10481453740685675094"
+      },
+      {
+        "file": "DESIGN.md",
+        "hash": "5385321441420609493"
+      },
+      {
+        "file": "README.md",
+        "hash": "9784702611523596278"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/api-foundation.md",
+        "hash": "3868400923753435289"
+      },
+      {
+        "file": "docs/conventions.md",
+        "hash": "17113399218037682373"
+      },
+      {
+        "file": "docs/devops/cicd.md",
+        "hash": "17443959631721743968"
+      },
+      {
+        "file": "docs/monorepo-foundation.md",
+        "hash": "8940735622983921439"
+      },
+      {
+        "file": "docs/petabase-foundation.md",
+        "hash": "9799983902735912201"
+      },
+      {
+        "file": "nx.json",
+        "hash": "18099693732401140174"
+      },
+      {
+        "file": "package.json",
+        "hash": "5262078858415835150"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "10329755439000037970"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "16236708781579308380"
+      },
+      {
+        "file": "specs/28/spec.md",
+        "hash": "15552840871831894190"
+      },
+      {
+        "file": "specs/31/spec.md",
+        "hash": "5576906797576060216"
+      },
+      {
+        "file": "specs/32/spec.md",
+        "hash": "716780420377337194"
+      },
+      {
+        "file": "specs/33/spec.md",
+        "hash": "12635533639773551386"
+      },
+      {
+        "file": "tools/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/ci/run-affected.sh",
+        "hash": "1968148472626079410"
+      },
+      {
+        "file": "tools/ci/run-migrations.sh",
+        "hash": "9716932840724910232"
+      },
+      {
+        "file": "tools/ci/set-nx-shas.sh",
+        "hash": "5548184769992819166"
+      },
+      {
+        "file": "tools/ci/smoke-check.sh",
+        "hash": "642231980794446635"
+      },
+      {
+        "file": "tools/scripts/run-target.mjs",
+        "hash": "12976974314986713044"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "9993735522181013675"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2530239551698568359"
       }
     ],
     "projectFileMap": {
-      "petabase": [
-        {
-          "file": "apps/petabase/.eslintrc.json",
-          "hash": "14613463309782317224"
-        },
-        {
-          "file": "apps/petabase/.prettierrc.json",
-          "hash": "9555875142989992828"
-        },
-        {
-          "file": "apps/petabase/middleware.ts",
-          "hash": "17897390402575200371"
-        },
-        {
-          "file": "apps/petabase/next-env.d.ts",
-          "hash": "2517811901510882550"
-        },
-        {
-          "file": "apps/petabase/next.config.ts",
-          "hash": "305038319733719677"
-        },
-        {
-          "file": "apps/petabase/package.json",
-          "hash": "15469560007392832265",
-          "deps": [
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:eslint",
-            "npm:eslint-config-next",
-            "npm:prettier",
-            "npm:typescript",
-            "npm:next",
-            "npm:react",
-            "npm:react-dom",
-            "npm:zod"
-          ]
-        },
-        {
-          "file": "apps/petabase/project.json",
-          "hash": "1246557275604876282"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/(auth)/layout.tsx",
-          "hash": "12082840765975003169"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/(auth)/sign-in/page.tsx",
-          "hash": "18052017335399902383"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/(dashboard)/dashboard/page.tsx",
-          "hash": "7652542179724084562"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/(dashboard)/layout.tsx",
-          "hash": "2659752697976439623"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/admin/layout.tsx",
-          "hash": "15312438204965644900"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/admin/page.tsx",
-          "hash": "4922947483701791939"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/error.tsx",
-          "hash": "729619524555067314"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/layout.tsx",
-          "hash": "18353295668033201323"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/loading.tsx",
-          "hash": "2808790601887310106"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/not-found.tsx",
-          "hash": "17375491375545894368"
-        },
-        {
-          "file": "apps/petabase/src/app/[locale]/page.tsx",
-          "hash": "16551270416893869547"
-        },
-        {
-          "file": "apps/petabase/src/app/globals.css",
-          "hash": "3705525759977291290"
-        },
-        {
-          "file": "apps/petabase/src/app/layout.tsx",
-          "hash": "5856026018874886932"
-        },
-        {
-          "file": "apps/petabase/src/app/page.tsx",
-          "hash": "12914162688171629964"
-        },
-        {
-          "file": "apps/petabase/src/components/feedback/empty-state.tsx",
-          "hash": "10559729084869108007"
-        },
-        {
-          "file": "apps/petabase/src/components/feedback/loading-state.tsx",
-          "hash": "13724398853870376032"
-        },
-        {
-          "file": "apps/petabase/src/components/layout/page-container.tsx",
-          "hash": "3120106055843597932"
-        },
-        {
-          "file": "apps/petabase/src/components/shell/app-header.tsx",
-          "hash": "4599951806078718202"
-        },
-        {
-          "file": "apps/petabase/src/components/shell/app-shell.tsx",
-          "hash": "4678749185446400234"
-        },
-        {
-          "file": "apps/petabase/src/components/shell/app-sidebar.tsx",
-          "hash": "6192523748836289720"
-        },
-        {
-          "file": "apps/petabase/src/components/ui/button.tsx",
-          "hash": "2463006414696408759"
-        },
-        {
-          "file": "apps/petabase/src/components/ui/card.tsx",
-          "hash": "979319491411941887"
-        },
-        {
-          "file": "apps/petabase/src/components/ui/input.tsx",
-          "hash": "5383713225136688683"
-        },
-        {
-          "file": "apps/petabase/src/components/ui/toast-provider.tsx",
-          "hash": "17638482798086847639"
-        },
-        {
-          "file": "apps/petabase/src/features/auth/components/sign-in-form.tsx",
-          "hash": "4235678435070590926"
-        },
-        {
-          "file": "apps/petabase/src/hooks/use-auth-guard.ts",
-          "hash": "1624119933326677013"
-        },
-        {
-          "file": "apps/petabase/src/hooks/use-locale-path.ts",
-          "hash": "16087131601068778796"
-        },
-        {
-          "file": "apps/petabase/src/hooks/use-toast.ts",
-          "hash": "1749341695735867349"
-        },
-        {
-          "file": "apps/petabase/src/lib/api/client.ts",
-          "hash": "929358403296024427"
-        },
-        {
-          "file": "apps/petabase/src/lib/auth/protection.ts",
-          "hash": "7263762596170025564"
-        },
-        {
-          "file": "apps/petabase/src/lib/env.ts",
-          "hash": "12899639880696780316"
-        },
-        {
-          "file": "apps/petabase/src/lib/i18n/config.ts",
-          "hash": "13099645222782024882"
-        },
-        {
-          "file": "apps/petabase/src/lib/i18n/dictionaries.ts",
-          "hash": "5785921298342780189"
-        },
-        {
-          "file": "apps/petabase/src/lib/i18n/locale.ts",
-          "hash": "187837169138544895"
-        },
-        {
-          "file": "apps/petabase/src/lib/navigation/locale-path.ts",
-          "hash": "4414046172250886019"
-        },
-        {
-          "file": "apps/petabase/src/lib/utils/classnames.ts",
-          "hash": "8460952238377914029"
-        },
-        {
-          "file": "apps/petabase/src/messages/en.ts",
-          "hash": "288094726183440233"
-        },
-        {
-          "file": "apps/petabase/src/messages/th.ts",
-          "hash": "6615217900692999454"
-        },
-        {
-          "file": "apps/petabase/src/styles/tokens.css",
-          "hash": "8175296877173046030"
-        },
-        {
-          "file": "apps/petabase/src/types/i18n.ts",
-          "hash": "9667847850722662406"
-        },
-        {
-          "file": "apps/petabase/tsconfig.json",
-          "hash": "16003690457250127368"
-        }
-      ],
       "api": [
         {
           "file": "apps/api/.prettierrc.json",
@@ -1704,6 +1541,213 @@
         {
           "file": "packages/types/package.json",
           "hash": "7999081443838942900"
+        }
+      ],
+      "petabase": [
+        {
+          "file": "apps/petabase/.eslintrc.json",
+          "hash": "14613463309782317224"
+        },
+        {
+          "file": "apps/petabase/.prettierrc.json",
+          "hash": "9555875142989992828"
+        },
+        {
+          "file": "apps/petabase/middleware.ts",
+          "hash": "17897390402575200371"
+        },
+        {
+          "file": "apps/petabase/next-env.d.ts",
+          "hash": "2517811901510882550"
+        },
+        {
+          "file": "apps/petabase/next.config.ts",
+          "hash": "305038319733719677"
+        },
+        {
+          "file": "apps/petabase/package.json",
+          "hash": "15469560007392832265",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:prettier",
+            "npm:typescript",
+            "npm:next",
+            "npm:react",
+            "npm:react-dom",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/petabase/project.json",
+          "hash": "1246557275604876282"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(auth)/layout.tsx",
+          "hash": "12082840765975003169"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(auth)/sign-in/page.tsx",
+          "hash": "18052017335399902383"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(dashboard)/dashboard/page.tsx",
+          "hash": "7652542179724084562"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/(dashboard)/layout.tsx",
+          "hash": "11419244553939120555"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/admin/layout.tsx",
+          "hash": "15312438204965644900"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/admin/page.tsx",
+          "hash": "4922947483701791939"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/error.tsx",
+          "hash": "729619524555067314"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/layout.tsx",
+          "hash": "574819609835682824"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/loading.tsx",
+          "hash": "2808790601887310106"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/not-found.tsx",
+          "hash": "17375491375545894368"
+        },
+        {
+          "file": "apps/petabase/src/app/[locale]/page.tsx",
+          "hash": "16551270416893869547"
+        },
+        {
+          "file": "apps/petabase/src/app/globals.css",
+          "hash": "3705525759977291290"
+        },
+        {
+          "file": "apps/petabase/src/app/layout.tsx",
+          "hash": "5856026018874886932"
+        },
+        {
+          "file": "apps/petabase/src/app/page.tsx",
+          "hash": "12914162688171629964"
+        },
+        {
+          "file": "apps/petabase/src/components/feedback/empty-state.tsx",
+          "hash": "10559729084869108007"
+        },
+        {
+          "file": "apps/petabase/src/components/feedback/loading-state.tsx",
+          "hash": "13724398853870376032"
+        },
+        {
+          "file": "apps/petabase/src/components/layout/page-container.tsx",
+          "hash": "3120106055843597932"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-header.tsx",
+          "hash": "9409768931105584453"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-shell.tsx",
+          "hash": "8506964943436397945"
+        },
+        {
+          "file": "apps/petabase/src/components/shell/app-sidebar.tsx",
+          "hash": "3227183590774681787"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/button.tsx",
+          "hash": "2463006414696408759"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/card.tsx",
+          "hash": "979319491411941887"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/input.tsx",
+          "hash": "5383713225136688683"
+        },
+        {
+          "file": "apps/petabase/src/components/ui/toast-provider.tsx",
+          "hash": "17638482798086847639"
+        },
+        {
+          "file": "apps/petabase/src/features/auth/components/sign-in-form.tsx",
+          "hash": "4235678435070590926"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-auth-guard.ts",
+          "hash": "1624119933326677013"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-locale-path.ts",
+          "hash": "16087131601068778796"
+        },
+        {
+          "file": "apps/petabase/src/hooks/use-toast.ts",
+          "hash": "1749341695735867349"
+        },
+        {
+          "file": "apps/petabase/src/lib/api/client.ts",
+          "hash": "929358403296024427"
+        },
+        {
+          "file": "apps/petabase/src/lib/auth/protection.ts",
+          "hash": "7263762596170025564"
+        },
+        {
+          "file": "apps/petabase/src/lib/env.ts",
+          "hash": "12899639880696780316"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/config.ts",
+          "hash": "13099645222782024882"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/dictionaries.ts",
+          "hash": "5785921298342780189"
+        },
+        {
+          "file": "apps/petabase/src/lib/i18n/locale.ts",
+          "hash": "187837169138544895"
+        },
+        {
+          "file": "apps/petabase/src/lib/navigation/locale-path.ts",
+          "hash": "4414046172250886019"
+        },
+        {
+          "file": "apps/petabase/src/lib/utils/classnames.ts",
+          "hash": "8460952238377914029"
+        },
+        {
+          "file": "apps/petabase/src/messages/en.ts",
+          "hash": "288094726183440233"
+        },
+        {
+          "file": "apps/petabase/src/messages/th.ts",
+          "hash": "6615217900692999454"
+        },
+        {
+          "file": "apps/petabase/src/styles/tokens.css",
+          "hash": "8175296877173046030"
+        },
+        {
+          "file": "apps/petabase/src/types/i18n.ts",
+          "hash": "9667847850722662406"
+        },
+        {
+          "file": "apps/petabase/tsconfig.json",
+          "hash": "16003690457250127368"
         }
       ]
     }

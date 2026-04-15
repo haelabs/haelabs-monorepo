@@ -1,0 +1,133 @@
+name: Deploy Production
+
+on:
+  # Temporarily disabled for auto CD while team deploys manually.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy-petabase:
+    name: Deploy petabase to Vercel
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      VERCEL_DEPLOY_COMMAND: ${{ vars.VERCEL_DEPLOY_COMMAND }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.8.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Deploy web app
+        run: |
+          if [ -z "${VERCEL_DEPLOY_COMMAND:-}" ]; then
+            echo "Missing vars.VERCEL_DEPLOY_COMMAND"
+            exit 1
+          fi
+          bash -lc "${VERCEL_DEPLOY_COMMAND}"
+
+  deploy-api:
+    name: Deploy api to Railway
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      RAILWAY_DEPLOY_COMMAND: ${{ vars.RAILWAY_DEPLOY_COMMAND }}
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      RAILWAY_SERVICE_ID: ${{ vars.RAILWAY_SERVICE_ID }}
+      RAILWAY_ENVIRONMENT_ID: ${{ vars.RAILWAY_ENVIRONMENT_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.8.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Deploy api service
+        run: |
+          if [ -z "${RAILWAY_DEPLOY_COMMAND:-}" ]; then
+            echo "Missing vars.RAILWAY_DEPLOY_COMMAND"
+            exit 1
+          fi
+          bash -lc "${RAILWAY_DEPLOY_COMMAND}"
+
+  migrate-production:
+    name: Run production database migrations
+    runs-on: ubuntu-latest
+    needs:
+      - deploy-petabase
+      - deploy-api
+    environment: production
+    env:
+      MIGRATION_COMMAND: ${{ vars.PRODUCTION_MIGRATION_COMMAND }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.8.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run migrations
+        run: bash tools/ci/run-migrations.sh
+
+  smoke-checks:
+    name: Run production smoke checks
+    runs-on: ubuntu-latest
+    needs:
+      - migrate-production
+    env:
+      API_HEALTHCHECK_URL: ${{ vars.API_HEALTHCHECK_URL }}
+      WEB_SMOKE_URL: ${{ vars.WEB_SMOKE_URL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run smoke checks
+        run: bash tools/ci/smoke-check.sh
