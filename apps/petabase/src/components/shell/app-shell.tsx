@@ -5,7 +5,7 @@ import { AppSidebar } from '@petabase/components/shell/app-sidebar';
 import { type AppLocale } from '@petabase/lib/i18n/config';
 import type { MessageCatalog } from '@petabase/types/i18n';
 
-type AppShellProps = {
+export type AppShellProps = {
   locale: AppLocale;
   messages: MessageCatalog;
   children: ReactNode;
