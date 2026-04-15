@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 
 import { ToastProvider } from '@petabase/components/ui/toast-provider';
+import { getMessages } from '@petabase/lib/i18n/dictionaries';
 import { isLocale, LOCALES } from '@petabase/lib/i18n/config';
 
 type LocaleLayoutProps = {
@@ -18,6 +19,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   if (!isLocale(locale)) {
     notFound();
   }
+
+  await getMessages(locale);
 
   return <ToastProvider>{children}</ToastProvider>;
 }

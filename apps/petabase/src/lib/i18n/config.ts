@@ -4,10 +4,13 @@ export const LOCALE_COOKIE = 'petabase.locale';
 
 export type AppLocale = (typeof LOCALES)[number];
 
+const LOCALE_SET = new Set<AppLocale>(LOCALES);
+
 export function isLocale(value: string): value is AppLocale {
-  return LOCALES.includes(value as AppLocale);
+  return LOCALE_SET.has(value as AppLocale);
 }
 
 export function normalizeLocale(value: string): AppLocale {
-  return isLocale(value) ? value : DEFAULT_LOCALE;
+  const normalizedValue = value.trim().toLowerCase();
+  return isLocale(normalizedValue) ? normalizedValue : DEFAULT_LOCALE;
 }

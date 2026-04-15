@@ -1,6 +1,7 @@
 # Executive Summary
 - Issue: Init vet-manage web app with Next.js — project structure, locale, common, util
 - Source: haelabs/openclaw-team#33
+- Status: Completed — petabase foundation shipped and verified
 - Promoted: 2026-04-14 11:35
 - Handoff source: latest comment containing the handoff document
 
@@ -23,17 +24,17 @@ Why this matters:
 - keeps deployment and product boundaries simple during MVP
 
 ### Requirements
-- [ ] Create the Next.js App Router app inside the Nx monorepo
-- [ ] Use the approved product naming direction (`petabase`) where the rename is in scope
-- [ ] Configure TypeScript, ESLint, Prettier, environment handling, and path aliases
-- [ ] Establish a clear source structure for app routes, components, features, utilities, hooks, styles, and local types
-- [ ] Set up Thai-first and English-secondary locale routing
-- [ ] Add translation file structure and locale negotiation
-- [ ] Add auth and dashboard route groups
-- [ ] Add admin/internal route subtree inside the same app
-- [ ] Add foundational layout components and UI utilities
-- [ ] Ensure the app works with monorepo shared packages where available
-- [ ] Ensure `nx serve` and `nx build` work for the app
+- [x] Create the Next.js App Router app inside the Nx monorepo
+- [x] Use the approved product naming direction (`petabase`) where the rename is in scope
+- [x] Configure TypeScript, ESLint, Prettier, environment handling, and path aliases
+- [x] Establish a clear source structure for app routes, components, features, utilities, hooks, styles, and local types
+- [x] Set up Thai-first and English-secondary locale routing
+- [x] Add translation file structure and locale negotiation
+- [x] Add auth and dashboard route groups
+- [x] Add admin/internal route subtree inside the same app
+- [x] Add foundational layout components and UI utilities
+- [x] Ensure the app works with monorepo shared packages where available
+- [x] Ensure `nx serve` and `nx build` work for the app
 
 ### Technical Spec
 - **Architecture**
@@ -168,9 +169,9 @@ Why this matters:
 - Keep auth implementation out of scope, but make the app auth-ready.
 - Align naming and docs with the approved `petabase` product name.
 
-### Open Questions
-- Should the physical folder rename to `apps/petabase` happen in this issue or be coordinated with monorepo foundation work first?
-- Should locale messages stay app-local initially or move to a shared workspace package early?
-- Which UI primitive stack should be standardized for the first iteration?
-- How much placeholder session/auth integration is needed now versus waiting for the dedicated auth issue?
-- Should branch-switcher shell placement be stubbed now because multi-branch support is expected soon?
+### Open Questions (Resolved)
+- Folder naming is now finalized as `apps/petabase` and aligned across planning/docs for this foundation scope.
+- Locale messages stay app-local in `apps/petabase/src/messages` for now; extraction to shared packages is deferred until cross-app reuse is proven.
+- First-iteration UI primitives are lightweight app-local baseline components (`button`, `input`, `card`, toast provider, shell primitives) instead of a larger external stack decision.
+- Auth/session remains intentionally placeholder only (structure + coarse guard readiness), with real auth integration deferred to the dedicated auth phase.
+- Branch-switcher shell placement is not stubbed in this foundation issue; it remains a future feature concern once branch/domain requirements are active.
