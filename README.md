@@ -55,4 +55,5 @@ pnpm exec nx build api
 - `tools/` for local scripts and workspace tooling
 
 See `docs/monorepo-foundation.md` for the current structure and extension rules.
+For backend foundation conventions, `docs/api-foundation.md` is the canonical reference.
 See `docs/petabase-foundation.md` for web app routing and i18n conventions.
