@@ -66,6 +66,13 @@ Complete foundation documentation so future contributors can extend the API with
 ### Included Tasks
 - Task 10: Document API foundation conventions.
 
+**Requirements:** [R21, R22]
+
+**Plans:** 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Harden canonical API foundation docs and handoff cross-links
+
 ### Milestones And Dependencies
 - **M8: Foundation Docs Published**
   - Deliverables: documented layout, route versioning, config pattern, response contracts, extension points, and where future modules belong.
