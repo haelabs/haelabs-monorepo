@@ -18,4 +18,4 @@
 Plans:
 - [x] 01-01-PLAN.md — Lock locale + env + middleware contracts for deterministic app foundation behavior
 - [x] 01-02-PLAN.md — Implement route-group shell architecture for auth vs dashboard/admin boundaries
-- [ ] 01-03-PLAN.md — Consolidate common/util helpers and canonical petabase foundation documentation
+- [x] 01-03-PLAN.md — Consolidate common/util helpers and canonical petabase foundation documentation
