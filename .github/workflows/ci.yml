@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  # Temporarily disabled for auto CI while team deploys manually.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Monorepo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.8.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve Nx SHAs
+        run: bash tools/ci/set-nx-shas.sh
+
+      - name: Lint affected projects
+        run: bash tools/ci/run-affected.sh lint
+
+      - name: Typecheck affected projects
+        run: bash tools/ci/run-affected.sh typecheck
+
+      - name: Test affected projects
+        run: bash tools/ci/run-affected.sh test
+
+      - name: Build affected projects
+        run: bash tools/ci/run-affected.sh build
