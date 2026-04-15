@@ -1,10 +1,12 @@
 import { z } from 'zod';
 
+import { LOCALES } from './i18n/config';
+
 const envSchema = z.object({
-  NEXT_PUBLIC_APP_NAME: z.string().min(1).default('Petabase'),
-  NEXT_PUBLIC_API_BASE_URL: z.string().url().default('http://localhost:3000/api/v1'),
-  NEXT_PUBLIC_DEFAULT_LOCALE: z.enum(['th', 'en']).default('th'),
-  NEXT_PUBLIC_ENABLE_AUTH_GUARD: z.enum(['true', 'false']).default('false'),
+  NEXT_PUBLIC_APP_NAME: z.string().trim().min(1),
+  NEXT_PUBLIC_API_BASE_URL: z.string().url(),
+  NEXT_PUBLIC_DEFAULT_LOCALE: z.enum(LOCALES),
+  NEXT_PUBLIC_ENABLE_AUTH_GUARD: z.enum(['true', 'false']),
 });
 
 const parsed = envSchema.safeParse({

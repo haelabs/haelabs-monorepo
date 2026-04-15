@@ -3,11 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import {
   DEFAULT_LOCALE,
   LOCALE_COOKIE,
-  LOCALES,
   type AppLocale,
   isLocale,
 } from './src/lib/i18n/config';
 import { getProtectedPath, SESSION_COOKIE_NAME } from './src/lib/auth/protection';
+import { env } from './src/lib/env';
 
 const PUBLIC_FILE = /\.[^/]+$/;
 
@@ -46,7 +46,7 @@ function getPreferredLocale(request: NextRequest): AppLocale {
 }
 
 function shouldRunAuthGuard(): boolean {
-  return process.env.NEXT_PUBLIC_ENABLE_AUTH_GUARD === 'true';
+  return env.NEXT_PUBLIC_ENABLE_AUTH_GUARD === 'true';
 }
 
 export function middleware(request: NextRequest): NextResponse {
