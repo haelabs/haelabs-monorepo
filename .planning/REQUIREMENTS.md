@@ -93,43 +93,43 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | TBD | Pending |
-| AUTH-02 | TBD | Pending |
-| AUTH-03 | TBD | Pending |
-| AUTH-04 | TBD | Pending |
-| AUTH-05 | TBD | Pending |
-| ORG-01 | TBD | Pending |
-| ORG-02 | TBD | Pending |
-| ORG-03 | TBD | Pending |
-| ORG-04 | TBD | Pending |
-| PATO-01 | TBD | Pending |
-| PATO-02 | TBD | Pending |
-| PATO-03 | TBD | Pending |
-| PATO-04 | TBD | Pending |
-| PATO-05 | TBD | Pending |
-| APPT-01 | TBD | Pending |
-| APPT-02 | TBD | Pending |
-| APPT-03 | TBD | Pending |
-| APPT-04 | TBD | Pending |
-| SOAP-01 | TBD | Pending |
-| SOAP-02 | TBD | Pending |
-| SOAP-03 | TBD | Pending |
-| SOAP-04 | TBD | Pending |
-| SOAP-05 | TBD | Pending |
-| BILL-01 | TBD | Pending |
-| BILL-02 | TBD | Pending |
-| BILL-03 | TBD | Pending |
-| BILL-04 | TBD | Pending |
-| BILL-05 | TBD | Pending |
-| UX-01 | TBD | Pending |
-| UX-02 | TBD | Pending |
-| UX-03 | TBD | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Pending |
+| ORG-01 | Phase 1 | Pending |
+| ORG-02 | Phase 1 | Pending |
+| ORG-03 | Phase 1 | Pending |
+| ORG-04 | Phase 1 | Pending |
+| PATO-01 | Phase 2 | Pending |
+| PATO-02 | Phase 2 | Pending |
+| PATO-03 | Phase 2 | Pending |
+| PATO-04 | Phase 2 | Pending |
+| PATO-05 | Phase 2 | Pending |
+| APPT-01 | Phase 3 | Pending |
+| APPT-02 | Phase 3 | Pending |
+| APPT-03 | Phase 3 | Pending |
+| APPT-04 | Phase 3 | Pending |
+| SOAP-01 | Phase 4 | Pending |
+| SOAP-02 | Phase 4 | Pending |
+| SOAP-03 | Phase 4 | Pending |
+| SOAP-04 | Phase 4 | Pending |
+| SOAP-05 | Phase 4 | Pending |
+| BILL-01 | Phase 5 | Pending |
+| BILL-02 | Phase 5 | Pending |
+| BILL-03 | Phase 5 | Pending |
+| BILL-04 | Phase 5 | Pending |
+| BILL-05 | Phase 5 | Pending |
+| UX-01 | Phase 5 | Pending |
+| UX-02 | Phase 5 | Pending |
+| UX-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 31 total
-- Mapped to phases: 0
-- Unmapped: 31
+- Mapped to phases: 31
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-19*
-*Last updated: 2026-04-19 after initial definition*
+*Last updated: 2026-04-19 after roadmap mapping*
