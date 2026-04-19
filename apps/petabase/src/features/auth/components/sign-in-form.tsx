@@ -133,8 +133,15 @@ export function SignInForm({
             </p>
           </fieldset>
 
-          <Button type="submit" disabled={loading}>
-            {loading ? messages.states.loading : messages.auth.submit}
+          <Button type="submit" disabled={loading} aria-busy={loading}>
+            {loading ? (
+              <>
+                <span className="pb-spinner" aria-hidden="true" />
+                {messages.states.loading}
+              </>
+            ) : (
+              messages.auth.submit
+            )}
           </Button>
 
           <p className="pb-auth-footer-note">

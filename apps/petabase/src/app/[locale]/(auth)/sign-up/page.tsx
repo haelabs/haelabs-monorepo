@@ -17,9 +17,9 @@ export default async function SignUpPage({ params }: SignUpPageProps) {
   const isThai = locale === 'th';
 
   return (
-    <section className="pb-auth-stage">
-      <header className="pb-auth-header">
-        <p className="pb-sidebar-kicker">Phase 1 Prototype</p>
+    <section className="pb-auth-stage pb-auth-stage-calm">
+      <header className="pb-auth-header pb-auth-header-calm">
+        <p className="pb-sidebar-kicker">Phase 1 Frontend Prototype</p>
         <h1>{isThai ? 'สร้างบัญชีผู้ดูแลและเริ่มตั้งค่าคลินิก' : 'Create owner account and start clinic setup'}</h1>
         <p>
           {isThai

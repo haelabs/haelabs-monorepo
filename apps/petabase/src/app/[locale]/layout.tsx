@@ -22,5 +22,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   await getMessages(locale);
 
-  return <ToastProvider>{children}</ToastProvider>;
+  return (
+    <div lang={locale} className="pb-locale-root">
+      <ToastProvider>{children}</ToastProvider>
+    </div>
+  );
 }

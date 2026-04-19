@@ -10,6 +10,7 @@ export type AppSidebarProps = {
 };
 
 export function AppSidebar({ locale, messages }: AppSidebarProps) {
+  const isThai = locale === 'th';
   const navigationItems = [
     {
       href: withLocale(locale, '/dashboard'),
@@ -23,14 +24,15 @@ export function AppSidebar({ locale, messages }: AppSidebarProps) {
 
   return (
     <aside className="pb-sidebar">
-      <div>
+      <div className="pb-sidebar-brand">
         <p className="pb-sidebar-kicker">{messages.common.appName}</p>
         <h2>{messages.common.welcome}</h2>
+        <p className="pb-sidebar-subtitle">{isThai ? 'โหมดปฏิบัติการคลินิก' : 'Clinic operations mode'}</p>
       </div>
 
-      <nav>
+      <nav className="pb-sidebar-nav">
         {navigationItems.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link key={item.href} href={item.href} className="pb-sidebar-link">
             {item.label}
           </Link>
         ))}

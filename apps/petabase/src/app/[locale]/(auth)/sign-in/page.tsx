@@ -15,9 +15,9 @@ export default async function SignInPage({ params }: SignInPageProps) {
   const forgotPasswordHref = withLocale(locale, '/forgot-password');
 
   return (
-    <section className="pb-auth-stage">
-      <header className="pb-auth-header">
-        <p className="pb-sidebar-kicker">Phase 1 Prototype</p>
+    <section className="pb-auth-stage pb-auth-stage-calm">
+      <header className="pb-auth-header pb-auth-header-calm">
+        <p className="pb-sidebar-kicker">Phase 1 Frontend Prototype</p>
         <h1>{messages.auth.title}</h1>
         <p>{messages.auth.subtitle}</p>
       </header>

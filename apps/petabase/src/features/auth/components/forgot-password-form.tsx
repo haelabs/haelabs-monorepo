@@ -51,8 +51,17 @@ export function ForgotPasswordForm({ locale }: ForgotPasswordFormProps) {
           </p>
         ) : null}
 
-        <Button type="submit" disabled={loading}>
-          {loading ? (isThai ? 'กำลังส่ง...' : 'Sending...') : isThai ? 'ส่งลิงก์รีเซ็ต' : 'Send reset link'}
+        <Button type="submit" disabled={loading} aria-busy={loading}>
+          {loading ? (
+            <>
+              <span className="pb-spinner" aria-hidden="true" />
+              {isThai ? 'กำลังส่ง...' : 'Sending...'}
+            </>
+          ) : isThai ? (
+            'ส่งลิงก์รีเซ็ต'
+          ) : (
+            'Send reset link'
+          )}
         </Button>
 
         <p className="pb-workflow-copy">

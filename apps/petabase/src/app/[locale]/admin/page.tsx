@@ -1,5 +1,7 @@
 import { PageContainer } from '@petabase/components/layout/page-container';
+import { Button } from '@petabase/components/ui/button';
 import { Card } from '@petabase/components/ui/card';
+import { Input } from '@petabase/components/ui/input';
 import { getMessages } from '@petabase/lib/i18n/dictionaries';
 import { ensureLocale } from '@petabase/lib/i18n/locale';
 
@@ -12,10 +14,27 @@ export default async function AdminPage({ params }: AdminPageProps) {
   const locale = ensureLocale(localeParam);
   const messages = await getMessages(locale);
   const isThai = locale === 'th';
+  const branchLabels = {
+    branch: isThai ? 'สาขา' : 'Branch',
+    location: isThai ? 'พื้นที่' : 'Location',
+    owner: isThai ? 'ผู้รับผิดชอบ' : 'Owner',
+    staffReady: isThai ? 'ทีมงานพร้อมใช้งาน' : 'Staff ready',
+    status: isThai ? 'สถานะ' : 'Status',
+    actions: isThai ? 'จัดการ' : 'Actions',
+  } as const;
+  const staffLabels = {
+    staff: isThai ? 'ทีมงาน' : 'Staff',
+    role: isThai ? 'บทบาท' : 'Role',
+    branchScope: isThai ? 'ขอบเขตสาขา' : 'Branch scope',
+    lastActive: isThai ? 'ใช้งานล่าสุด' : 'Last active',
+    status: isThai ? 'สถานะ' : 'Status',
+    actions: isThai ? 'ดำเนินการ' : 'Actions',
+  } as const;
 
   const branchRows = [
     {
       branch: 'Bangkok HQ',
+      code: isThai ? 'สาขาหลัก' : 'Main branch',
       city: isThai ? 'กรุงเทพฯ' : 'Bangkok',
       manager: 'Thanida P.',
       staff: '12',
@@ -24,6 +43,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
     },
     {
       branch: 'Rama 9',
+      code: isThai ? 'สาขารอง' : 'Satellite branch',
       city: isThai ? 'กรุงเทพฯ' : 'Bangkok',
       manager: 'Dr. Pim K.',
       staff: '6',
@@ -32,6 +52,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
     },
     {
       branch: 'Chiang Mai Satellite',
+      code: isThai ? 'สาขาใหม่' : 'New branch',
       city: isThai ? 'เชียงใหม่' : 'Chiang Mai',
       manager: isThai ? 'ยังไม่กำหนด' : 'Unassigned',
       staff: '0',
@@ -43,6 +64,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
   const staffRows = [
     {
       name: 'Thanida Pradit',
+      email: 'thanida@paws-care.co.th',
       role: 'Admin',
       branch: isThai ? 'ทุกสาขา' : 'All branches',
       lastActive: '09:24',
@@ -51,6 +73,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
     },
     {
       name: 'Dr. Napat Surachai',
+      email: 'napat@paws-care.co.th',
       role: 'Doctor',
       branch: 'Bangkok HQ',
       lastActive: '09:18',
@@ -59,6 +82,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
     },
     {
       name: 'Chompoo R.',
+      email: 'chompoo@paws-care.co.th',
       role: 'Nurse',
       branch: 'Rama 9',
       lastActive: isThai ? 'เมื่อวาน' : 'Yesterday',
@@ -67,6 +91,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
     },
     {
       name: 'Frontdesk CM Invite',
+      email: 'frontdesk.cm@paws-care.co.th',
       role: 'Receptionist',
       branch: 'Chiang Mai Satellite',
       lastActive: '-',
@@ -111,21 +136,56 @@ export default async function AdminPage({ params }: AdminPageProps) {
           </header>
 
           <form className="pb-form-grid" aria-label="Organization profile form">
-            <label htmlFor="org-name">{isThai ? 'ชื่อองค์กร' : 'Organization name'}</label>
-            <input id="org-name" className="pb-input" defaultValue="Paws & Care Veterinary Group" />
+            <p className="pb-form-intro">
+              {isThai
+                ? 'กรอกข้อมูลให้ครบเพื่อใช้กับเอกสาร คลินิกสาขา และสิทธิ์ระดับองค์กร'
+                : 'Complete the profile for legal documents, branch setup, and organization-level access.'}
+            </p>
 
-            <label htmlFor="org-id">{isThai ? 'เลขทะเบียนนิติบุคคล' : 'Business registration id'}</label>
-            <input id="org-id" className="pb-input" defaultValue="0105569112234" />
+            <div className="pb-field">
+              <label htmlFor="org-name">{isThai ? 'ชื่อองค์กร' : 'Organization name'}</label>
+              <Input id="org-name" defaultValue="Paws & Care Veterinary Group" />
+            </div>
 
-            <label htmlFor="org-phone">{isThai ? 'เบอร์ติดต่อหลัก' : 'Primary contact number'}</label>
-            <input id="org-phone" className="pb-input" defaultValue="+66 2 245 8800" />
+            <div className="pb-field">
+              <label htmlFor="org-id">{isThai ? 'เลขทะเบียนนิติบุคคล' : 'Business registration id'}</label>
+              <Input id="org-id" defaultValue="0105569112234" />
+            </div>
 
-            <label htmlFor="org-email">{isThai ? 'อีเมลสำหรับแจ้งเตือนระบบ' : 'System notification email'}</label>
-            <input id="org-email" className="pb-input" defaultValue="admin@paws-care.co.th" />
+            <div className="pb-field">
+              <label htmlFor="org-phone">{isThai ? 'เบอร์ติดต่อหลัก' : 'Primary contact number'}</label>
+              <Input id="org-phone" defaultValue="+66 2 245 8800" />
+            </div>
 
-            <button type="button" className="pb-btn">
-              {isThai ? 'บันทึกแบบร่าง' : 'Save draft'}
-            </button>
+            <div className="pb-field">
+              <label htmlFor="org-email">{isThai ? 'อีเมลสำหรับแจ้งเตือนระบบ' : 'System notification email'}</label>
+              <Input id="org-email" defaultValue="admin@paws-care.co.th" />
+            </div>
+
+            <div className="pb-field">
+              <label htmlFor="org-timezone">{isThai ? 'โซนเวลาองค์กร' : 'Organization timezone'}</label>
+              <select id="org-timezone" className="pb-select" defaultValue="Asia/Bangkok">
+                <option value="Asia/Bangkok">Asia/Bangkok (UTC+7)</option>
+                <option value="Asia/Singapore">Asia/Singapore (UTC+8)</option>
+              </select>
+              <p className="pb-field-hint">
+                {isThai
+                  ? 'เวลานัดหมายและรายงานจะอ้างอิงจากโซนเวลานี้'
+                  : 'Appointments and operational reports follow this timezone.'}
+              </p>
+            </div>
+
+            <div className="pb-field pb-field-span-full">
+              <label htmlFor="org-address">{isThai ? 'ที่อยู่สำนักงานใหญ่' : 'Head office address'}</label>
+              <Input id="org-address" defaultValue="35 Rama IX Road, Huai Khwang, Bangkok 10310" />
+            </div>
+
+            <div className="pb-form-actions">
+              <Button type="button" variant="ghost">
+                {isThai ? 'ยกเลิกการแก้ไข' : 'Discard changes'}
+              </Button>
+              <Button type="button">{isThai ? 'บันทึกแบบร่าง' : 'Save draft'}</Button>
+            </div>
           </form>
         </Card>
 
@@ -170,28 +230,59 @@ export default async function AdminPage({ params }: AdminPageProps) {
           </p>
         </header>
 
+        <div className="pb-table-toolbar">
+          <div>
+            <p className="pb-table-title">{isThai ? 'สรุปภาพรวมสาขา' : 'Branch readiness overview'}</p>
+            <p className="pb-table-caption">
+              <span className="pb-live-dot" aria-hidden="true" />
+              {isThai ? 'อัปเดตล่าสุด 09:30' : 'Last updated at 09:30'}
+            </p>
+          </div>
+          <div className="pb-table-actions">
+            <Button type="button" variant="ghost">
+              {isThai ? 'ส่งออก CSV' : 'Export CSV'}
+            </Button>
+          </div>
+        </div>
+
         <div className="pb-table-wrap">
           <table className="pb-table">
             <thead>
               <tr>
-                <th scope="col">{isThai ? 'สาขา' : 'Branch'}</th>
-                <th scope="col">{isThai ? 'พื้นที่' : 'Location'}</th>
-                <th scope="col">{isThai ? 'ผู้รับผิดชอบ' : 'Owner'}</th>
-                <th scope="col">{isThai ? 'ทีมงานพร้อมใช้งาน' : 'Staff ready'}</th>
-                <th scope="col">{isThai ? 'สถานะ' : 'Status'}</th>
+                <th scope="col">{branchLabels.branch}</th>
+                <th scope="col">{branchLabels.location}</th>
+                <th scope="col">{branchLabels.owner}</th>
+                <th scope="col">{branchLabels.staffReady}</th>
+                <th scope="col">{branchLabels.status}</th>
+                <th scope="col">{branchLabels.actions}</th>
               </tr>
             </thead>
             <tbody>
               {branchRows.map((row) => (
                 <tr key={row.branch}>
-                  <td>{row.branch}</td>
-                  <td>{row.city}</td>
-                  <td>{row.manager}</td>
-                  <td data-numeric="true">{row.staff}</td>
-                  <td>
+                  <td data-label={branchLabels.branch}>
+                    <span className="pb-row-main">{row.branch}</span>
+                    <span className="pb-row-meta">{row.code}</span>
+                  </td>
+                  <td data-label={branchLabels.location}>{row.city}</td>
+                  <td data-label={branchLabels.owner}>{row.manager}</td>
+                  <td data-label={branchLabels.staffReady} data-numeric="true">
+                    {row.staff}
+                  </td>
+                  <td data-label={branchLabels.status}>
                     <span className="pb-pill" data-status={row.statusCode}>
                       {row.status}
                     </span>
+                  </td>
+                  <td data-label={branchLabels.actions}>
+                    <div className="pb-row-actions">
+                      <Button type="button" variant="ghost" className="pb-row-action-btn">
+                        {isThai ? 'ดู' : 'View'}
+                      </Button>
+                      <Button type="button" variant="ghost" className="pb-row-action-btn">
+                        {isThai ? 'แก้ไข' : 'Edit'}
+                      </Button>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -210,28 +301,59 @@ export default async function AdminPage({ params }: AdminPageProps) {
           </p>
         </header>
 
+        <div className="pb-table-toolbar">
+          <div>
+            <p className="pb-table-title">{isThai ? 'บัญชีผู้ใช้งานทั้งหมด' : 'All staff accounts'}</p>
+            <p className="pb-table-caption">
+              <span className="pb-live-dot" aria-hidden="true" />
+              {isThai ? 'พร้อมเปิดใช้งานทันที 2 บัญชี' : '2 accounts ready for activation'}
+            </p>
+          </div>
+          <div className="pb-table-actions">
+            <Button type="button" variant="ghost">
+              {isThai ? 'เชิญทีมงาน' : 'Invite staff'}
+            </Button>
+          </div>
+        </div>
+
         <div className="pb-table-wrap">
           <table className="pb-table">
             <thead>
               <tr>
-                <th scope="col">{isThai ? 'ทีมงาน' : 'Staff'}</th>
-                <th scope="col">{isThai ? 'บทบาท' : 'Role'}</th>
-                <th scope="col">{isThai ? 'ขอบเขตสาขา' : 'Branch scope'}</th>
-                <th scope="col">{isThai ? 'ใช้งานล่าสุด' : 'Last active'}</th>
-                <th scope="col">{isThai ? 'สถานะ' : 'Status'}</th>
+                <th scope="col">{staffLabels.staff}</th>
+                <th scope="col">{staffLabels.role}</th>
+                <th scope="col">{staffLabels.branchScope}</th>
+                <th scope="col">{staffLabels.lastActive}</th>
+                <th scope="col">{staffLabels.status}</th>
+                <th scope="col">{staffLabels.actions}</th>
               </tr>
             </thead>
             <tbody>
               {staffRows.map((row) => (
                 <tr key={row.name}>
-                  <td>{row.name}</td>
-                  <td>{row.role}</td>
-                  <td>{row.branch}</td>
-                  <td data-numeric="true">{row.lastActive}</td>
-                  <td>
+                  <td data-label={staffLabels.staff}>
+                    <span className="pb-row-main">{row.name}</span>
+                    <span className="pb-row-meta">{row.email}</span>
+                  </td>
+                  <td data-label={staffLabels.role}>{row.role}</td>
+                  <td data-label={staffLabels.branchScope}>{row.branch}</td>
+                  <td data-label={staffLabels.lastActive} data-numeric="true">
+                    {row.lastActive}
+                  </td>
+                  <td data-label={staffLabels.status}>
                     <span className="pb-pill" data-status={row.statusCode}>
                       {row.status}
                     </span>
+                  </td>
+                  <td data-label={staffLabels.actions}>
+                    <div className="pb-row-actions">
+                      <Button type="button" variant="ghost" className="pb-row-action-btn">
+                        {isThai ? 'รีเซ็ตสิทธิ์' : 'Reset access'}
+                      </Button>
+                      <Button type="button" variant="ghost" className="pb-row-action-btn">
+                        {isThai ? 'ส่งเตือน' : 'Send reminder'}
+                      </Button>
+                    </div>
                   </td>
                 </tr>
               ))}

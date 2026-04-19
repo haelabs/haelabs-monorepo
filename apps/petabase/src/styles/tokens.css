@@ -1,7 +1,9 @@
 :root {
-  --pb-font-sans:
-    'sohne-var', 'Noto Sans Thai', 'Sarabun', 'SF Pro Display', 'Segoe UI', sans-serif;
-  --pb-font-mono: 'SourceCodePro', 'SFMono-Regular', ui-monospace, monospace;
+  --pb-font-sans-latin:
+    var(--pb-font-latin), 'sohne-var', 'SF Pro Display', 'Segoe UI', sans-serif;
+  --pb-font-sans-thai: var(--pb-font-thai), 'Noto Sans Thai', 'Sarabun', 'Prompt', sans-serif;
+  --pb-font-sans: var(--pb-font-sans-latin);
+  --pb-font-mono: var(--pb-font-mono-real), 'SourceCodePro', 'SFMono-Regular', ui-monospace, monospace;
 
   --pb-color-bg: #ffffff;
   --pb-color-bg-soft: #f6f9fc;

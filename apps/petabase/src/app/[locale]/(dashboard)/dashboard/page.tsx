@@ -12,6 +12,11 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
   const locale = ensureLocale(localeParam);
   const messages = await getMessages(locale);
   const isThai = locale === 'th';
+  const roleMatrixLabels = {
+    role: isThai ? 'บทบาท' : 'Role',
+    access: isThai ? 'สิทธิ์หลัก' : 'Primary access',
+    branchScope: isThai ? 'ขอบเขตสาขา' : 'Branch scope',
+  } as const;
 
   const setupMilestones = [
     {
@@ -233,17 +238,17 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
             <table className="pb-table">
               <thead>
                 <tr>
-                  <th scope="col">{isThai ? 'บทบาท' : 'Role'}</th>
-                  <th scope="col">{isThai ? 'สิทธิ์หลัก' : 'Primary access'}</th>
-                  <th scope="col">{isThai ? 'ขอบเขตสาขา' : 'Branch scope'}</th>
+                  <th scope="col">{roleMatrixLabels.role}</th>
+                  <th scope="col">{roleMatrixLabels.access}</th>
+                  <th scope="col">{roleMatrixLabels.branchScope}</th>
                 </tr>
               </thead>
               <tbody>
                 {roleCoverageRows.map((row) => (
                   <tr key={row.role}>
-                    <td>{row.role}</td>
-                    <td>{row.access}</td>
-                    <td>{row.branchScope}</td>
+                    <td data-label={roleMatrixLabels.role}>{row.role}</td>
+                    <td data-label={roleMatrixLabels.access}>{row.access}</td>
+                    <td data-label={roleMatrixLabels.branchScope}>{row.branchScope}</td>
                   </tr>
                 ))}
               </tbody>

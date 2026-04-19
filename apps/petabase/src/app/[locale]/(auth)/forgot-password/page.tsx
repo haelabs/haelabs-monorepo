@@ -17,9 +17,9 @@ export default async function ForgotPasswordPage({ params }: ForgotPasswordPageP
   const isThai = locale === 'th';
 
   return (
-    <section className="pb-auth-stage pb-auth-stage-compact">
-      <header className="pb-auth-header">
-        <p className="pb-sidebar-kicker">Account Recovery</p>
+    <section className="pb-auth-stage pb-auth-stage-compact pb-auth-stage-calm">
+      <header className="pb-auth-header pb-auth-header-calm">
+        <p className="pb-sidebar-kicker">Phase 1 Frontend Prototype</p>
         <h1>{isThai ? 'กู้คืนการเข้าถึงบัญชี' : 'Recover account access'}</h1>
         <p>
           {isThai

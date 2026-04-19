@@ -76,14 +76,17 @@ export function SignUpForm({ locale }: SignUpFormProps) {
             </p>
           ) : null}
 
-          <Button type="submit" disabled={loading}>
-            {loading
-              ? isThai
-                ? 'กำลังสร้างเวิร์กสเปซ...'
-                : 'Creating workspace...'
-              : isThai
-                ? 'สร้างเวิร์กสเปซคลินิก'
-                : 'Create clinic workspace'}
+          <Button type="submit" disabled={loading} aria-busy={loading}>
+            {loading ? (
+              <>
+                <span className="pb-spinner" aria-hidden="true" />
+                {isThai ? 'กำลังสร้างเวิร์กสเปซ...' : 'Creating workspace...'}
+              </>
+            ) : isThai ? (
+              'สร้างเวิร์กสเปซคลินิก'
+            ) : (
+              'Create clinic workspace'
+            )}
           </Button>
         </form>
       </Card>
