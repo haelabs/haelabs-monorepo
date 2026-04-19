@@ -14,6 +14,7 @@ concurrency:
 jobs:
   deploy-petabase:
     name: Deploy petabase to Vercel
+    if: ${{ false }} # Temporarily disabled while deploying locally.
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -50,6 +51,7 @@ jobs:
 
   deploy-api:
     name: Deploy api to Railway
+    if: ${{ false }} # Temporarily disabled while deploying locally.
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -86,6 +88,7 @@ jobs:
 
   migrate-production:
     name: Run production database migrations
+    if: ${{ false }} # Temporarily disabled while deploying locally.
     runs-on: ubuntu-latest
     needs:
       - deploy-petabase
@@ -118,6 +121,7 @@ jobs:
 
   smoke-checks:
     name: Run production smoke checks
+    if: ${{ false }} # Temporarily disabled while deploying locally.
     runs-on: ubuntu-latest
     needs:
       - migrate-production

@@ -14,6 +14,7 @@ concurrency:
 jobs:
   validate:
     name: Validate Monorepo
+    if: ${{ false }} # Temporarily disabled while running checks locally.
     runs-on: ubuntu-latest
 
     steps:

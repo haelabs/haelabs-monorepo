@@ -29,6 +29,7 @@ Current priority is establishing stable workspace structure and conventions so f
 - If uncertain between adding new structure vs documenting reserved paths, choose the simpler option and document it clearly
 - Preserve existing user changes; do not revert unrelated files
 - Do not introduce secrets or `.env` values into tracked files
+- CI/CD workflows are temporarily disabled; use local deploy scripts/commands documented in `docs/devops/cicd.md` instead of GitHub Actions.
 
 ## Workspace Commands
 When available, standard root scripts should be:
