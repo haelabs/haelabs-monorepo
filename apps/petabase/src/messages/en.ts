@@ -19,12 +19,12 @@ const en: MessageCatalog = {
     submit: 'Sign in',
   },
   dashboard: {
-    title: 'Today at a glance',
-    subtitle: 'The shell is ready for scheduling, patient, and billing modules.',
+    title: 'Phase 1 operations overview',
+    subtitle: 'Track access control, branch setup, and staff readiness before API integration.',
   },
   admin: {
-    title: 'Internal admin area',
-    subtitle: 'Admin routes stay inside the same deployable app.',
+    title: 'Clinic setup and access management',
+    subtitle: 'Configure organization profile, branches, and role-scoped staff access.',
   },
   states: {
     loading: 'Loading...',
