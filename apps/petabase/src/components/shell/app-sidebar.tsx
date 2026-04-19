@@ -1,7 +1,5 @@
-import Link from 'next/link';
-
+import { AppNavLinks } from '@petabase/components/shell/app-nav-links';
 import { type AppLocale } from '@petabase/lib/i18n/config';
-import { withLocale } from '@petabase/lib/navigation/locale-path';
 import type { MessageCatalog } from '@petabase/types/i18n';
 
 export type AppSidebarProps = {
@@ -11,16 +9,6 @@ export type AppSidebarProps = {
 
 export function AppSidebar({ locale, messages }: AppSidebarProps) {
   const isThai = locale === 'th';
-  const navigationItems = [
-    {
-      href: withLocale(locale, '/dashboard'),
-      label: messages.nav.dashboard,
-    },
-    {
-      href: withLocale(locale, '/admin'),
-      label: messages.nav.admin,
-    },
-  ] as const;
 
   return (
     <aside className="pb-sidebar">
@@ -29,14 +17,7 @@ export function AppSidebar({ locale, messages }: AppSidebarProps) {
         <h2>{messages.common.welcome}</h2>
         <p className="pb-sidebar-subtitle">{isThai ? 'โหมดปฏิบัติการคลินิก' : 'Clinic operations mode'}</p>
       </div>
-
-      <nav className="pb-sidebar-nav">
-        {navigationItems.map((item) => (
-          <Link key={item.href} href={item.href} className="pb-sidebar-link">
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      <AppNavLinks locale={locale} messages={messages} surface="sidebar" />
     </aside>
   );
 }

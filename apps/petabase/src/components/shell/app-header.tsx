@@ -17,6 +17,11 @@ export function AppHeader({ locale, messages }: AppHeaderProps) {
   return (
     <header className="pb-header" role="banner">
       <div className="pb-header-row">
+        <div className="pb-header-window-controls" aria-hidden="true">
+          <span className="pb-window-dot pb-window-dot-close" />
+          <span className="pb-window-dot pb-window-dot-minimize" />
+          <span className="pb-window-dot pb-window-dot-expand" />
+        </div>
         <div className="pb-header-brand">
           <p className="pb-header-kicker">{isThai ? 'หลังบ้าน' : 'Backoffice'}</p>
           <p>{messages.common.appName}</p>
@@ -27,7 +32,7 @@ export function AppHeader({ locale, messages }: AppHeaderProps) {
           </Link>
         </div>
       </div>
-      <AppNavLinks locale={locale} messages={messages} />
+      <AppNavLinks locale={locale} messages={messages} surface="top" />
     </header>
   );
 }

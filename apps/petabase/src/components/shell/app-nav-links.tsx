@@ -12,11 +12,20 @@ type AppNavLinksProps = {
   locale: AppLocale;
   messages: MessageCatalog;
   className?: string;
-  compact?: boolean;
+  surface?: 'top' | 'bottom' | 'sidebar';
 };
 
-export function AppNavLinks({ locale, messages, className, compact = false }: AppNavLinksProps) {
+export function AppNavLinks({ locale, messages, className, surface = 'top' }: AppNavLinksProps) {
   const pathname = usePathname();
+  const navClassName =
+    surface === 'bottom' ? 'pb-bottom-nav' : surface === 'sidebar' ? 'pb-sidebar-nav' : 'pb-top-nav';
+  const linkClassName =
+    surface === 'bottom'
+      ? 'pb-bottom-nav-link'
+      : surface === 'sidebar'
+        ? 'pb-sidebar-link'
+        : 'pb-top-nav-link';
+
   const navItems = [
     {
       href: withLocale(locale, '/dashboard'),
@@ -29,17 +38,14 @@ export function AppNavLinks({ locale, messages, className, compact = false }: Ap
   ] as const;
 
   return (
-    <nav className={classNames(compact ? 'pb-bottom-nav' : 'pb-top-nav', className)}>
+    <nav className={classNames(navClassName, className)}>
       {navItems.map((item) => {
         const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
         return (
           <Link
             key={item.href}
             href={item.href}
-            className={classNames(
-              compact ? 'pb-bottom-nav-link' : 'pb-top-nav-link',
-              isActive && 'is-active',
-            )}
+            className={classNames(linkClassName, isActive && 'is-active')}
           >
             {item.label}
           </Link>
