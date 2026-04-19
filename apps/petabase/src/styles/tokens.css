@@ -1,16 +1,42 @@
 :root {
+  --pb-font-sans:
+    'sohne-var', 'Noto Sans Thai', 'Sarabun', 'SF Pro Display', 'Segoe UI', sans-serif;
+  --pb-font-mono: 'SourceCodePro', 'SFMono-Regular', ui-monospace, monospace;
+
   --pb-color-bg: #ffffff;
+  --pb-color-bg-soft: #f6f9fc;
   --pb-color-heading: #061b31;
   --pb-color-body: #64748d;
   --pb-color-label: #273951;
+  --pb-color-body-strong: #3b4c64;
   --pb-color-primary: #533afd;
   --pb-color-primary-hover: #4434d4;
+  --pb-color-primary-deep: #2e2b8c;
+  --pb-color-primary-mid: #665efd;
   --pb-color-border: #e5edf5;
   --pb-color-border-active: #b9b9f9;
+  --pb-color-border-soft: #d6d9fc;
+  --pb-color-border-magenta: #ffd7ef;
   --pb-color-surface-dark: #1c1e54;
   --pb-color-accent-ruby: #ea2261;
   --pb-color-accent-magenta: #f96bee;
+  --pb-color-accent-magenta-soft: #ffd7ef;
+  --pb-color-warning: #9b6829;
+  --pb-color-success: #15be53;
+  --pb-color-success-text: #108c3d;
+
+  --pb-radius-sm: 4px;
+  --pb-radius-md: 6px;
+  --pb-radius-lg: 8px;
+
+  --pb-shadow-ambient: rgba(23, 23, 23, 0.08) 0 15px 35px;
+  --pb-shadow-soft: rgba(23, 23, 23, 0.06) 0 3px 6px;
   --pb-shadow-elevated:
     rgba(50, 50, 93, 0.25) 0 30px 45px -30px,
     rgba(0, 0, 0, 0.1) 0 18px 36px -18px;
+  --pb-shadow-deep:
+    rgba(3, 3, 39, 0.25) 0 14px 21px -14px,
+    rgba(0, 0, 0, 0.1) 0 8px 17px -8px;
+
+  --pb-focus-ring: 2px solid var(--pb-color-primary);
 }

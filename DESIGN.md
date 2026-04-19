@@ -320,3 +320,106 @@ What truly distinguishes Stripe is its shadow system. Rather than the flat or si
 6. Use `"tnum"` for any numbers in tables, charts, or financial displays
 7. Dark sections use `#1c1e54` -- not black, not gray, but a deep branded indigo
 8. SourceCodePro for code at 12px/500 with 2.00 line-height (very generous for readability)
+
+## 10. Petabase Alignment to Requirement #12
+
+This section is the authoritative interpretation for Petabase. The Stripe-inspired system above is the visual base, but the product context is veterinary B2B operations in Thailand.
+
+### 10.1 Mood and Tone (Veterinary B2B)
+
+- Professional but warm: trusted medical workspace, not consumer playful
+- Clinical but not cold: calm surfaces, clear hierarchy, humane microcopy
+- Operationally focused: queue, patient timeline, appointment states, billing clarity
+- Long-session comfort: reduced visual noise, predictable interaction rhythm for 8+ hour usage
+
+### 10.2 Accessibility and Environment Guidelines
+
+- Minimum body contrast target: WCAG AA (4.5:1)
+- Minimum large text contrast target: WCAG AA (3:1)
+- Interactive targets: minimum 40px touch height on mobile
+- Focus treatment: always visible `2px` ring with brand purple
+- Clinic lighting resilience: avoid low-contrast pale text and low-opacity key actions
+
+### 10.3 Thai/English Typography Pairing
+
+Recommended production stack:
+- Primary sans: `sohne-var`, fallback `Noto Sans Thai`, `Sarabun`, `SF Pro Display`, `Segoe UI`, sans-serif
+- Monospace: `SourceCodePro`, fallback `SFMono-Regular`, ui-monospace, monospace
+
+Thai + English rules:
+- Keep line-height at `1.4` for body text to protect Thai readability
+- Use `font-feature-settings: "ss01"` on non-tabular UI text
+- Use `font-feature-settings: "tnum"` for tables, financial numbers, and schedule columns
+- Avoid ultra-tight letter spacing for Thai UI labels below 18px
+
+### 10.4 Component Style Baseline
+
+- Cards: white surface, `1px` border, radius `6px`, elevated blue-tinted shadow
+- Buttons: primary purple fill and ghost outlined variant as default action pair
+- Inputs: white background, subtle border, purple focus border/ring, readable labels
+- Data tables: sticky visual hierarchy, numeric alignment, compact row rhythm for clinic ops
+- Status pills: semantic states for scheduled/confirmed/in-progress/completed/cancelled/no-show/paid/overdue
+
+### 10.5 Reference Analysis (5-10 Real Products)
+
+These references inform Petabase behavior and polish targets:
+
+1. Stripe Dashboard - benchmark for dense but readable financial data surfaces and spacing discipline
+2. Linear - benchmark for speed, keyboard-first flow, and low-friction status updates
+3. Notion - benchmark for calm visual hierarchy and low-cognitive-load content blocks
+4. Shopify Admin - benchmark for operational admin workflows and mobile-friendly management patterns
+5. Figma - benchmark for information layering without losing orientation
+6. ezyVet - veterinary domain reference for patient and consultation workflow structure
+7. IDEXX Neo - veterinary domain reference for practice management essentials and timeline navigation
+8. Covetrus Pulse - veterinary domain reference for clinic operations and billing workflow grouping
+9. Digitail - veterinary domain reference for modern pet record and owner communication UX
+
+Reference takeaways for Petabase:
+- Keep primary workflows one tap away (appointments, patients, billing)
+- Use explicit state labels, not color-only encoding
+- Prioritize operational scan-ability over decorative density
+- Keep mobile interactions thumb-friendly for front-desk and floor usage
+
+### 10.6 Role-Based Navigation and UX Patterns
+
+Primary roles:
+- Receptionist: check-in, queue updates, appointment actions, payment status
+- Doctor/Nurse: patient timeline, SOAP notes, prescriptions, follow-up actions
+- Manager/Owner: branch overview, staff access, billing summary, utilization signals
+
+Navigation rules:
+- Persistent primary nav for Dashboard, Appointments, Patients, Billing, Admin
+- Role-aware visibility for modules and actions
+- Mobile: sticky top actions + bottom-safe scroll zones for key task lists
+- Breadcrumb-free shallow routing for top-level modules to reduce cognitive hops
+
+### 10.7 Mobile-First Behavioral Specification
+
+- Breakpoints: `<640`, `640-1024`, `1024-1280`, `>1280`
+- Cards collapse to single column below 640px
+- Tables horizontally scroll with preserved header context
+- Primary actions become full-width buttons on narrow screens
+- Header density reduces on mobile while keeping sign-in and role actions visible
+
+### 10.8 Design System Foundation Principles
+
+- One token system for color, radius, shadows, typography, spacing
+- One interaction language for focus, hover, pressed, disabled, loading
+- One status vocabulary across scheduling, consultation, and billing states
+- One accessibility baseline enforced before visual embellishment
+
+### 10.9 Out-of-Scope for Initial Design System
+
+- Consumer-social visual patterns (gamified feeds, playful sticker aesthetics)
+- Neon/dark-only visual direction that increases long-session eye strain
+- Per-page bespoke components that bypass shared tokens and style primitives
+
+### 10.10 Requirement #12 Traceability Checklist
+
+- [x] Mood and tone defined for veterinary B2B
+- [x] Theme and palette documented with accessibility constraints
+- [x] Thai/English typography recommendations defined
+- [x] Core component style baseline documented
+- [x] 5-10 references collected and analyzed
+- [x] Role-based navigation and UX patterns defined
+- [x] Design system foundation principles established

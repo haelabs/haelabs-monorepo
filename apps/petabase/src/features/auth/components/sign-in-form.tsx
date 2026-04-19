@@ -35,6 +35,11 @@ export function SignInForm({ messages }: SignInFormProps) {
         <label htmlFor="password">{messages.auth.passwordLabel}</label>
         <Input id="password" type="password" name="password" required />
 
+        <div className="pb-auth-meta">
+          <span>Thai/English ready</span>
+          <span>Reset flow in API phase</span>
+        </div>
+
         <Button type="submit" disabled={loading}>
           {loading ? messages.states.loading : messages.auth.submit}
         </Button>
