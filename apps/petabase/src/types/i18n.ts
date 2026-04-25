@@ -5,6 +5,10 @@ export type CommonMessages = {
 
 export type NavMessages = {
   dashboard: string;
+  patients: string;
+  appointments: string;
+  consultations: string;
+  billing: string;
   admin: string;
   signIn: string;
   signOut: string;

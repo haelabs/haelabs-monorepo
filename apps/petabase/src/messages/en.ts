@@ -7,6 +7,10 @@ const en: MessageCatalog = {
   },
   nav: {
     dashboard: 'Dashboard',
+    patients: 'Patients',
+    appointments: 'Appointments',
+    consultations: 'Consultations',
+    billing: 'Billing',
     admin: 'Admin',
     signIn: 'Sign in',
     signOut: 'Sign out',
@@ -19,12 +23,12 @@ const en: MessageCatalog = {
     submit: 'Sign in',
   },
   dashboard: {
-    title: 'Phase 1 operations overview',
-    subtitle: 'Track access control, branch setup, and staff readiness before API integration.',
+    title: 'Clinic operations overview',
+    subtitle: 'Track today\'s appointments, patient care flow, billing, and branch readiness in one prototype workspace.',
   },
   admin: {
-    title: 'Clinic setup and access management',
-    subtitle: 'Configure organization profile, branches, and role-scoped staff access.',
+    title: 'Organization and access management',
+    subtitle: 'Configure organization profile, branches, staff invites, and role-scoped access.',
   },
   states: {
     loading: 'Loading...',

@@ -3,7 +3,7 @@
 ## Metadata
 
 - Slug: `1-petabase-ui-prototype`
-- Status: `intake`
+- Status: `planned`
 - Owner: `OpenAI agent`
 - Updated: `2026-04-25`
 
@@ -46,24 +46,27 @@ Create a high-fidelity Petabase staff-facing UI prototype in `apps/petabase` tha
 ## Assumptions
 
 - The prototype is intended to prioritize breadth of workflow coverage over production-complete business logic.
-- Mock auth can be represented with UI-only success/failure states and local prototype navigation.
-- Calendar, billing, consultation, and management flows can use seeded mock datasets and deterministic local state.
+- Mock auth should behave as a fully interactive UI-only flow with believable success, failure, recovery, and navigation states, while remaining local and mock-data-only.
+- Calendar, billing, consultation, and management flows should use seeded mock datasets and deterministic local state with full interaction fidelity for the prototype.
 - Thai/English support should be preserved at the layout/content level even if some prototype copy starts in one language before full localization pass.
+- The prototype should live inside the existing locale-aware app routing structure rather than in an isolated prototype-only route namespace.
+- The deliverable is a fully connected clickable prototype across all requested modules, not just a representative screen set.
+- Print-friendly consultation and invoice outputs should be supported through both dedicated routes and print styles on the corresponding in-app screens.
+- The seed dataset should use a believable multi-branch clinic scenario centered on Paws & Care Veterinary Group, with Bangkok HQ, Rama 9, and Chiang Mai branch personas plus linked staff, owners, pets, appointments, consultations, and invoices.
 - Repo-level planning sources `.planning/PROJECT.md`, `.planning/STATE.md`, `.planning/REQUIREMENTS.md`, and `.planning/ROADMAP.md` are currently absent, so this brief is grounded in `AGENTS.md`, `DESIGN.md`, and `.planning/features/*` artifacts.
 
 ## Open Questions
 
-- Should this prototype live behind existing locale-aware app routes, or in a dedicated prototype section within `apps/petabase`?
-- How much interaction fidelity is expected for mock auth, appointment state transitions, billing calculations, and CRUD modals/forms?
-- Is the target deliverable a fully connected clickable prototype across all modules, or a collection of representative screens with local navigation?
-- Should print-friendly consultation/invoice layouts be implemented as dedicated routes, print styles on existing screens, or both?
-- Are there preferred mock personas, clinic branches, staff roles, and patient records that should anchor the prototype dataset?
+- None at implementation close; the current prototype uses a default Paws & Care multi-branch seed dataset that can be refined later if the team wants specific clinic personas.
 
 ## Acceptance Criteria
 
 - `apps/petabase` exposes a coherent mock-data-only prototype covering dashboard, auth, patients, appointments, consultation/SOAP, billing, and organization/user management flows.
-- Core navigation and screen transitions make it possible to move through representative clinic workflows without backend integration.
-- Appointment, billing, and consultation UIs visibly represent the requested states, filters, and forms using mock data.
+- The prototype is implemented inside the existing locale-aware Petabase routing structure.
+- Core navigation and screen transitions make it possible to move through full end-to-end clinic workflows without backend integration.
+- Mock auth, appointment state transitions, billing calculations, and CRUD forms/modals behave with full prototype interaction fidelity using local state and mock data.
+- Appointment, billing, and consultation UIs visibly represent the requested states, filters, forms, and status progressions using mock data.
 - Patient and owner views clearly show linked relationships, history, and documents in a staff-usable Calm Ops layout.
 - Organization, branch, staff, role, and permission views are present as UI prototype screens within `apps/petabase`.
+- Consultation and invoice experiences include both dedicated print-friendly routes and print styles on relevant screens.
 - The prototype follows existing Petabase design tokens, shell patterns, locale-aware structure, and mobile/desktop behavior expectations.

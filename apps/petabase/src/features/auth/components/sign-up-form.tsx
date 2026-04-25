@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 import { Button } from '@petabase/components/ui/button';
@@ -21,6 +22,7 @@ export function SignUpForm({ locale }: SignUpFormProps) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { push } = useToast();
+  const router = useRouter();
   const isThai = locale === 'th';
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -34,6 +36,7 @@ export function SignUpForm({ locale }: SignUpFormProps) {
         : 'Prototype clinic workspace created. Continue in Admin to configure staff access.',
     );
     setLoading(false);
+    router.push(`/${locale}/admin`);
   }
 
   return (

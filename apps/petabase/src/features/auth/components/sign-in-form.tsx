@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 import { Button } from '@petabase/components/ui/button';
@@ -54,6 +55,7 @@ export function SignInForm({
   const [selectedRole, setSelectedRole] = useState<(typeof ROLE_PRESETS)[number]['id']>('admin');
   const [branch, setBranch] = useState('bangkok-hq');
   const { push } = useToast();
+  const router = useRouter();
   const selectedRolePreset = ROLE_PRESETS.find((preset) => preset.id === selectedRole) ?? ROLE_PRESETS[0];
   const isThai = locale === 'th';
 
@@ -76,6 +78,7 @@ export function SignInForm({
         : `Prototype mode: signed in as ${selectedRolePreset.label} at ${selectedBranchLabel}`,
     );
     setLoading(false);
+    router.push(selectedRole === 'admin' ? `/${locale}/admin` : `/${locale}/dashboard`);
   }
 
   return (

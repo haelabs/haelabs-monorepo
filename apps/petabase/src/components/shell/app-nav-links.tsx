@@ -32,6 +32,22 @@ export function AppNavLinks({ locale, messages, className, surface = 'top' }: Ap
       label: messages.nav.dashboard,
     },
     {
+      href: withLocale(locale, '/patients'),
+      label: messages.nav.patients,
+    },
+    {
+      href: withLocale(locale, '/appointments'),
+      label: messages.nav.appointments,
+    },
+    {
+      href: withLocale(locale, '/consultations'),
+      label: messages.nav.consultations,
+    },
+    {
+      href: withLocale(locale, '/billing'),
+      label: messages.nav.billing,
+    },
+    {
       href: withLocale(locale, '/admin'),
       label: messages.nav.admin,
     },
