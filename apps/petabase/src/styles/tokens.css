@@ -5,40 +5,83 @@
   --pb-font-sans: var(--pb-font-sans-latin);
   --pb-font-mono: var(--pb-font-mono-real), 'SourceCodePro', 'SFMono-Regular', ui-monospace, monospace;
 
+  --pb-space-0: 0;
+  --pb-space-1: 4px;
+  --pb-space-2: 8px;
+  --pb-space-3: 12px;
+  --pb-space-4: 16px;
+  --pb-space-5: 20px;
+  --pb-space-6: 24px;
+  --pb-space-8: 32px;
+  --pb-space-10: 40px;
+  --pb-space-12: 48px;
+  --pb-space-16: 64px;
+
+  --pb-radius-xs: 4px;
+  --pb-radius-sm: 8px;
+  --pb-radius-md: 12px;
+  --pb-radius-lg: 16px;
+  --pb-radius-xl: 20px;
+  --pb-radius-2xl: 24px;
+  --pb-radius-pill: 999px;
+
+  --pb-breakpoint-sm: 640px;
+  --pb-breakpoint-md: 768px;
+  --pb-breakpoint-lg: 1024px;
+  --pb-breakpoint-xl: 1280px;
+
   --pb-color-bg: #ffffff;
   --pb-color-bg-soft: #f6f9fc;
+  --pb-color-bg-muted: #eef3f9;
   --pb-color-heading: #061b31;
   --pb-color-body: #64748d;
   --pb-color-label: #273951;
   --pb-color-body-strong: #3b4c64;
+  --pb-color-text-inverse: #f8fafc;
   --pb-color-primary: #533afd;
   --pb-color-primary-hover: #4434d4;
   --pb-color-primary-deep: #2e2b8c;
   --pb-color-primary-mid: #665efd;
+  --pb-color-primary-soft: rgb(83 58 253 / 10%);
   --pb-color-border: #e5edf5;
   --pb-color-border-active: #b9b9f9;
   --pb-color-border-soft: #d6d9fc;
+  --pb-color-border-strong: #c9d5e2;
   --pb-color-border-magenta: #ffd7ef;
   --pb-color-surface-dark: #1c1e54;
+  --pb-color-surface-card: #ffffff;
+  --pb-color-surface-raised: #fbfdff;
+  --pb-color-surface-overlay: rgb(6 27 49 / 45%);
   --pb-color-accent-ruby: #ea2261;
   --pb-color-accent-magenta: #f96bee;
   --pb-color-accent-magenta-soft: #ffd7ef;
+  --pb-color-accent-cyan: #2c92f7;
   --pb-color-warning: #9b6829;
+  --pb-color-warning-soft: rgb(155 104 41 / 12%);
   --pb-color-success: #15be53;
   --pb-color-success-text: #108c3d;
+  --pb-color-success-soft: rgb(21 190 83 / 12%);
+  --pb-color-info: #1979d4;
+  --pb-color-info-soft: rgb(25 121 212 / 12%);
 
-  --pb-radius-sm: 4px;
-  --pb-radius-md: 6px;
-  --pb-radius-lg: 8px;
-
-  --pb-shadow-ambient: rgba(23, 23, 23, 0.08) 0 15px 35px;
-  --pb-shadow-soft: rgba(23, 23, 23, 0.06) 0 3px 6px;
+  --pb-shadow-ambient: rgba(20, 29, 41, 0.08) 0 22px 50px -30px;
+  --pb-shadow-soft: rgba(16, 36, 58, 0.08) 0 8px 16px -10px;
   --pb-shadow-elevated:
-    rgba(50, 50, 93, 0.25) 0 30px 45px -30px,
-    rgba(0, 0, 0, 0.1) 0 18px 36px -18px;
+    rgba(28, 51, 77, 0.18) 0 26px 40px -28px,
+    rgba(12, 27, 45, 0.12) 0 14px 24px -18px;
   --pb-shadow-deep:
-    rgba(3, 3, 39, 0.25) 0 14px 21px -14px,
-    rgba(0, 0, 0, 0.1) 0 8px 17px -8px;
+    rgba(7, 21, 35, 0.24) 0 28px 48px -26px,
+    rgba(7, 21, 35, 0.18) 0 16px 28px -18px;
+
+  --pb-elevation-0: none;
+  --pb-elevation-1: var(--pb-shadow-soft);
+  --pb-elevation-2: var(--pb-shadow-elevated);
+  --pb-elevation-3: var(--pb-shadow-deep);
+
+  --pb-duration-fast: 140ms;
+  --pb-duration-base: 200ms;
+  --pb-duration-slow: 320ms;
+  --pb-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   --pb-focus-ring: 2px solid var(--pb-color-primary);
 }

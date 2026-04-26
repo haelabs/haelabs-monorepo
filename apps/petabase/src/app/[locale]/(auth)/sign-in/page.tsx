@@ -15,11 +15,12 @@ export default async function SignInPage({ params }: SignInPageProps) {
   const forgotPasswordHref = withLocale(locale, '/forgot-password');
 
   return (
-    <section className="pb-auth-stage pb-auth-stage-calm">
-      <header className="pb-auth-header pb-auth-header-calm">
-        <p className="pb-sidebar-kicker">Phase 1 Frontend Prototype</p>
-        <h1>{messages.auth.title}</h1>
-        <p>{messages.auth.subtitle}</p>
+    <section className="grid w-full max-w-[1120px] gap-5">
+      <header className="grid gap-2 rounded-[var(--pb-radius-md)] border border-[var(--pb-color-border-soft)] bg-[linear-gradient(165deg,rgb(255_255_255/0.95),rgb(247_250_255))] p-4 text-center shadow-[var(--pb-shadow-soft)]">
+        <h1 className="text-[color:var(--pb-color-heading)] text-[clamp(1.8rem,4vw,2rem)] font-light tracking-[-0.64px]">
+          {messages.auth.title}
+        </h1>
+        <p className="mx-auto max-w-[64ch] text-[color:var(--pb-color-body)]">{messages.auth.subtitle}</p>
       </header>
       <SignInForm
         locale={locale}

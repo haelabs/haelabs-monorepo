@@ -11,18 +11,29 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.11.0",
+    "motion": "^12.38.0",
     "next": "15.5.9",
     "react": "19.1.1",
     "react-dom": "19.1.1",
+    "tailwind-merge": "^3.5.0",
     "zod": "4.1.12"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "24.7.2",
     "@types/react": "19.1.17",
     "@types/react-dom": "19.1.9",
     "eslint": "8.57.1",
     "eslint-config-next": "15.5.9",
     "prettier": "3.6.2",
+    "tailwindcss": "^4.2.4",
     "typescript": "5.9.3"
   }
 }

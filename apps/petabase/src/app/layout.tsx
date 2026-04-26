@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_Thai, Plus_Jakarta_Sans, Source_Code_Pro } from 'next/font/google';
 
+import '@petabase/styles/tokens.css';
 import '@petabase/app/globals.css';
 
 const primarySans = Plus_Jakarta_Sans({

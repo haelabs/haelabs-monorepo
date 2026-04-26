@@ -37,6 +37,8 @@
 - For package-scoped commands, Nx ultimately shells out to:
 - `pnpm --filter @haelabs/petabase run <dev|build|lint|test|typecheck>`
 - `pnpm --filter @haelabs/api run <start|start:dev|build|lint|test|typecheck>`
+- Deploy:
+- `cd apps/petabase && vercel --prod --yes` — deploy petabase to Vercel production (project already linked).
 
 ## Verification Order
 - Follow the local CI order when doing broad validation: `lint -> typecheck -> test -> build`.

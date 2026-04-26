@@ -1,0 +1,253 @@
+# Feature Status: Petabase Complete Cosmetic UI Overhaul
+
+## Snapshot
+
+- Slug: `2-cosmetic-ui-overhaul`
+- Status: `in_progress`
+- Updated: `2026-04-25`
+
+## Progress
+
+- [x] Plan created
+- [x] Implementation started
+- [x] Validation run
+- [x] Ready for handoff
+
+## Completed
+
+- Feature brief created with full scope, constraints, and open questions.
+- Active feature slug recorded in `.planning/features/last.txt`.
+- Codebase audit completed: vanilla CSS (~1840 lines globals.css), no component library, minimal custom components (button, card, input, toast-provider), Next.js 15 + React 19 + Zod only dependencies.
+- Implementation plan created with 8 sequential phases (Phase 0: Research → Phase 7: Polish).
+- Phase dependency graph documented: Phase 0 → Phase 1 → Phase 2 → Phases 3–6 (parallel) → Phase 7.
+- Acceptance criteria defined per phase with build/lint/typecheck gates.
+- Risk register created covering React 19 compat, bundle size, CSS migration scope, Tailwind conflicts, gesture conflicts, and Thai font rendering.
+- Handoff package created at `.planning/features/2-cosmetic-ui-overhaul/handoff.md`.
+- Phase 0 completed: created `.planning/features/2-cosmetic-ui-overhaul/notes.md` with comparative evaluations and single recommendations for component, animation, CSS, and icon libraries.
+- Phase 0 open questions resolved in `notes.md` (component library, CSS strategy, animation stack, design direction, and mobile navigation model).
+- Phase 1 started with dependency and tooling foundation in `apps/petabase`:
+  - Added stack dependencies: `@radix-ui/react-slot`, `class-variance-authority`, `clsx`, `tailwind-merge`, `motion`, and `lucide-react`.
+  - Added Tailwind v4 tooling via `tailwindcss` + `@tailwindcss/postcss` and created `apps/petabase/postcss.config.mjs`.
+  - Enabled Tailwind global import in `apps/petabase/src/app/globals.css`.
+  - Preserved token usage by importing `@petabase/styles/tokens.css` from `apps/petabase/src/app/layout.tsx`.
+- Added initial Phase 1 UI primitives and utilities:
+  - Updated `classNames` util to use `clsx` + `tailwind-merge`.
+  - Upgraded `button`, `card`, and `input` to token-aware utility-based styles.
+  - Added new components: `badge`, `textarea`, `skeleton`, and `avatar`.
+  - Added shared animation presets at `apps/petabase/src/lib/motion/presets.ts`.
+- Expanded Phase 1 base primitives with Radix-backed components:
+  - Added dependencies: `@radix-ui/react-dialog`, `@radix-ui/react-select`, and `@radix-ui/react-tabs`.
+  - Added `select` primitive in `apps/petabase/src/components/ui/select.tsx`.
+  - Added `tabs` primitive in `apps/petabase/src/components/ui/tabs.tsx`.
+  - Added `dialog` primitive in `apps/petabase/src/components/ui/dialog.tsx`.
+  - Added `sheet` primitive in `apps/petabase/src/components/ui/sheet.tsx`.
+- Continued Phase 1 migration in feature usage and feedback primitives:
+  - Added modern toast primitive in `apps/petabase/src/components/ui/toast.tsx` and updated `toast-provider` with Motion enter/exit transitions.
+  - Migrated auth sign-in branch selector from legacy `<select className="pb-select">` to new Radix-based `Select` in `apps/petabase/src/features/auth/components/sign-in-form.tsx`.
+- Continued auth form migration to base primitives:
+  - Migrated sign-up branch type control to new Radix-based `Select` in `apps/petabase/src/features/auth/components/sign-up-form.tsx`.
+  - Migrated forgot-password language control to new Radix-based `Select` in `apps/petabase/src/features/auth/components/forgot-password-form.tsx`.
+- Advanced token modernization and semantic adoption:
+  - Expanded `apps/petabase/src/styles/tokens.css` with semantic scales for spacing, radii, breakpoints, elevations, durations, easing, and additional surface/feedback colors.
+  - Updated core primitives (`button`, `card`, `input`, `textarea`, `select`, `toast`, `dialog`, `sheet`) to consume semantic token variables.
+  - Reduced legacy toast styling in `apps/petabase/src/app/globals.css` so toast visuals are driven by the new UI primitive.
+- Started Phase 2 shell migration with token-first component styling:
+  - Modernized shell structure classes in `apps/petabase/src/components/shell/app-shell.tsx` and retained mobile safe-area behavior.
+  - Modernized `app-header` with token-first classes and switched sign-in CTA to shared `Button` primitive.
+  - Modernized `app-sidebar` typography/surface treatment with semantic tokens.
+  - Rebuilt `app-nav-links` with icon-led navigation (Lucide icons), semantic active/focus states, and responsive layout behavior.
+  - Removed now-unused legacy nav-link CSS blocks (`pb-top-nav-link`, `pb-sidebar-link`, `pb-bottom-nav-link`) from `apps/petabase/src/app/globals.css`.
+- Continued Phase 2 with dashboard/page-container migration:
+  - Modernized `PageContainer` structure in `apps/petabase/src/components/layout/page-container.tsx` to token-first utility composition.
+  - Migrated dashboard hero/KPI/split sections in `apps/petabase/src/app/[locale]/(dashboard)/dashboard/page.tsx` to token-first utility layout classes.
+  - Replaced dashboard CTA/link action with shared `Button` primitive and selected status pills with shared `Badge` primitive.
+  - Removed legacy page-container CSS rules (`pb-page-container`, `pb-page-header` and old stagger selectors) from `apps/petabase/src/app/globals.css`.
+- Continued Phase 2 with patients module migration:
+  - Migrated patients prototype hero/KPI/section layout in `apps/petabase/src/features/prototype/components/prototype-pages.tsx` to token-first utility layout classes.
+  - Replaced legacy patients filters/select controls with shared Radix-based `Select` primitive.
+  - Replaced patient tag chips with shared `Badge` primitive in the patients table.
+- Continued Phase 2 with appointments module migration:
+  - Migrated appointments prototype hero/section layout in `apps/petabase/src/features/prototype/components/prototype-pages.tsx` to token-first utility layout classes.
+  - Replaced legacy segmented control with shared `Tabs` primitive for day/week/month view switching.
+  - Replaced legacy appointments filter/status/form selects with shared Radix-based `Select` primitive.
+  - Replaced appointment status pills with shared `Badge` primitive in calendar slots, tables, and status flow.
+  - Replaced consultation CTA link button with shared `Button` primitive (`asChild`, `ghost`).
+  - Removed unused segmented control CSS rules (`pb-segmented-control`, `pb-segmented-btn`) from `apps/petabase/src/app/globals.css`.
+- Continued Phase 2 with consultations module migration:
+  - Migrated consultations prototype hero/section layout in `apps/petabase/src/features/prototype/components/prototype-pages.tsx` to token-first utility layout classes.
+  - Replaced printable status pill with shared `Badge` primitive in consultation history list.
+  - Replaced SOAP `<textarea className="pb-textarea">` controls with shared `Textarea` primitive.
+  - Replaced print-view CTA link button with shared `Button` primitive (`asChild`, `ghost`).
+  - Removed unused legacy `.pb-textarea` CSS rules from `apps/petabase/src/app/globals.css`.
+- Continued Phase 2 with billing module migration:
+  - Migrated billing prototype hero/KPI/section layout in `apps/petabase/src/features/prototype/components/prototype-pages.tsx` to token-first utility layout classes.
+  - Replaced billing status filter and payment method `<select className="pb-select">` controls with shared Radix-based `Select` primitive.
+  - Replaced invoice status pills in billing table with shared `Badge` primitive.
+  - Removed unused legacy billing-related CSS rules (`.pb-select-compact`, `.pb-kpi-grid`, `.pb-kpi-card` and responsive `.pb-kpi-grid` override) from `apps/petabase/src/app/globals.css`.
+- Continued Phase 2 with admin module migration:
+  - Migrated admin prototype hero/section layout in `apps/petabase/src/features/prototype/components/prototype-pages.tsx` to token-first utility layout classes.
+  - Replaced admin invite role `<select className="pb-select">` control with shared Radix-based `Select` primitive.
+  - Replaced branch/staff/admin status pills and role pills with shared `Badge` primitive in branch and staff tables.
+  - Removed now-unused legacy `.pb-select` CSS rules from `apps/petabase/src/app/globals.css`.
+
+## Blockers
+
+- None
+
+## Validation Notes
+
+- Reviewed `AGENTS.md`, existing feature `1-petabase-ui-prototype` (status: completed), `.planning/features/README.md`, and feature templates.
+- Audited current `apps/petabase` dependencies, component inventory, CSS architecture, shell structure, and routing.
+- `.planning/PROJECT.md`, `.planning/STATE.md`, `.planning/REQUIREMENTS.md`, `.planning/ROADMAP.md` are absent from the repo.
+- Plan follows the template structure from `.planning/features/templates/feature-plan.md`.
+- Verified Phase 0 acceptance criteria against `plan.md`:
+  - Decision document exists at `.planning/features/2-cosmetic-ui-overhaul/notes.md`.
+  - Single recommendation recorded for each required category (component, animation, CSS, icons).
+- No application runtime code changed in this step; lint/typecheck/build were not required for this documentation-only phase.
+- Phase 1 foundation slice validated with:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after adding `select`/`tabs`/`dialog`/`sheet` primitives:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after toast refresh and sign-in form select migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after sign-up and forgot-password select migrations:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after token modernization and semantic primitive updates:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after Phase 2 shell starter migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after dashboard/page-container migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after patients module migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after appointments module migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after consultations module migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after billing module migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after admin module migration:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after patient detail route migration and legacy CSS cleanup:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+- Re-validated after Phase 3 auth screen redesign and CSS cleanup:
+  - `pnpm --filter @haelabs/petabase run lint`
+  - `pnpm --filter @haelabs/petabase run typecheck`
+  - `pnpm --filter @haelabs/petabase run build`
+  - Result: all commands passed cleanly.
+
+## Follow-Up
+
+- Begin Phase 1 (Foundation & Token System) using the selected stack:
+  - shadcn/ui + Radix primitives,
+  - Motion,
+  - Tailwind CSS v4 with existing token variables,
+  - lucide-react.
+- Add dependencies and scaffold base UI component set in `apps/petabase/src/components/ui/`.
+- Continue Phase 1 by migrating remaining form controls/screens from legacy class-based controls to base primitives (`select`, `tabs`, `dialog/sheet`, `toast`).
+- Continue replacing legacy `pb-*` screen classes with primitive-first composition in auth and dashboard screens.
+- Continue token adoption by migrating major layout/shell CSS rules in `globals.css` to semantic tokens and reducing hard-coded gradients/colors.
+- Continue Phase 2 by migrating route-level page containers and dashboard content cards to the new shell/navigation visual language.
+- Continue Phase 2 by migrating patients/appointments/consultations/billing route screens to the same token-first layout patterns and replacing remaining legacy status chips/pills with shared primitives.
+- Continue Phase 2 by migrating appointments/consultations/billing prototype sections in `prototype-pages.tsx` (tables/forms/status states) to shared primitives and token-first layout classes.
+- Continue Phase 2 by migrating consultations and billing prototype sections in `prototype-pages.tsx` to shared primitives and token-first layout classes, then remove now-unused consultation/billing-specific legacy CSS selectors.
+- Continue Phase 2 by migrating billing prototype section in `prototype-pages.tsx` to shared primitives (`Select`, `Badge`, token-first layout) and removing now-unused billing-specific legacy CSS selectors.
+- Continue Phase 2 by migrating admin prototype section in `prototype-pages.tsx` (role selectors, status chips, hero/section layout) to the same token-first primitives and removing now-unused admin-specific legacy CSS selectors.
+- Begin Phase 3 migration by applying the same token-first + primitive patterns to non-prototype dashboard detail routes (e.g. `patients/[patientId]`) and retire corresponding remaining legacy layout selectors.
+- Completed patient detail route (`patients/[patientId]/page.tsx`) migration:
+  - Replaced `.pb-phase-hero`, `.pb-phase-status-bar` layout with token-first inline utility classes.
+  - Replaced `.pb-avatar` / `.pb-profile-hero` with token-first inline avatar and flex layout.
+  - Replaced `.pb-split-grid` / `.pb-split-grid-wide` with inline `grid gap-4 lg:grid-cols-2`.
+  - Replaced `.pb-stat-grid` with inline grid utility.
+  - Removed all now-unused legacy CSS selectors from `globals.css`: `.pb-phase-hero` (+ h2/p), `.pb-phase-status-bar`, `.pb-stat-value-sm`, `.pb-split-grid`, `.pb-split-grid-wide`, `.pb-profile-hero`, `.pb-avatar`, `.pb-stat-grid`, plus all responsive overrides in `@media` blocks. Also removed `.pb-stat-value-sm` from Thai font override.
+  - `globals.css` reduced from ~1840 lines to ~1461 lines (380 lines removed, 21% reduction).
+- Phase 2 declared complete. All prototype modules + patient detail route migrated.
+- Completed Phase 3 — Auth screens full visual redesign:
+  - Redesigned auth layout `(auth)/layout.tsx`: replaced `pb-auth-layout` with inline gradient background and Tailwind utilities.
+  - Redesigned all 3 auth pages (sign-in, sign-up, forgot-password): removed legacy `pb-auth-stage`, `pb-auth-header`, `pb-sidebar-kicker` classes; replaced with token-first card-style headers with clean typography.
+  - Redesigned all 3 auth form components:
+    - Replaced `pb-auth-grid`, `pb-auth-card`, `pb-auth-form`, `pb-auth-meta` with Tailwind utility grid layouts (`lg:grid-cols-[1.1fr_0.9fr]`).
+    - Replaced `pb-pill` with `Badge` primitive in account invite lists.
+    - Replaced `pb-role-chip` / `pb-role-presets` with inline styled buttons using Tailwind conditional classes.
+    - Replaced `pb-checklist` / `pb-checklist-item` with inline styled list items.
+    - Replaced `pb-form-success` with inline success alert styling.
+    - Added Motion fade-up animation on form mount (`motion.div` with `initial={{ opacity: 0, y: 8 }}`).
+    - Added `AnimatePresence` loading state transitions on submit buttons.
+  - Redesigned `not-found.tsx` and `error.tsx`: replaced `pb-auth-layout` + `pb-state-card` + `pb-btn` with inline gradient + `Button` primitive.
+  - Updated sign-up and forgot-password page footer links to use styled `<Link>` with hover/focus transitions.
+  - Removed ~385 lines of now-unused legacy CSS from `globals.css`:
+    - All `pb-auth-*` selectors (16 unique classes + pseudo-elements + descendant selectors).
+    - `pb-role-presets`, `pb-role-chip`, `pb-role-chip-grid`, `pb-role-scope`.
+    - `pb-checklist`, `pb-checklist-item` (+ state variants).
+    - `pb-form-success`, `pb-checkbox-label`.
+    - `pb-pill` (+ all `data-status` variants: confirmed, in-progress, scheduled, no-show).
+    - All responsive overrides for these selectors in `@media` blocks.
+  - `globals.css` reduced from ~1840 lines to 1055 lines (43% total reduction from baseline).
+  - Validation: lint + typecheck + build all pass cleanly.
+- Completed Phase 4 — Dashboard deep redesign:
+  - Created `AnimatedCounter` client component (`src/components/ui/animated-counter.tsx`): Motion-powered count-up animation with locale-aware number formatting.
+  - Created `StaggerGrid` client component (`src/components/ui/stagger-grid.tsx`): staggered fade-up animation wrapper for grid children.
+  - Redesigned dashboard page (`dashboard/page.tsx`) with modern card-based KPIs:
+    - 4 KPI cards with Lucide icons (CalendarDays, Banknote, AlertTriangle, Users), animated counters, and trend metadata.
+    - Responsive grid: 1-col mobile → 2-col tablet → 4-col desktop.
+    - Hero card retains gradient treatment with animated counters in the mini stat panel.
+  - Replaced all legacy CSS class usage in dashboard with inline Tailwind utilities:
+    - `pb-sidebar-kicker`, `pb-stat-label`, `pb-stat-value`, `pb-stat-trend` → inline Tailwind.
+    - `pb-section-header` → inline `grid gap-1.5 pb-3` header layout.
+    - `pb-workflow-list`, `pb-workflow-role`, `pb-workflow-copy` → inline styled `<ul>/<li>` list with rounded card items.
+    - `pb-form-actions`, `pb-form-actions-start` → `flex justify-start gap-2 pt-3`.
+    - `pb-activity-list`, `pb-row-meta` → same inline card list pattern.
+    - `pb-link-grid`, `pb-link-card` → inline link cards with icon badges (Heart, Stethoscope, Receipt).
+    - `pb-branch-grid`, `pb-branch-card` → inline branch cards with Building2 icon badges.
+  - Legacy CSS definitions remain in `globals.css` (still used by `prototype-pages.tsx`, patient detail, and print pages). Removal deferred to Phase 7.
+  - Dashboard route bundle: 3.9 kB (includes AnimatedCounter, StaggerGrid, and Lucide icon imports).
+  - Validation: lint + typecheck + build all pass cleanly.
+- Completed Phase 5 — Core workflow screen deep redesign (4 modules in `prototype-pages.tsx`):
+  - Added shared imports: `motion` (from `motion/react`), `AnimatedCounter`, Lucide icons (`Search`, `Syringe`, `FileText`, `Banknote`, `AlertTriangle`).
+  - **Patients module**: Replaced all legacy CSS with inline Tailwind. Added search icon overlay on input, KPI cards with icon badges (Syringe, FileText) and `AnimatedCounter`, `motion.tr` stagger on table rows, styled linked pets list, inline form grid.
+  - **Appointments module**: Replaced all legacy CSS. Calendar slots use `motion.button` with stagger fade-in, active state with primary border/bg, status flow uses dot indicators with `motion.div` slide-in, inline table styling.
+  - **Consultations module**: Replaced all legacy CSS. History list uses `motion.button` card selection, SOAP form with inline label/field pattern, prescription cards with inline styling.
+  - **Billing module**: Replaced all legacy CSS. KPI cards with Banknote/AlertTriangle icon badges, line items use `motion.li` stagger, inline table styling, inline payment form grid.
+  - All 4 hero cards use `motion.div` fade-up animation on mount.
+  - Legacy CSS still in `globals.css` — shared classes used by admin module (Phase 6), patient detail, and print pages. Phase 7 will clean up.
+  - Dashboard bundle reduced from 3.9 kB → 1.23 kB (Motion/AnimatedCounter now shared via common chunk).
+  - Validation: lint + typecheck + build all pass cleanly.
