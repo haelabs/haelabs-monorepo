@@ -40,7 +40,11 @@ export function ToastProvider({ children }: PropsWithChildren) {
   return (
     <ToastContext.Provider value={value}>
       {children}
-      <div className="pb-toast-stack" role="status" aria-live="polite">
+      <div
+        className="pointer-events-none fixed inset-x-0 top-3 z-50 mx-auto grid w-[min(92vw,32rem)] gap-2"
+        role="status"
+        aria-live="polite"
+      >
         <AnimatePresence initial={false}>
           {toasts.map((toast) => (
             <motion.div
@@ -50,7 +54,7 @@ export function ToastProvider({ children }: PropsWithChildren) {
               exit={{ opacity: 0, y: 6, scale: 0.985 }}
               transition={{ type: 'spring', stiffness: 300, damping: 24, mass: 0.8 }}
             >
-              <Toast className="pb-toast-item">{toast.message}</Toast>
+              <Toast className="pointer-events-auto">{toast.message}</Toast>
             </motion.div>
           ))}
         </AnimatePresence>

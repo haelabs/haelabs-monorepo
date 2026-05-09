@@ -3,9 +3,9 @@
 ## Metadata
 
 - Slug: `2-cosmetic-ui-overhaul`
-- Status: `intake`
+- Status: `in_progress`
 - Owner: `agent`
-- Updated: `2026-04-25`
+- Updated: `2026-04-26`
 
 ## Goal
 

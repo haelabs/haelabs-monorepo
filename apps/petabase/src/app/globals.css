@@ -309,17 +309,6 @@ p {
   outline-offset: 2px;
 }
 
-.pb-btn-ghost {
-  background: transparent;
-  color: var(--pb-color-primary);
-  border-color: var(--pb-color-border-active);
-}
-
-.pb-btn-ghost:hover {
-  background: rgba(83, 58, 253, 0.05);
-  box-shadow: none;
-}
-
 .pb-input {
   width: 100%;
   border: 1px solid var(--pb-color-border);
@@ -422,16 +411,6 @@ p {
   margin: 0;
 }
 
-@keyframes pb-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes pb-shimmer {
   from {
     background-position: 100% 0;
@@ -439,18 +418,6 @@ p {
 
   to {
     background-position: -100% 0;
-  }
-}
-
-@keyframes pb-fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(7px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

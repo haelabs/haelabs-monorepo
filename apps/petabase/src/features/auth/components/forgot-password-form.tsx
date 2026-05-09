@@ -83,7 +83,10 @@ export function ForgotPasswordForm({ locale }: ForgotPasswordFormProps) {
                   exit={{ opacity: 0 }}
                   className="flex items-center gap-2"
                 >
-                  <span className="pb-spinner" aria-hidden="true" />
+                  <span
+                    className="inline-block size-4 animate-spin rounded-full border-2 border-current border-r-transparent"
+                    aria-hidden="true"
+                  />
                   {isThai ? 'กำลังส่ง...' : 'Sending...'}
                 </motion.span>
               ) : (
